@@ -74,4 +74,4 @@ WHERE {
 }
 GROUP BY
   ?url ?title ?source_type ?content_type ?record_type ?creator_author
-LIMIT 100000
+LIMIT 10000
