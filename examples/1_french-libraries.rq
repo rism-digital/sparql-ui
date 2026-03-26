@@ -1,0 +1,22 @@
+# Title: Number of Prints in French Libraries, sorted by decade
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX pmo: <http://performedmusicontology.org/ontology/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
+PREFIX schemaorg: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (STR(?dec) AS ?decade) (COUNT(DISTINCT ?source) AS ?count) WHERE {
+    ?source a rism:Source;
+            rdfs:label ?title ;
+            rism:hasHolding ?copy ;
+            rism:hasDates/rism:earliestDate ?date .
+	MINUS { ?source rism:isPartOf ?parent . }
+    ?copy rism:hasHoldingInstitution/rdfs:label ?institution .
+    FILTER(CONTAINS(STR(?institution), "F-"))
+    BIND((ROUND(?date / 10) * 10) AS ?dec)
+}
+GROUP BY ?dec
+HAVING(?dec > 1490 && ?dec < 2100)
+ORDER BY ?dec

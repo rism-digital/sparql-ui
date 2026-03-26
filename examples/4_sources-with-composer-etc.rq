@@ -1,0 +1,16 @@
+# Title: List of the sources with composer, title, dates and publication place
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX pmo: <http://performedmusicontology.org/ontology/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
+PREFIX schemaorg: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?source ?composer ?title ?from ?to WHERE {
+        ?source a rism:Source ;
+        dcterms:creator [ rdfs:label ?composer ] ;
+        rdfs:label ?title ;
+        rism:hasDates [ rism:earliestDate ?from ;
+             rism:latestDate ?to ];
+}

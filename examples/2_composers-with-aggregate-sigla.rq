@@ -1,0 +1,18 @@
+# Title: List of composers with an aggregate of the sigla where their sources are held
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX pmo: <http://performedmusicontology.org/ontology/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
+PREFIX schemaorg: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?composer ?composer_id (GROUP_CONCAT(DISTINCT ?siglum; SEPARATOR=',') as ?sigla) (COUNT(DISTINCT (?source)) AS ?source_count) WHERE {
+        ?source a rism:Source ;
+        dcterms:creator [ rdfs:label ?composer ] ;
+		dcterms:creator ?composer_id ;
+		rism:hasHolding ?examplar .
+    ?examplar rism:hasHoldingInstitution ?institution .
+    ?institution rism:hasSiglum ?siglum .
+} GROUP BY ?composer ?composer_id
+ORDER BY DESC(?source_count)

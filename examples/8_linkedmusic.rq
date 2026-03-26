@@ -1,0 +1,32 @@
+# Title: Federated query with LinkedMusic
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?person
+  ?personLabel
+  ?predicate
+  ?object
+WHERE {
+  {
+    SELECT DISTINCT ?person ?personLabel
+    WHERE {
+      ?person a rism:Person .
+      FILTER(STRSTARTS(STR(?person), "https://rism.online/people/"))
+
+      OPTIONAL {
+        ?person rdfs:label ?personLabel .
+      }
+    }
+    LIMIT 100
+  }
+
+  SERVICE <https://virtuoso.simssa.ca/sparql> {
+    ?person ?predicate ?object .
+  }
+
+  FILTER NOT EXISTS {
+    ?person ?predicate ?object .
+  }
+}
+ORDER BY ?person ?predicate

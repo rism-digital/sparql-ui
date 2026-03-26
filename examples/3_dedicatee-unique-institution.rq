@@ -1,0 +1,32 @@
+# Title: People in RISM listed as a dedicatee, by unique institution
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX pmo: <http://performedmusicontology.org/ontology/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
+PREFIX schemaorg: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?person (?pName AS ?name) (COUNT(?institution) as ?count) WHERE {
+    SELECT ?person ?pName ?institution ?iName (COUNT(?person) as ?count1) WHERE {
+        ?source a rism:Source ;
+            rism:hasMaterialGroup/rism:hasSummary ?group ;
+            rism:hasHolding ?copy ;
+            rism:hasMaterialGroup?/rism:hasRelationship ?dte .
+			?dte dcterms:relation ?person ;
+                 rism:hasRole relators:dte .
+		    ?group a dcterms:type ;
+       			rdf:value ?source_type .
+        ?copy rism:hasHoldingInstitution ?institution .
+        ?institution rdfs:label ?iName .
+        ?person rdfs:label ?pName .
+        ?person a rism:Person .
+        #FILTER(STR(?source_type) = "Autograph manuscript")
+    }
+    GROUP BY ?person ?institution ?pName ?iName
+    HAVING(?count1)
+    ORDER BY ?person
+}
+GROUP BY ?person ?pName
+HAVING(?count > 1)
+ORDER BY DESC(?count)

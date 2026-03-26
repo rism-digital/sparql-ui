@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Linked RISM SPARQL UI</title>
+    <meta name="description" content="SPARQL query UI for linked.rism.io" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="https://esm.sh/@sib-swiss/sparql-editor@0.2.14"></script>
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body class="sidebar-open">
+    <header class="app-header">
+      <h1>Linked RISM SPARQL Query UI</h1>
+      <button id="toggleSidebarBtn" class="btn" type="button" aria-expanded="true" aria-controls="examplesSidebar">
+        Hide examples
+      </button>
+    </header>
+
+    <main class="app-main">
+      <section class="editor-section" aria-label="SPARQL editor">
+        <sparql-editor id="sparqlEditor" endpoint="https://linked.rism.io/api"></sparql-editor>
+      </section>
+
+      <aside id="examplesSidebar" class="examples-sidebar" aria-label="SPARQL examples">
+        <h2>Examples</h2>
+        <div id="examplesStatus" class="examples-status" role="status">Loading examples...</div>
+        <div id="examplesList" class="examples-list"></div>
+      </aside>
+    </main>
+  </body>
+</html>

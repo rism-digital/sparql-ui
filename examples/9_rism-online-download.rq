@@ -1,0 +1,77 @@
+# Title: List similar to RISM Online download
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
+PREFIX rism:   <https://rism.online/api/v1#>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT
+  ?url
+  ?title
+  ?source_type
+  ?content_type
+  ?record_type
+  (GROUP_CONCAT(DISTINCT ?date_statement; separator="; ") AS ?date_statements)
+  ?creator_author
+  (GROUP_CONCAT(DISTINCT ?other_contrib; separator="; ") AS ?other_contributors)
+WHERE {
+  # Add some filters here
+  #
+
+  ?url a rism:Source .
+
+  # title (prefer @en if present)
+  OPTIONAL { ?url rdfs:label ?title_en FILTER(LANG(?title_en) = "en") }
+  OPTIONAL { ?url rdfs:label ?title_any }
+  BIND(COALESCE(?title_en, ?title_any) AS ?title)
+
+  # record_type (in your example you want "Collection"; map this however your model defines it)
+  # Here we derive it from "hasSourceItem" = it contains parts => treat as "Collection".
+  BIND(IF(EXISTS { ?url rism:hasSourceItem ?_part }, "Collection", "Item") AS ?record_type)
+
+  # date statements
+  OPTIONAL {
+    ?url rism:hasDates ?dates .
+    OPTIONAL { ?dates rism:dateStatement ?date_statement }
+  }
+
+  # creator/author label
+  OPTIONAL {
+    ?url dcterms:creator ?creator .
+    OPTIONAL { ?creator rdfs:label ?creator_label }
+  }
+  BIND(COALESCE(?creator_label, "") AS ?creator_author)
+
+  # source_type + content_type from material group summaries
+  OPTIONAL {
+    ?url rism:hasMaterialGroup ?mg .
+    ?mg rism:hasSummary ?sumType .
+    ?sumType a dcterms:type ;
+            rdf:value ?source_type .
+  }
+  OPTIONAL {
+    ?url rism:hasMaterialGroup ?mg2 .
+    ?mg2 rism:hasSummary ?sumContent .
+    ?sumContent rdfs:label ?ctLabel ;
+                rdf:value ?content_type .
+    FILTER(LANG(?ctLabel) = "en" && STR(?ctLabel) = "Content type")
+  }
+
+  # other contributors: creator + relationships (exclude duplicates if you want)
+  {
+    # include creator as contributor (matches your desired output)
+    BIND(COALESCE(?creator_label, "") AS ?other_contrib)
+  }
+  UNION
+  {
+    ?url rism:hasRelationship ?rel .
+    ?rel dcterms:relation ?person .
+    OPTIONAL { ?person rdfs:label ?person_label }
+    BIND(COALESCE(?person_label, "") AS ?other_contrib)
+  }
+}
+GROUP BY
+  ?url ?title ?source_type ?content_type ?record_type ?creator_author
+LIMIT 100000

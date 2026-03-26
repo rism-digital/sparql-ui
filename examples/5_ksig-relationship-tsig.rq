@@ -1,0 +1,40 @@
+# Title: Analysis of key signatures and their relationship to time signatures
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX pmo: <http://performedmusicontology.org/ontology/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
+PREFIX schemaorg: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT
+	?keysig (COUNT(?keysig) as ?total)
+	(COUNT(?binaryK) as ?binary)
+	((ROUND(?binary / ?total * 100) / 100) as ?br)
+	(COUNT(?ternaryK) as ?ternary)
+	((ROUND(?ternary / ?total * 100) / 100) as ?tr)
+	(COUNT(?compoundK) as ?compound)
+	((ROUND(?compound / ?total * 100) / 100) as ?cr)
+WHERE {
+    ?source rism:hasIncipit ?incipit ;
+            rdfs:label ?title .
+    ?incipit a rism:Incipit ;
+        	 rism:hasPAEKeysig ?keysigRaw ;
+    		 rism:hasPAETimesig ?timesig .
+    BIND(REPLACE(STR(?keysigRaw), "\\\\[|\\\\]", "") AS ?keysig) .
+    OPTIONAL {
+	    VALUES ?binaryK { "c" "c/" "4/4" "2/4" "2/2" "4/2" }
+        BIND(?binaryK as ?timesig) .
+    }
+    OPTIONAL {
+	    VALUES ?ternaryK { "3/4" "3/8" "3/2" }
+        BIND(?ternaryK as ?timesig) .
+    }
+    OPTIONAL {
+	    VALUES ?compoundK { "6/8" "12/8" "6/4" }
+        BIND(?compoundK as ?timesig) .
+    }
+    #FILTER(STRSTARTS(STR(?title), "Dance"))
+}
+GROUP BY ?keysig
+ORDER BY DESC(?total)
