@@ -17,6 +17,7 @@ WHERE {
     ?creator dcterms:relation ?composer_id ;
                rism:hasRole relators:cre .
 
+    # Filter out the Anonymous person.
     FILTER(?composer_id != <https://rism.online/people/30004985>)
 
     ?composer_id rdfs:label ?composer .
