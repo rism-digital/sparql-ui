@@ -23,17 +23,27 @@ body {
 .app-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
   padding: 0.6rem 0.75rem;
   border-bottom: 1px solid var(--border);
   background: var(--panel);
 }
 
+.app-header img {
+  display: block;
+  height: 4rem;
+  width: auto;
+}
+
 .app-header h1 {
   margin: 0;
   font-size: 1rem;
   font-weight: 650;
+}
+
+.app-header #toggleSidebarBtn {
+  margin-left: auto;
 }
 
 .app-main {
