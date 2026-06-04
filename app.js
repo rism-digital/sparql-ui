@@ -1,8 +1,35 @@
 const EXAMPLES_JSON_PATH = "./examples.json";
 const ENDPOINT_URL = "https://linked.rism.io/api";
 const PAGE_SIZE = 100;
+const DATASET_STATS = [
+  {
+    key: "triples",
+    query: "SELECT (COUNT(*) AS ?count) WHERE { ?s ?p ?o }",
+  },
+  {
+    key: "subjects",
+    query: "SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE { ?s ?p ?o }",
+  },
+  {
+    key: "predicates",
+    query: "SELECT (COUNT(DISTINCT ?p) AS ?count) WHERE { ?s ?p ?o }",
+  },
+  {
+    key: "objects",
+    query: "SELECT (COUNT(DISTINCT ?o) AS ?count) WHERE { ?s ?p ?o }",
+  },
+];
 
 const toggleBtn = document.getElementById("toggleSidebarBtn");
+const datasetInfoToggleBtn = document.getElementById("datasetInfoToggle");
+const datasetInfoContentEl = document.getElementById("datasetInfoContent");
+const datasetStatsStatusEl = document.getElementById("datasetStatsStatus");
+const statValueEls = {
+  triples: document.getElementById("triplesStat"),
+  subjects: document.getElementById("subjectsStat"),
+  predicates: document.getElementById("predicatesStat"),
+  objects: document.getElementById("objectsStat"),
+};
 const examplesStatusEl = document.getElementById("examplesStatus");
 const listEl = document.getElementById("examplesList");
 const yasguiRootEl = document.getElementById("yasgui");
@@ -25,8 +52,14 @@ toggleBtn.addEventListener("click", () => {
   const isOpen = document.body.classList.contains("sidebar-open");
   document.body.classList.toggle("sidebar-open", !isOpen);
   document.body.classList.toggle("sidebar-collapsed", isOpen);
-  toggleBtn.textContent = isOpen ? "Show examples" : "Hide examples";
+  toggleBtn.textContent = isOpen ? "Show sidebar" : "Hide sidebar";
   toggleBtn.setAttribute("aria-expanded", String(!isOpen));
+});
+
+datasetInfoToggleBtn.addEventListener("click", () => {
+  const isExpanded = datasetInfoToggleBtn.getAttribute("aria-expanded") === "true";
+  datasetInfoToggleBtn.setAttribute("aria-expanded", String(!isExpanded));
+  datasetInfoContentEl.hidden = isExpanded;
 });
 
 prevPageBtn.addEventListener("click", () => {
@@ -45,6 +78,56 @@ nextPageBtn.addEventListener("click", () => {
 
 function setExamplesStatus(message) {
   examplesStatusEl.textContent = message;
+}
+
+function formatStatValue(value) {
+  const numberValue = Number(value);
+  if (!Number.isFinite(numberValue)) return value;
+  return new Intl.NumberFormat().format(numberValue);
+}
+
+async function fetchSparqlCount(query) {
+  const body = new URLSearchParams({query});
+  const response = await fetch(ENDPOINT_URL, {
+    method: "POST",
+    headers: {
+      Accept: "application/sparql-results+json",
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body,
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+
+  const data = await response.json();
+  const value = data?.results?.bindings?.[0]?.count?.value;
+  if (value === undefined) {
+    throw new Error("Missing count value");
+  }
+  return value;
+}
+
+async function loadDatasetStats() {
+  datasetStatsStatusEl.textContent = "Loading statistics...";
+
+  try {
+    const results = await Promise.all(
+      DATASET_STATS.map(async stat => ({
+        key: stat.key,
+        value: await fetchSparqlCount(stat.query),
+      }))
+    );
+
+    results.forEach(result => {
+      const element = statValueEls[result.key];
+      if (element) element.textContent = formatStatValue(result.value);
+    });
+    datasetStatsStatusEl.textContent = `Statistics for ${ENDPOINT_URL}.`;
+  } catch (error) {
+    datasetStatsStatusEl.textContent = `Could not load statistics (${error.message}).`;
+  }
 }
 
 function truncatePreview(text) {
@@ -391,6 +474,7 @@ function initYasgui() {
 
 async function init() {
   initYasgui();
+  void loadDatasetStats();
   await loadExamples();
 }
 

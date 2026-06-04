@@ -14,7 +14,7 @@
     <header class="app-header">
       <h1>Linked RISM SPARQL Query UI</h1>
       <button id="toggleSidebarBtn" class="btn" type="button" aria-expanded="true" aria-controls="examplesSidebar">
-        Hide examples
+        Hide sidebar
       </button>
     </header>
 
@@ -32,6 +32,39 @@
       </section>
 
       <aside id="examplesSidebar" class="examples-sidebar" aria-label="SPARQL examples">
+        <section class="dataset-info" aria-labelledby="datasetInfoTitle">
+          <button
+            id="datasetInfoToggle"
+            class="dataset-info-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="datasetInfoContent"
+          >
+            <span id="datasetInfoTitle">Dataset Info</span>
+            <span class="dataset-info-caret" aria-hidden="true">▾</span>
+          </button>
+          <div id="datasetInfoContent" class="dataset-info-content">
+            <div id="datasetStatsStatus" class="dataset-stats-status" role="status">Loading statistics...</div>
+            <dl class="dataset-stats" aria-label="Linked RISM dataset statistics">
+              <div class="dataset-stat">
+                <dt>Triples</dt>
+                <dd id="triplesStat">...</dd>
+              </div>
+              <div class="dataset-stat">
+                <dt>Subjects</dt>
+                <dd id="subjectsStat">...</dd>
+              </div>
+              <div class="dataset-stat">
+                <dt>Predicates</dt>
+                <dd id="predicatesStat">...</dd>
+              </div>
+              <div class="dataset-stat">
+                <dt>Objects</dt>
+                <dd id="objectsStat">...</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
         <h2>Examples</h2>
         <div id="examplesStatus" class="examples-status" role="status">Loading examples...</div>
         <div id="examplesList" class="examples-list"></div>
