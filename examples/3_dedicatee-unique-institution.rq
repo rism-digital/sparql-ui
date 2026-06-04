@@ -11,17 +11,19 @@ SELECT
     (COUNT(DISTINCT ?institution) AS ?count)
 WHERE {
     ?source a rism:Source ;
-        rism:materialGroups/rism:hasMaterialGroup ?materialGroup ;
-        rism:holdings/rism:hasHolding ?copy .
+            rism:holdings/rism:hasHolding ?copy .
 
-    ?materialGroup rism:hasSummary ?group ;
-               rism:relationships/rism:hasRelationship ?dte .
+    {
+      ?source rism:relationships/rism:hasRelationship ?dte .
+    }
+    UNION
+    {
+      ?source rism:materialGroups/rism:hasMaterialGroup/
+              rism:relationships/rism:hasRelationship ?dte .
+    }
 
     ?dte dcterms:relation ?person ;
-        rism:hasRole relators:dte .
-
-    ?group a dcterms:type ;
-           rdf:value ?source_type .
+         rism:hasRole relators:dte .
 
     ?copy rism:hasHoldingInstitution ?institution .
 
@@ -29,7 +31,6 @@ WHERE {
             rdfs:label ?pName .
 
     FILTER(LANG(?pName) = "none")
-    # FILTER(?source_type = "Autograph manuscript"@en)
 }
 GROUP BY ?person ?pName
 HAVING(COUNT(DISTINCT ?institution) > 1)
