@@ -4,20 +4,26 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?source ?composer ?title ?from ?to WHERE {
-?source a rism:Source ;
-        dcterms:creator ?creator ;
-        rdfs:label ?title ;
-        rism:hasDates [
-          rism:earliestDate ?from ;
-          rism:latestDate ?to
-        ] .
+SELECT
+    ?source
+    ?composer
+    ?title
+    ?from
+    ?to
+WHERE {
+    ?source a rism:Source ;
+            dcterms:creator ?creator ;
+            rdfs:label ?title ;
+            rism:hasDates [
+              rism:earliestDate ?from ;
+              rism:latestDate ?to
+            ] .
 
-?creator dcterms:relation ?composer_id ;
-         rism:hasRole relators:cre .
+    ?creator dcterms:relation ?composer_id ;
+             rism:hasRole relators:cre .
 
-?composer_id rdfs:label ?composer .
+    ?composer_id rdfs:label ?composer .
 
-FILTER(LANG(?composer) = "none")
-FILTER(LANG(?title) = "en")
+    FILTER(LANG(?composer) = "none")
+    FILTER(LANG(?title) = "en")
 }

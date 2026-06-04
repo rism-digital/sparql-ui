@@ -5,29 +5,31 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?person (?pName AS ?name) (COUNT(DISTINCT ?institution) AS ?count)
+SELECT
+    ?person
+    (?pName AS ?name)
+    (COUNT(DISTINCT ?institution) AS ?count)
 WHERE {
-?source a rism:Source ;
+    ?source a rism:Source ;
         rism:materialGroups/rism:hasMaterialGroup ?materialGroup ;
         rism:holdings/rism:hasHolding ?copy .
 
-?materialGroup rism:hasSummary ?group ;
+    ?materialGroup rism:hasSummary ?group ;
                rism:relationships/rism:hasRelationship ?dte .
 
-?dte dcterms:relation ?person ;
-     rism:hasRole relators:dte .
+    ?dte dcterms:relation ?person ;
+        rism:hasRole relators:dte .
 
-?group a dcterms:type ;
-       rdf:value ?source_type .
+    ?group a dcterms:type ;
+           rdf:value ?source_type .
 
-?copy rism:hasHoldingInstitution ?institution .
+    ?copy rism:hasHoldingInstitution ?institution .
 
-?person a rism:Person ;
-        rdfs:label ?pName .
+    ?person a rism:Person ;
+            rdfs:label ?pName .
 
-FILTER(LANG(?pName) = "none")
-
-# FILTER(?source_type = "Autograph manuscript"@en)
+    FILTER(LANG(?pName) = "none")
+    # FILTER(?source_type = "Autograph manuscript"@en)
 }
 GROUP BY ?person ?pName
 HAVING(COUNT(DISTINCT ?institution) > 1)

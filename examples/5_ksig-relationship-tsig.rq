@@ -1,26 +1,29 @@
 # Title: Analysis of key signatures and their relationship to time signatures
 PREFIX rism: <https://rism.online/api/v1#>
 
-SELECT ?keysig ?meterClass (COUNT(?incipit) AS ?count)
+SELECT
+    ?keysig
+    ?meterClass
+    (COUNT(?incipit) AS ?count)
 WHERE {
-VALUES (?timesig ?meterClass) {
-  ("c"    "binary")
-  ("c/"   "binary")
-  ("4/4"  "binary")
-  ("2/4"  "binary")
-  ("2/2"  "binary")
-  ("4/2"  "binary")
-  ("3/4"  "ternary")
-  ("3/8"  "ternary")
-  ("3/2"  "ternary")
-  ("6/8"  "compound")
-  ("12/8" "compound")
-  ("6/4"  "compound")
-}
+    VALUES (?timesig ?meterClass) {
+      ("c"    "binary")
+      ("c/"   "binary")
+      ("4/4"  "binary")
+      ("2/4"  "binary")
+      ("2/2"  "binary")
+      ("4/2"  "binary")
+      ("3/4"  "ternary")
+      ("3/8"  "ternary")
+      ("3/2"  "ternary")
+      ("6/8"  "compound")
+      ("12/8" "compound")
+      ("6/4"  "compound")
+    }
 
-?incipit a rism:Incipit ;
-         rism:hasPAEKeysig ?keysig ;
-         rism:hasPAETimesig ?timesig .
+    ?incipit a rism:Incipit ;
+             rism:hasPAEKeysig ?keysig ;
+             rism:hasPAETimesig ?timesig .
 }
 GROUP BY ?keysig ?meterClass
 ORDER BY DESC(?count)
