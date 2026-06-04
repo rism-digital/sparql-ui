@@ -1,6 +1,6 @@
 # Linked RISM SPARQL UI
 
-Simple static SPARQL query page using `@sib-swiss/sparql-editor` and a custom examples sidebar.
+Simple static SPARQL query page using plain `YASGUI` and a custom examples sidebar.
 
 ## Endpoint
 
@@ -38,7 +38,17 @@ Then open `http://localhost:8000`.
 
 ## Notes
 
-- This implementation intentionally does **not** use the `examples-repository` feature from `sparql-editor`.
+- The page uses plain YASGUI (not `@sib-swiss/sparql-editor`).
+- SPARQL queries are sent using HTTP `POST`.
+- `SELECT` queries without explicit `LIMIT`/`OFFSET` are server-paged with `LIMIT 100 OFFSET n`.
+- `CONSTRUCT` queries without explicit `LIMIT` get `LIMIT 100` automatically.
+- If a query already includes `LIMIT` or `OFFSET`, it is sent unchanged.
 - Sidebar actions:
-  - `Load`: inserts query into the editor as a new tab.
+  - `Load`: inserts query into the editor (new tab when supported by current YASGUI API).
   - `Copy`: copies query text to clipboard.
+
+## Generating a void file:
+
+```
+java -jar void-generator-0.19-uber.jar -r "https://linked.rism.io/api" -p "https://linked.rism.io/api" --void-file void-rism.ttl --iri-of-void 'https://linked.rism.io/.well-known/void#' -g "http://linked.rism.io/" --optimize-for=Qlever
+```

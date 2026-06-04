@@ -52,10 +52,56 @@ body {
   min-width: 0;
 }
 
-.editor-section sparql-editor {
+.editor-section #yasgui {
   display: block;
   width: 100%;
   min-height: calc(100vh - 90px);
+}
+
+.yasr-image-cell {
+  display: flex;
+  align-items: center;
+  min-height: 5rem;
+}
+
+.yasr-image-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.yasr-result-image {
+  display: block;
+  max-width: 8rem;
+  max-height: 6rem;
+  object-fit: contain;
+}
+
+.query-controls {
+  margin-top: 0.3rem;
+  padding-top: 0.2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.query-mode-status {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.query-pager {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.page-indicator {
+  font-size: 0.78rem;
+  min-width: 4rem;
+  text-align: center;
+  color: var(--muted);
 }
 
 .examples-sidebar {
@@ -149,6 +195,11 @@ body.sidebar-collapsed .examples-sidebar {
     grid-template-columns: 1fr;
     gap: 0;
     padding: 0;
+  }
+
+  .query-controls {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .examples-sidebar {

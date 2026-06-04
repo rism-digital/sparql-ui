@@ -1,9 +1,25 @@
 const EXAMPLES_JSON_PATH = "./examples.json";
+const ENDPOINT_URL = "https://linked.rism.io/api";
+const PAGE_SIZE = 100;
 
 const toggleBtn = document.getElementById("toggleSidebarBtn");
-const statusEl = document.getElementById("examplesStatus");
+const examplesStatusEl = document.getElementById("examplesStatus");
 const listEl = document.getElementById("examplesList");
-const editorEl = document.getElementById("sparqlEditor");
+const yasguiRootEl = document.getElementById("yasgui");
+const prevPageBtn = document.getElementById("prevPageBtn");
+const nextPageBtn = document.getElementById("nextPageBtn");
+const pageIndicatorEl = document.getElementById("pageIndicator");
+const queryModeStatusEl = document.getElementById("queryModeStatus");
+
+let yasgui = null;
+const pagingState = {
+  currentOffset: 0,
+  pageSize: PAGE_SIZE,
+  managedPagingEnabled: false,
+  manualLimitDetected: false,
+  lastQueryFingerprint: "",
+  lastQueryType: "",
+};
 
 toggleBtn.addEventListener("click", () => {
   const isOpen = document.body.classList.contains("sidebar-open");
@@ -13,8 +29,22 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.setAttribute("aria-expanded", String(!isOpen));
 });
 
-function setStatus(message) {
-  statusEl.textContent = message;
+prevPageBtn.addEventListener("click", () => {
+  if (!pagingState.managedPagingEnabled || pagingState.currentOffset === 0) return;
+  pagingState.currentOffset = Math.max(0, pagingState.currentOffset - pagingState.pageSize);
+  updatePagingUi();
+  rerunActiveQuery();
+});
+
+nextPageBtn.addEventListener("click", () => {
+  if (!pagingState.managedPagingEnabled) return;
+  pagingState.currentOffset += pagingState.pageSize;
+  updatePagingUi();
+  rerunActiveQuery();
+});
+
+function setExamplesStatus(message) {
+  examplesStatusEl.textContent = message;
 }
 
 function truncatePreview(text) {
@@ -44,31 +74,165 @@ async function copyQuery(example) {
   try {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       await navigator.clipboard.writeText(example.query);
-      setStatus(`Copied: ${example.title}`);
+      setExamplesStatus(`Copied: ${example.title}`);
       return;
     }
     const copied = fallbackCopy(example.query);
-    setStatus(copied ? `Copied: ${example.title}` : `Copy failed: ${example.title}`);
+    setExamplesStatus(copied ? `Copied: ${example.title}` : `Copy failed: ${example.title}`);
   } catch {
-    setStatus(`Copy failed: ${example.title}`);
+    setExamplesStatus(`Copy failed: ${example.title}`);
   }
 }
 
-function loadQuery(example) {
-  if (typeof editorEl.addTab === "function") {
-    editorEl.addTab(example.query, example.title);
-    setStatus(`Loaded: ${example.title}`);
+function getActiveYasqe() {
+  return yasgui?.getTab?.()?.getYasqe?.() || null;
+}
+
+function normalizeQuery(query) {
+  return query.replace(/\s+/g, " ").trim();
+}
+
+function hasExplicitLimitOrOffset(query) {
+  return /\bLIMIT\s+\d+\b/i.test(query) || /\bOFFSET\s+\d+\b/i.test(query);
+}
+
+function syncPagingStateFromEditor() {
+  const yasqe = getActiveYasqe();
+  if (!yasqe) {
+    pagingState.managedPagingEnabled = false;
+    pagingState.manualLimitDetected = false;
+    pagingState.lastQueryType = "";
+    updatePagingUi();
     return;
   }
 
-  const yasqe = editorEl?.yasgui?.getTab?.()?.getYasqe?.();
+  const rawQuery = yasqe.getValue?.() || "";
+  const queryFingerprint = normalizeQuery(rawQuery);
+  const queryType = (yasqe.getQueryType?.() || "").toUpperCase();
+  const hasManualLimit = hasExplicitLimitOrOffset(rawQuery);
+
+  if (queryFingerprint !== pagingState.lastQueryFingerprint) {
+    pagingState.currentOffset = 0;
+    pagingState.lastQueryFingerprint = queryFingerprint;
+  }
+
+  pagingState.lastQueryType = queryType;
+  pagingState.manualLimitDetected = queryType === "SELECT" && hasManualLimit;
+  pagingState.managedPagingEnabled = queryType === "SELECT" && !hasManualLimit;
+  updatePagingUi();
+}
+
+function updatePagingUi() {
+  const pageNumber = Math.floor(pagingState.currentOffset / pagingState.pageSize) + 1;
+  pageIndicatorEl.textContent = `Page ${pageNumber}`;
+
+  prevPageBtn.disabled = !pagingState.managedPagingEnabled || pagingState.currentOffset === 0;
+  nextPageBtn.disabled = !pagingState.managedPagingEnabled;
+
+  if (pagingState.lastQueryType === "SELECT" && pagingState.managedPagingEnabled) {
+    queryModeStatusEl.textContent = `POST mode active. Server paging LIMIT ${pagingState.pageSize}, OFFSET ${pagingState.currentOffset}.`;
+    return;
+  }
+  if (pagingState.manualLimitDetected) {
+    queryModeStatusEl.textContent = "POST mode active. Manual LIMIT/OFFSET detected; app paging is disabled.";
+    return;
+  }
+  if (pagingState.lastQueryType === "CONSTRUCT") {
+    queryModeStatusEl.textContent = `POST mode active. Auto LIMIT ${pagingState.pageSize} applied for CONSTRUCT when missing.`;
+    return;
+  }
+  if (pagingState.lastQueryType) {
+    queryModeStatusEl.textContent = "POST mode active.";
+    return;
+  }
+  queryModeStatusEl.textContent = "POST mode active. Waiting for query.";
+}
+
+function rewriteQueryForRequest(yasqe) {
+  const rawQuery = yasqe.getValue?.() || "";
+  const queryType = (yasqe.getQueryType?.() || "").toUpperCase();
+  const queryFingerprint = normalizeQuery(rawQuery);
+  const hasManualLimit = hasExplicitLimitOrOffset(rawQuery);
+
+  if (queryFingerprint !== pagingState.lastQueryFingerprint) {
+    pagingState.currentOffset = 0;
+    pagingState.lastQueryFingerprint = queryFingerprint;
+  }
+
+  pagingState.lastQueryType = queryType;
+
+  if (queryType === "SELECT") {
+    if (hasManualLimit) {
+      pagingState.manualLimitDetected = true;
+      pagingState.managedPagingEnabled = false;
+      updatePagingUi();
+      return rawQuery;
+    }
+
+    pagingState.manualLimitDetected = false;
+    pagingState.managedPagingEnabled = true;
+    updatePagingUi();
+    return `${rawQuery.trim()}\nLIMIT ${pagingState.pageSize} OFFSET ${pagingState.currentOffset}`;
+  }
+
+  if (queryType === "CONSTRUCT") {
+    pagingState.manualLimitDetected = false;
+    pagingState.managedPagingEnabled = false;
+    updatePagingUi();
+    if (hasManualLimit) return rawQuery;
+    return `${rawQuery.trim()}\nLIMIT ${pagingState.pageSize}`;
+  }
+
+  pagingState.manualLimitDetected = false;
+  pagingState.managedPagingEnabled = false;
+  updatePagingUi();
+  return rawQuery;
+}
+
+function rerunActiveQuery() {
+  const yasqe = getActiveYasqe();
+  if (!yasqe || typeof yasqe.query !== "function") return;
+  yasqe.query().catch(() => {});
+}
+
+function loadQuery(example) {
+  if (!yasgui) {
+    setExamplesStatus(`Could not load "${example.title}" into the editor.`);
+    return;
+  }
+
+  pagingState.currentOffset = 0;
+  pagingState.lastQueryFingerprint = "";
+
+  const YasguiCtor = window.Yasgui;
+  if (
+    typeof yasgui.addTab === "function" &&
+    YasguiCtor?.Tab &&
+    typeof YasguiCtor.Tab.getDefaults === "function"
+  ) {
+    yasgui.addTab(true, {
+      ...YasguiCtor.Tab.getDefaults(),
+      name: example.title || "Example",
+      requestConfig: {
+        ...(yasgui.config?.requestConfig || {}),
+        endpoint: ENDPOINT_URL,
+      },
+      yasqe: {value: example.query},
+    });
+    syncPagingStateFromEditor();
+    setExamplesStatus(`Loaded: ${example.title}`);
+    return;
+  }
+
+  const yasqe = getActiveYasqe();
   if (yasqe && typeof yasqe.setValue === "function") {
     yasqe.setValue(example.query);
-    setStatus(`Loaded: ${example.title}`);
+    syncPagingStateFromEditor();
+    setExamplesStatus(`Loaded: ${example.title}`);
     return;
   }
 
-  setStatus(`Could not load "${example.title}" into the editor.`);
+  setExamplesStatus(`Could not load "${example.title}" into the editor.`);
 }
 
 function renderExamples(examples) {
@@ -122,19 +286,111 @@ async function loadExamples() {
       throw new Error("Invalid examples.json format");
     }
     if (examples.length === 0) {
-      setStatus("No examples found. Add files in examples/ and run scripts/compile-examples.sh.");
+      setExamplesStatus("No examples found. Add files in examples/ and run scripts/compile-examples.sh.");
       return;
     }
     renderExamples(examples);
-    setStatus(`${examples.length} example(s) loaded.`);
+    setExamplesStatus(`${examples.length} example(s) loaded.`);
   } catch (error) {
     listEl.innerHTML = "";
-    setStatus(`Failed to load examples (${error.message}). Build examples.json first.`);
+    setExamplesStatus(`Failed to load examples (${error.message}). Build examples.json first.`);
+  }
+}
+
+function bindYasqeChangeHandlers() {
+  const tab = yasgui?.getTab?.();
+  const yasqe = tab?.getYasqe?.();
+  if (!yasqe || typeof yasqe.on !== "function") return;
+
+  yasqe.on("change", () => {
+    syncPagingStateFromEditor();
+  });
+}
+
+function isRenderableImageUrl(value) {
+  if (typeof value !== "string") return false;
+
+  try {
+    const url = new URL(value);
+    if (url.protocol !== "http:" && url.protocol !== "https:") return false;
+    const pathname = url.pathname.toLowerCase();
+    return [".jpg", ".jpeg", ".png", ".gif", ".webp"].some(extension => pathname.endsWith(extension));
+  } catch {
+    return false;
+  }
+}
+
+function renderImageCell(cell, binding) {
+  if (!binding || binding.type !== "uri" || !isRenderableImageUrl(binding.value)) return;
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "yasr-image-cell";
+
+  const link = document.createElement("a");
+  link.className = "yasr-image-link";
+  link.href = binding.value;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+
+  const image = document.createElement("img");
+  image.className = "yasr-result-image";
+  image.src = binding.value;
+  image.alt = binding.value;
+  image.loading = "lazy";
+
+  link.appendChild(image);
+  wrapper.appendChild(link);
+  cell.replaceChildren(wrapper);
+}
+
+function initYasgui() {
+  if (!window.Yasgui) {
+    throw new Error("YASGUI script did not load.");
+  }
+
+  if (window.Yasr?.plugins?.table?.defaults?.tableConfig) {
+    window.Yasr.plugins.table.defaults.tableConfig = {
+      ...window.Yasr.plugins.table.defaults.tableConfig,
+      pageLength: PAGE_SIZE,
+      lengthChange: false,
+      paging: false,
+      info: false,
+      columnDefs: [
+        ...(window.Yasr.plugins.table.defaults.tableConfig.columnDefs || []),
+        {
+          targets: "_all",
+          createdCell: renderImageCell,
+        },
+      ],
+    };
+  }
+
+  yasgui = new window.Yasgui(yasguiRootEl, {
+    requestConfig: {
+      endpoint: ENDPOINT_URL,
+      method: "POST",
+      adjustQueryBeforeRequest: rewriteQueryForRequest,
+    },
+    copyEndpointOnNewTab: true,
+  });
+
+  bindYasqeChangeHandlers();
+  syncPagingStateFromEditor();
+
+  if (typeof yasgui.on === "function") {
+    yasgui.on("tabSelect", () => {
+      bindYasqeChangeHandlers();
+      syncPagingStateFromEditor();
+    });
+    yasgui.on("tabAdd", () => {
+      bindYasqeChangeHandlers();
+      syncPagingStateFromEditor();
+    });
   }
 }
 
 async function init() {
-  await customElements.whenDefined("sparql-editor");
+  initYasgui();
   await loadExamples();
 }
 

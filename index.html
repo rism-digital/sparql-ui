@@ -6,7 +6,8 @@
     <title>Linked RISM SPARQL UI</title>
     <meta name="description" content="SPARQL query UI for linked.rism.io" />
     <link rel="stylesheet" href="./styles.css" />
-    <script type="module" src="https://esm.sh/@sib-swiss/sparql-editor@0.2.14"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@triply/yasgui/build/yasgui.min.css" />
+    <script src="https://unpkg.com/@triply/yasgui/build/yasgui.min.js"></script>
     <script type="module" src="./app.js"></script>
   </head>
   <body class="sidebar-open">
@@ -19,7 +20,15 @@
 
     <main class="app-main">
       <section class="editor-section" aria-label="SPARQL editor">
-        <sparql-editor id="sparqlEditor" endpoint="https://linked.rism.io/api" add-limit="100"></sparql-editor>
+        <div id="yasgui"></div>
+        <div class="query-controls" aria-label="Query request controls">
+          <span id="queryModeStatus" class="query-mode-status">POST mode active. Waiting for query.</span>
+          <div class="query-pager">
+            <button id="prevPageBtn" class="btn" type="button" disabled>Previous</button>
+            <span id="pageIndicator" class="page-indicator">Page 1</span>
+            <button id="nextPageBtn" class="btn" type="button" disabled>Next</button>
+          </div>
+        </div>
       </section>
 
       <aside id="examplesSidebar" class="examples-sidebar" aria-label="SPARQL examples">
