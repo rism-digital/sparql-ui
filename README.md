@@ -36,6 +36,58 @@ python -m http.server
 
 Then open `http://localhost:8000`.
 
+## Natural language query prototype
+
+The natural language query page is available at:
+
+- `query.html`
+
+It expects a separate local Go JSON API. The Go server does not serve static files; it only talks to the LLM provider and returns generated SPARQL as JSON.
+
+Configure the backend:
+
+```bash
+export INFOMANIAK_API_TOKEN="..."
+export INFOMANIAK_PRODUCT_ID="..."
+export INFOMANIAK_MODEL="moonshotai/Kimi-K2.6"
+```
+
+Alternatively, create a local `.env` file in the project root:
+
+```text
+INFOMANIAK_API_TOKEN=...
+INFOMANIAK_PRODUCT_ID=...
+INFOMANIAK_MODEL=moonshotai/Kimi-K2.6
+INFOMANIAK_REASONING_EFFORT=none
+```
+
+Values already present in the process environment take precedence over `.env`.
+
+Run the backend:
+
+```bash
+go run .
+```
+
+Defaults:
+
+- backend URL: `http://127.0.0.1:8787`
+- SPARQL endpoint: `https://linked.rism.io/api`
+- prompt cache key: `linked-rism-nl2sparql-v1`
+
+Optional backend settings:
+
+- `NL2SPARQL_ADDR`: bind address, defaults to `127.0.0.1:8787`
+- `INFOMANIAK_REASONING_EFFORT`: defaults to `none`; keeps reasoning models from spending output on hidden reasoning instead of JSON content
+- `SPARQL_ENDPOINT`: endpoint included in prompts and optional validation
+- `PROMPT_TEMPLATE_PATH`: prompt template loaded on startup, defaults to `prompts/rism-nl2sparql.md`
+- `PROMPT_CACHE_KEY`: stable provider prompt-cache key
+- `MAX_REPAIR_RETRIES`: generation repair attempts, defaults to `2`
+- `DEFAULT_QUERY_LIMIT`: limit added to generated read queries, defaults to `100`
+- `ENABLE_ENDPOINT_VALIDATION=true`: additionally submit generated SPARQL to the endpoint for validation
+- `LOG_LEVEL=debug`: print detailed backend progress, provider status, response snippets, and parser diagnostics
+- `DEBUG_LLM=true`: include raw LLM content snippets in parse errors for local debugging
+
 ## Notes
 
 - The page uses plain YASGUI (not `@sib-swiss/sparql-editor`).

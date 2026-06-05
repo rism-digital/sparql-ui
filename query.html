@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Linked RISM Natural Language Query</title>
+    <meta name="description" content="Natural language SPARQL query generator for Linked RISM" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./query.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <img src="./images/logo.svg" alt="RISM Logo">
+      <h1>Linked RISM Natural Language Query</h1>
+      <a class="btn" href="./index.html">SPARQL UI</a>
+    </header>
+
+    <main class="nl-query-main">
+      <section class="nl-query-panel" aria-labelledby="instructionsTitle">
+        <div class="nl-query-heading">
+          <h2 id="instructionsTitle">Describe the query</h2>
+          <span id="apiStatus" class="nl-status" role="status">Backend: not checked</span>
+        </div>
+        <textarea
+          id="instructionsInput"
+          class="nl-instructions"
+          rows="7"
+          placeholder="Find sources by Mozart with titles and dates."
+        ></textarea>
+        <div class="nl-actions">
+          <button id="generateBtn" class="btn btn-primary" type="button">Generate SPARQL</button>
+          <button id="clearBtn" class="btn" type="button">Clear</button>
+        </div>
+        <ol id="progressList" class="nl-progress" aria-label="Query generation progress">
+          <li data-step="backend" class="pending">
+            <span>Backend</span>
+            <strong>Not checked</strong>
+          </li>
+          <li data-step="request" class="pending">
+            <span>Request</span>
+            <strong>Waiting</strong>
+          </li>
+          <li data-step="llm" class="pending">
+            <span>LLM generation</span>
+            <strong>Waiting</strong>
+          </li>
+          <li data-step="validation" class="pending">
+            <span>Server validation</span>
+            <strong>Waiting</strong>
+          </li>
+          <li data-step="results" class="pending">
+            <span>SPARQL execution</span>
+            <strong>Waiting</strong>
+          </li>
+        </ol>
+      </section>
+
+      <section class="nl-query-panel" aria-labelledby="sparqlTitle">
+        <div class="nl-query-heading">
+          <h2 id="sparqlTitle">Generated SPARQL</h2>
+          <span id="generationStatus" class="nl-status" role="status">Waiting for instructions.</span>
+        </div>
+        <textarea id="sparqlOutput" class="nl-sparql" rows="16" spellcheck="false"></textarea>
+        <div class="nl-actions">
+          <button id="copyBtn" class="btn" type="button" disabled>Copy</button>
+          <button id="runBtn" class="btn btn-primary" type="button" disabled>Run against Linked RISM</button>
+        </div>
+      </section>
+
+      <section class="nl-query-panel" aria-labelledby="notesTitle">
+        <h2 id="notesTitle">Generation notes</h2>
+        <p id="explanationText" class="nl-note-text">No query generated yet.</p>
+        <div class="nl-note-grid">
+          <div>
+            <h3>Assumptions</h3>
+            <ul id="assumptionsList" class="nl-list"></ul>
+          </div>
+          <div>
+            <h3>Warnings</h3>
+            <ul id="warningsList" class="nl-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="nl-query-panel nl-results-panel" aria-labelledby="resultsTitle">
+        <div class="nl-query-heading">
+          <h2 id="resultsTitle">Results</h2>
+          <span id="resultsStatus" class="nl-status" role="status">No query run yet.</span>
+        </div>
+        <div id="resultsTableWrap" class="nl-results-wrap"></div>
+      </section>
+    </main>
+  </body>
+</html>
