@@ -247,6 +247,58 @@ body {
   color: #b42318;
 }
 
+.nl-progress li.retry::before {
+  background: #b54708;
+}
+
+.nl-progress li.retry strong {
+  color: #b54708;
+}
+
+.nl-stream-panel {
+  margin-top: 0.65rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.55rem;
+}
+
+.nl-stream-list {
+  background: #fbfcfe;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  list-style: none;
+  margin: 0;
+  max-height: 13rem;
+  overflow: auto;
+  padding: 0.4rem;
+}
+
+.nl-stream-list li {
+  border-bottom: 1px solid #edf1f5;
+  padding-bottom: 0.25rem;
+}
+
+.nl-stream-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.nl-stream-time {
+  color: var(--text);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.72rem;
+  margin-right: 0.35rem;
+}
+
+.nl-stream-tool {
+  color: var(--accent);
+  font-weight: 650;
+  margin-right: 0.35rem;
+}
+
 .nl-note-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

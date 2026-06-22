@@ -53,6 +53,15 @@
             <strong>Waiting</strong>
           </li>
         </ol>
+        <div class="nl-stream-panel" aria-labelledby="streamTitle">
+          <div class="nl-query-heading">
+            <h3 id="streamTitle">Generation stream</h3>
+            <span id="streamStatus" class="nl-status" role="status">Not connected</span>
+          </div>
+          <ol id="streamList" class="nl-stream-list" aria-live="polite">
+            <li>No streamed messages yet.</li>
+          </ol>
+        </div>
       </section>
 
       <section class="nl-query-panel" aria-labelledby="sparqlTitle">
@@ -78,6 +87,10 @@
           <div>
             <h3>Warnings</h3>
             <ul id="warningsList" class="nl-list"></ul>
+          </div>
+          <div>
+            <h3>Tool trace</h3>
+            <ul id="toolTraceList" class="nl-list"></ul>
           </div>
         </div>
       </section>

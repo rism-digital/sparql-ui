@@ -66,8 +66,11 @@ Values already present in the process environment take precedence over `.env`.
 Run the backend:
 
 ```bash
+cd server
 go run .
 ```
+
+You can also launch it from the repo root with `go run ./server`.
 
 Defaults:
 
@@ -80,13 +83,29 @@ Optional backend settings:
 - `NL2SPARQL_ADDR`: bind address, defaults to `127.0.0.1:8787`
 - `INFOMANIAK_REASONING_EFFORT`: defaults to `none`; keeps reasoning models from spending output on hidden reasoning instead of JSON content
 - `SPARQL_ENDPOINT`: endpoint included in prompts and optional validation
-- `PROMPT_TEMPLATE_PATH`: prompt template loaded on startup, defaults to `prompts/rism-nl2sparql.md`
+- `PROMPT_TEMPLATE_PATH`: prompt template loaded on startup, defaults to `prompts/rism-nl2sparql.md` and is resolved relative to the current working directory or its parent
 - `PROMPT_CACHE_KEY`: stable provider prompt-cache key
+- `RDF_EXAMPLES_DIR`: local RDF/example search directory, defaults to `rdf-examples` and is resolved relative to the current working directory or its parent
+- `ONTOLOGY_PATH`: RISM service ontology used for prompt context and ontology search, defaults to `rdf-examples/rism-service-ontology.ttl` and is resolved relative to the current working directory or its parent
+- `RG_PATH`: ripgrep executable path, defaults to `rg`
+- `MAX_TOOL_ITERATIONS`: maximum LLM tool-call rounds per generation attempt, defaults to `4`
+- `DISCOVERY_CACHE_TTL_SECONDS`: cache TTL for Linked RISM discovery tool results, defaults to `3600`
 - `MAX_REPAIR_RETRIES`: generation repair attempts, defaults to `2`
 - `DEFAULT_QUERY_LIMIT`: limit added to generated read queries, defaults to `100`
 - `ENABLE_ENDPOINT_VALIDATION=true`: additionally submit generated SPARQL to the endpoint for validation
 - `LOG_LEVEL=debug`: print detailed backend progress, provider status, response snippets, and parser diagnostics
 - `DEBUG_LLM=true`: include raw LLM content snippets in parse errors for local debugging
+
+The NL-to-SPARQL backend exposes a coding harness to the LLM with tools for:
+
+- searching `rdf-examples/` with ripgrep
+- searching the configured RISM service ontology for labels, comments, and `rism:queryPattern` annotations
+- reading a selected RDF example file
+- listing common Linked RISM predicates/classes
+- sampling predicates for a class or triples for a subject
+- validating draft SPARQL
+
+The local RDF search tool requires `rg` (ripgrep) to be installed, or `RG_PATH` must point to a compatible executable.
 
 ## Notes
 
