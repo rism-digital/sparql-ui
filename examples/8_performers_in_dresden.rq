@@ -1,0 +1,42 @@
+# Title: Performers listed in sources in the Dresden State Library that lack a first name (Credit: Alfredo Vitolo)
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT
+    ?person
+    (?pName AS ?performer_name)
+WHERE {
+    # 1. Official ID of the target library (example: Sächsische Landesbibliothek, Dresden)
+    BIND(<https://rism.online/institutions/30000042> AS ?library)
+    # 2. Link sources to the physical copies held by the specified library
+    ?source a rism:Source ;
+            rism:holdings/rism:hasHolding ?copy .
+    ?copy rism:hasHoldingInstitution ?library .
+    # 3. Retrieve relationships (either direct or nested within material groups)
+    {
+      ?source rism:relationships/rism:hasRelationship ?rel .
+    }
+    UNION
+    {
+      ?source rism:materialGroups/rism:hasMaterialGroup/
+              rism:relationships/rism:hasRelationship ?rel .
+    }
+    # 4. Filter strictly by the related person and the 'prf' (Performer) role.
+    # For the complete list of relation codes, visit: https://id.loc.gov/vocabulary/relators.html
+    # NOTE: Not all Library of Congress codes are used in RISM.
+    # Common active codes include: dte (Dedicatee), lbt (Librettist), fmo (Former owner) or scr (Scribe).
+    ?rel dcterms:relation ?person ;
+         rism:hasRole relators:prf .
+    # 5. Fetch the person's name and apply language tag filtering
+    ?person a rism:Person ;
+            rdfs:label ?pName .
+    FILTER(LANG(?pName) = "none")
+
+    # EXCLUSION CRITERION: Excludes records without a standard "Surname, Name" structure.
+    # To include all names, simply add a # at the beginning of the next line to comment it out:
+    FILTER(!CONTAINS(STR(?pName), ", "))
+}
+ORDER BY ?performer_name
+LIMIT 1000
