@@ -1,0 +1,141 @@
+# Title: Women composers by institution source count; top 5 composers shown
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX relators: <http://id.loc.gov/vocabulary/relators/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schemaorg: <https://schema.org/>
+
+SELECT ?institution ?siglum (SAMPLE(?rawInstitutionName) AS ?institutionName)
+     ?totalSourceCount
+     (GROUP_CONCAT(DISTINCT ?composerEntry; separator=" | ") AS ?topComposers)
+WHERE {
+{
+  SELECT ?institution ?siglum (COUNT(DISTINCT ?source) AS ?totalSourceCount)
+  WHERE {
+    ?source a rism:Source ;
+            dcterms:creator ?creator ;
+            rism:holdings/rism:hasHolding ?holding .
+
+    ?creator dcterms:relation ?composer ;
+             rism:hasRole relators:cre .
+
+    ?composer a rism:Person ;
+              schemaorg:gender "female" .
+
+    ?holding rism:hasHoldingInstitution ?institution .
+    ?institution rism:hasSiglum ?siglum .
+  }
+  GROUP BY ?institution ?siglum
+  ORDER BY DESC(?totalSourceCount) ?siglum
+  LIMIT 10
+}
+
+OPTIONAL {
+  ?institution rdfs:label ?rawInstitutionName .
+  FILTER(LANG(?rawInstitutionName) = "none")
+}
+
+{
+  SELECT ?institution ?rank
+         (CONCAT(STR(?rank), ". ", SAMPLE(?rawComposerName), " (", STR(?composerSourceCount), ")") AS ?composerEntry)
+  WHERE {
+    {
+      SELECT ?institution ?composer ?composerSourceCount
+             (COUNT(DISTINCT ?betterComposer) AS ?rank)
+      WHERE {
+        {
+          SELECT ?institution ?composer (COUNT(DISTINCT ?source) AS ?composerSourceCount)
+          WHERE {
+            {
+              SELECT ?institution
+              WHERE {
+                ?source a rism:Source ;
+                        dcterms:creator ?creator ;
+                        rism:holdings/rism:hasHolding ?holding .
+
+                ?creator dcterms:relation ?composer ;
+                         rism:hasRole relators:cre .
+
+                ?composer a rism:Person ;
+                          schemaorg:gender "female" .
+
+                ?holding rism:hasHoldingInstitution ?institution .
+              }
+              GROUP BY ?institution
+              ORDER BY DESC(COUNT(DISTINCT ?source)) STR(?institution)
+              LIMIT 10
+            }
+
+            ?source a rism:Source ;
+                    dcterms:creator ?creator ;
+                    rism:holdings/rism:hasHolding ?holding .
+
+            ?creator dcterms:relation ?composer ;
+                     rism:hasRole relators:cre .
+
+            ?composer a rism:Person ;
+                      schemaorg:gender "female" .
+
+            ?holding rism:hasHoldingInstitution ?institution .
+          }
+          GROUP BY ?institution ?composer
+        }
+
+        {
+          SELECT ?institution ?betterComposer (COUNT(DISTINCT ?betterSource) AS ?betterSourceCount)
+          WHERE {
+            {
+              SELECT ?institution
+              WHERE {
+                ?topSource a rism:Source ;
+                           dcterms:creator ?topCreator ;
+                           rism:holdings/rism:hasHolding ?topHolding .
+
+                ?topCreator dcterms:relation ?topComposer ;
+                            rism:hasRole relators:cre .
+
+                ?topComposer a rism:Person ;
+                             schemaorg:gender "female" .
+
+                ?topHolding rism:hasHoldingInstitution ?institution .
+              }
+              GROUP BY ?institution
+              ORDER BY DESC(COUNT(DISTINCT ?topSource)) STR(?institution)
+              LIMIT 10
+            }
+
+            ?betterSource a rism:Source ;
+                          dcterms:creator ?betterCreator ;
+                          rism:holdings/rism:hasHolding ?betterHolding .
+
+            ?betterCreator dcterms:relation ?betterComposer ;
+                           rism:hasRole relators:cre .
+
+            ?betterComposer a rism:Person ;
+                            schemaorg:gender "female" .
+
+            ?betterHolding rism:hasHoldingInstitution ?institution .
+          }
+          GROUP BY ?institution ?betterComposer
+        }
+
+        FILTER(
+          ?betterSourceCount > ?composerSourceCount ||
+          (?betterSourceCount = ?composerSourceCount && STR(?betterComposer) < STR(?composer))
+        )
+      }
+      GROUP BY ?institution ?composer ?composerSourceCount
+    }
+
+    FILTER(?rank <= 5)
+
+    ?composer rdfs:label ?rawComposerName .
+    FILTER(LANG(?rawComposerName) = "none")
+  }
+  GROUP BY ?institution ?rank ?composerSourceCount
+  ORDER BY ?institution ?rank
+}
+}
+GROUP BY ?institution ?siglum ?totalSourceCount
+ORDER BY DESC(?totalSourceCount) ?siglum
+LIMIT 10

@@ -18,6 +18,12 @@ Always include a LIMIT for SELECT, CONSTRUCT, and DESCRIBE queries.
 
 Use the Linked RISM endpoint vocabulary and patterns below.
 
+When the user explicitly allows multiple identifier strategies, model them as alternative match branches, usually with UNION.
+
+Do not require labels unless the user asked for them or they are needed for filtering, grouping, or presentation. Prefer OPTIONAL labels when they are helpful but not essential to the join logic.
+
+For institution aggregation queries, if duplicate institution labels would otherwise create multiple rows for the same institution, bind the raw label to a different variable such as ?rawName and project one display label with SAMPLE(?rawName) AS ?name. Use this only for institution labels in grouped or aggregated queries where any one display label is acceptable.
+
 You have access to SPARQL coding tools. Use them when the user's request depends on unfamiliar RDF paths, predicates, classes, sample records, or local RDF examples. Prefer checking the tools over guessing.
 
 If you write that you need to inspect RDF examples or triplestore patterns, you must call the appropriate tool in that same turn.
@@ -253,6 +259,28 @@ SELECT ?composer ?composer_id ?wiki_id ?picture WHERE {
   }
 }
 GROUP BY ?composer_id ?composer ?wiki_id ?picture
+LIMIT 100
+
+Example: institutions with corresponding Wikidata entries by either RISM ID or siglum
+PREFIX rism: <https://rism.online/api/v1#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT ?institution ?siglum (SAMPLE(?rawName) AS ?name) (SAMPLE(?wikiItem) AS ?wikidata) WHERE {
+  ?institution a rism:Institution ;
+               rism:hasSiglum ?siglum .
+  OPTIONAL {
+    ?institution rdfs:label ?rawName .
+    FILTER(LANG(?rawName) = "none")
+  }
+  BIND(REPLACE(STR(?institution), "^https?://[^/]+/", "") AS ?rismId)
+  SERVICE <https://query.wikidata.org/sparql> {
+    { ?wikiItem wdt:P5504 ?rismId . }
+    UNION
+    { ?wikiItem wdt:P11550 ?siglum . }
+  }
+}
+GROUP BY ?institution ?siglum
+ORDER BY ?siglum
 LIMIT 100
 
 Example: Sources where Marie Antoinette (https://rism.online/people/316282) is a dedicatee
