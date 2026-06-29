@@ -118,6 +118,24 @@ body {
   color: var(--muted);
 }
 
+.dataset-resources {
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+
+.dataset-resource-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.dataset-resource-link:hover,
+.dataset-resource-link:focus-visible {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
 .nl-query-main {
   display: grid;
   grid-template-columns: minmax(18rem, 0.9fr) minmax(26rem, 1.4fr);

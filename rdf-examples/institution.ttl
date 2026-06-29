@@ -1,0 +1,2226 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Lieu lié"@fr ,
+    "Related place"@en ,
+    "Ort"@de ,
+    "Luogo correlato"@it ,
+    "Powiązane miejsce"@pl ,
+    "Local relacionado"@pt ,
+    "Lugar relacionado"@es ;
+  .
+
+<https://rism.online/institutions/40012075>
+  a rism:Institution ;
+  rdfs:label "Georg Gerhard Nerlich, Liegnitz; Legnica"@none ;
+  rism:externalAuthorities <https://rism.online/institutions/40012075/external-authorities> ;
+  rism:hasCityName "Liegnitz; Legnica" ;
+  rism:hasCountryCodes "D" ;
+  rism:hasExternalAuthority
+    <https://rism.online/institutions/40012075/external-authorities/dnb1037523008> ,
+    <https://rism.online/institutions/40012075/external-authorities/viaf311323372> ;
+  rism:notes <https://rism.online/institutions/40012075/notes> ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "institutions/40012075"@none ;
+          rdfs:label
+            "RISM ID number"@en ,
+            "No. RISM"@fr ,
+            "Número de ID de RISM"@es ,
+            "RISM Dokumentnummer"@de ,
+            "RISM ID"@pl ,
+            "Número ID RISM"@pt ,
+            "Numero documento RISM"@it ;
+        ] ,
+        [
+          rdf:value "Liegnitz; Legnica"@none ;
+          rdfs:label
+            "Miejscowość"@pl ,
+            "Ville"@fr ,
+            "Ort"@de ,
+            "Città"@it ,
+            "Ciudad"@es ,
+            "Cidade"@pt ,
+            "City"@en ;
+        ] ,
+        [
+          rdf:value
+            "Alemanha"@pt ,
+            "Germany"@en ,
+            "Deutschland"@de ,
+            "Allemagne"@fr ,
+            "Niemcy"@pl ,
+            "Germania"@it ,
+            "Alemania"@es ;
+          rdfs:label
+            "Land"@de ,
+            "País"@es ,
+            "País"@pt ,
+            "Kraj"@pl ,
+            "Pays"@fr ,
+            "Paese"@it ,
+            "Country"@en ;
+        ] ,
+        [
+          rdf:value
+            "Editore"@it ,
+            "Institution"@en ,
+            "Printer"@en ,
+            "Drukarnia"@pl ,
+            "Wydawca"@pl ,
+            "Publisher"@en ,
+            "Impresor"@es ,
+            "Drucker"@de ,
+            "Stampatore"@it ,
+            "Verleger"@de ,
+            "Instituição"@pt ,
+            "Editeur"@fr ,
+            "Instytucja"@pl ,
+            "Institución"@es ,
+            "Impressor(a)"@pt ,
+            "Istituzione"@it ,
+            "Editor (publicador)/Editorial (publicadora)"@es ,
+            "Imprimeur"@fr ,
+            "Institution"@fr ,
+            "Körperschaft"@de ,
+            "Casa editora"@pt ;
+          rdfs:label
+            "Typ der Körperschaft"@de ,
+            "Type d'institution"@fr ,
+            "Tipo de institución"@es ,
+            "Tipo de instituição"@pt ,
+            "Rodzaj instytucji"@pl ,
+            "Type of institution"@en ,
+            "Tipo di istituzione"@it ;
+        ] ;
+      rism:sectionLabel
+        "Summary"@en ,
+        "Resumo"@pt ,
+        "Riassunto"@it ,
+        "Résumé"@fr ,
+        "Resumen"@es ,
+        "Podsumowanie"@pl ,
+        "Zusammenfassung"@de ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-10T09:35:09Z"^^xsd:dateTime ;
+          rdfs:label
+            "Date de création"@fr ,
+            "Criado em"@pt ,
+            "Fecha de creación"@es ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:08:22Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ostatnia modyfikacja"@pl ,
+            "Ultima modifica"@it ,
+            "Last modification"@en ,
+            "Fecha de modificación"@es ,
+            "Dernière modification"@fr ,
+            "Letzte Änderung"@de ,
+            "Última modificação"@pt ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/40012075/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/institutions/40012075/sources" ;
+    ] ;
+  rismrel:xp <https://rism.online/places/3900042> ;
+  schemaorg:sameAs
+    "https://d-nb.info/gnd/1037523008"^^xsd:anyURI ,
+    "https://viaf.org/viaf/311323372"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40012075/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Normdatenverweise"@de ,
+    "Riferimento autorità"@it ,
+    "Identyfikator innego standardu"@pl ,
+    "Other standard identifier"@en ,
+    "Otro identificador estándar"@es ,
+    "Outro identificador padronizado"@pt ,
+    "Référence d'authorité"@fr ;
+  rism:hasExternalAuthority
+    <https://rism.online/institutions/40012075/external-authorities/dnb1037523008> ,
+    <https://rism.online/institutions/40012075/external-authorities/viaf311323372> ;
+  .
+
+<https://rism.online/institutions/40012075/external-authorities/dnb1037523008>
+  a rism:ExternalAuthority ;
+  rdf:value "1037523008" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 1037523008"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityScheme "dnb" ;
+  rism:authorityUrl "https://d-nb.info/gnd/1037523008"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40012075/external-authorities/viaf311323372>
+  a rism:ExternalAuthority ;
+  rdf:value "311323372" ;
+  rdfs:label "Virtual Internet Authority File (VIAF): 311323372"@none ;
+  rism:authorityBase "https://viaf.org/viaf/"^^xsd:anyURI ;
+  rism:authorityScheme "viaf" ;
+  rism:authorityUrl "https://viaf.org/viaf/311323372"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40012075/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Referencias y notas"@es ,
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "Bibliografia e note"@it ,
+    "Literatur und Bemerkungen"@de ,
+    "References and notes"@en ,
+    "Odniesienia i uwagi"@pl ;
+  rism:hasNote
+    [
+      rdf:value "Wirkungsort: Liegnitz (1673-1677)"@none ;
+      rdfs:label
+        "History of institution"@en ,
+        "Historique de l'institution"@fr ,
+        "Historia instytucji"@pl ,
+        "Geschichte der Körperschaft"@de ,
+        "Storia dell'ente"@it ,
+        "História da instituição"@pt ,
+        "Historia de la institución"@es ;
+    ] ;
+  .
+
+<https://rism.online/institutions/40012075/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3900042> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relazioni"@it ,
+    "Relacionamentos"@pt ,
+    "Relaciones"@es ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relacje"@pl ,
+    "Beziehungen"@de ;
+  .
+
+<https://rism.online/places/3900042>
+  a rism:Place ;
+  rdfs:label "Legnica, Województwo dolnośląskie, Polska"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:now_in
+  rdf:value "now-in" ;
+  rdfs:label
+    "Now in"@en ,
+    "Maintenant à"@fr ,
+    "Ora in"@it ,
+    "Obecnie w …"@pl ,
+    "Heute in"@de ,
+    "Agora em"@pt ,
+    "Actualmente en"@es ;
+  .
+
+rismrel:xi
+  rdf:value "xi" ;
+  rdfs:label
+    "Powiązana instytucja"@pl ,
+    "Institution liée"@fr ,
+    "Related institution"@en ,
+    "In Beziehung stehende Körperschaft"@de ,
+    "Istituzione correlata"@it ,
+    "Instituição relacionada"@pt ,
+    "Institución relacionada"@es ;
+  .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Lieu lié"@fr ,
+    "Lugar relacionado"@es ,
+    "Related place"@en ,
+    "Powiązane miejsce"@pl ,
+    "Local relacionado"@pt ,
+    "Ort"@de ,
+    "Luogo correlato"@it ;
+  .
+
+<https://rism.online/institutions/30000701>
+  a rism:Institution ;
+  rdfs:label "Stadtarchiv und Stadtbibliothek, Braunschweig (D-BS)"@none ;
+  rism:hasCityName "Braunschweig" ;
+  rism:hasCountryCodes "D" ;
+  rism:hasSiglum "D-BS" ;
+  rism:notes <https://rism.online/institutions/30000701/notes> ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "D-BS"@none ;
+          rdfs:label
+            "Sigel"@de ,
+            "Sigla"@it ,
+            "Sigla"@es ,
+            "Siglum"@pt ,
+            "Siglum"@en ,
+            "Siglum"@pl ,
+            "Sigle"@fr ;
+        ] ,
+        [
+          rdf:value "Braunschweig"@none ;
+          rdfs:label
+            "Città"@it ,
+            "Ort"@de ,
+            "Cidade"@pt ,
+            "Miejscowość"@pl ,
+            "Ciudad"@es ,
+            "Ville"@fr ,
+            "City"@en ;
+        ] ,
+        [
+          rdf:value "Öffentliche Bücherei (Stadtarchiv und Stadtbibliothek)"@none ;
+          rdfs:label
+            "Altre forme del nome"@it ,
+            "Autre forme de nom"@fr ,
+            "Wariant nazwy instytucji"@pl ,
+            "Otra forma del nombre"@es ,
+            "Andere Namensformen"@de ,
+            "Other form of name"@en ,
+            "Outra forma do nome"@pt ;
+        ] ,
+        [
+          rdf:value "institutions/30000701"@none ;
+          rdfs:label
+            "RISM Dokumentnummer"@de ,
+            "Número de ID de RISM"@es ,
+            "No. RISM"@fr ,
+            "Número ID RISM"@pt ,
+            "RISM ID"@pl ,
+            "RISM ID number"@en ,
+            "Numero documento RISM"@it ;
+        ] ,
+        [
+          rdf:value
+            "Germania"@it ,
+            "Allemagne"@fr ,
+            "Germany"@en ,
+            "Niemcy"@pl ,
+            "Alemania"@es ,
+            "Deutschland"@de ,
+            "Alemanha"@pt ;
+          rdfs:label
+            "Pays"@fr ,
+            "Paese"@it ,
+            "Kraj"@pl ,
+            "Land"@de ,
+            "Country"@en ,
+            "País"@pt ,
+            "País"@es ;
+        ] ,
+        [
+          rdf:value
+            "Archivo"@es ,
+            "Repositorio"@es ,
+            "Biblioteka"@pl ,
+            "Bibliothek"@de ,
+            "Archivio"@it ,
+            "Biblioteca"@it ,
+            "Archiv"@de ,
+            "Library"@en ,
+            "Arquivo"@pt ,
+            "Instituição"@pt ,
+            "Institution"@fr ,
+            "Institution"@en ,
+            "Archiwum"@pl ,
+            "Instytucja"@pl ,
+            "Archive"@en ,
+            "Institución"@es ,
+            "Archives"@fr ,
+            "Körperschaft"@de ,
+            "Istituzione"@it ,
+            "Bibliothèque"@fr ;
+          rdfs:label
+            "Tipo de instituição"@pt ,
+            "Tipo di istituzione"@it ,
+            "Type of institution"@en ,
+            "Type d'institution"@fr ,
+            "Tipo de institución"@es ,
+            "Typ der Körperschaft"@de ,
+            "Rodzaj instytucji"@pl ;
+        ] ;
+      rism:sectionLabel
+        "Podsumowanie"@pl ,
+        "Riassunto"@it ,
+        "Zusammenfassung"@de ,
+        "Summary"@en ,
+        "Resumen"@es ,
+        "Résumé"@fr ,
+        "Resumo"@pt ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Erstellungsdatum"@de ,
+            "Criado em"@pt ,
+            "Data utworzenia"@pl ,
+            "Date de création"@fr ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:06:28Z"^^xsd:dateTime ;
+          rdfs:label
+            "Dernière modification"@fr ,
+            "Ultima modifica"@it ,
+            "Última modificação"@pt ,
+            "Ostatnia modyfikacja"@pl ,
+            "Last modification"@en ,
+            "Letzte Änderung"@de ,
+            "Fecha de modificación"@es ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/30000701/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 2 ;
+      rism:url "https://rism.online/institutions/30000701/sources" ;
+    ] ;
+  rismrel:now_in <https://rism.online/institutions/30078214> ;
+  rismrel:xi
+    <https://rism.online/institutions/30078213> ,
+    <https://rism.online/institutions/30078214> ;
+  rismrel:xp <https://rism.online/places/3900441> ;
+  .
+
+<https://rism.online/institutions/30000701/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Literatur und Bemerkungen"@de ,
+    "Odniesienia i uwagi"@pl ,
+    "Références et notes"@fr ,
+    "Bibliografia e note"@it ,
+    "Referencias y notas"@es ,
+    "References and notes"@en ,
+    "Notas e referências"@pt ;
+  rism:hasNote
+    [
+      rdf:value
+        "Das bis dato beim RISM unter diesem Sigel verzeichnete gedruckte Notenmaterial befindet sich in der Stadtbibliothek D-BSstb."@none ,
+        "Sigel ungültig. Bitte nicht mehr verwenden. Stadtarchiv und Stadtbibliothek sind heute organisatorisch getrennt."@none ,
+        "Siglum invalid. Please do not use it any more. Today, the City Archive and the City Library are separate institutions."@none ,
+        "The printed music material listed in the RISM dtabase under this siglum is located in the City Library D-BSstb."@none ;
+      rdfs:label
+        "Uwaga ogólna"@pl ,
+        "Nota generale"@it ,
+        "General note"@en ,
+        "Remarque générale"@fr ,
+        "Bemerkungen"@de ,
+        "Nota geral"@pt ,
+        "Nota general"@es ;
+    ] ;
+  .
+
+<https://rism.online/institutions/30000701/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/institutions/30078213> ;
+      rism:hasRole rismrel:xi ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/institutions/30078214> ;
+      rism:hasRole rismrel:now_in ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/places/3900441> ;
+      rism:hasRole rismrel:xp ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/institutions/30078214> ;
+      rism:hasRole rismrel:xi ;
+    ] ;
+  rism:sectionLabel
+    "Relacionamentos"@pt ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Beziehungen"@de ,
+    "Relacje"@pl ,
+    "Relaciones"@es ,
+    "Relazioni"@it ;
+  .
+
+<https://rism.online/institutions/30078213>
+  a rism:Institution ;
+  rdfs:label "Stadtarchiv, Braunschweig (D-BSsta)"@none ;
+  .
+
+<https://rism.online/institutions/30078214>
+  a rism:Institution ;
+  rdfs:label "Stadtbibliothek, Braunschweig (D-BSstb)"@none ;
+  .
+
+<https://rism.online/places/3900441>
+  a rism:Place ;
+  rdfs:label "Braunschweig, Deutschland"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Powiązane miejsce"@pl ,
+    "Luogo correlato"@it ,
+    "Ort"@de ,
+    "Lieu lié"@fr ,
+    "Lugar relacionado"@es ,
+    "Local relacionado"@pt ,
+    "Related place"@en ;
+  .
+
+<https://rism.online/institutions/51008800>
+  a rism:Institution ;
+  rdfs:label "C. H. Müller, Aachen"@none ;
+  rism:hasCityName "Aachen" ;
+  rism:hasCountryCodes "D" ;
+  rism:notes <https://rism.online/institutions/51008800/notes> ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "institutions/51008800"@none ;
+          rdfs:label
+            "RISM Dokumentnummer"@de ,
+            "RISM ID number"@en ,
+            "Número de ID de RISM"@es ,
+            "RISM ID"@pl ,
+            "Numero documento RISM"@it ,
+            "No. RISM"@fr ,
+            "Número ID RISM"@pt ;
+        ] ,
+        [
+          rdf:value
+            "Stampatore"@it ,
+            "Drucker"@de ,
+            "Imprimeur"@fr ,
+            "Instytucja"@pl ,
+            "Impresor"@es ,
+            "Institution"@fr ,
+            "Institution"@en ,
+            "Drukarnia"@pl ,
+            "Istituzione"@it ,
+            "Impressor(a)"@pt ,
+            "Instituição"@pt ,
+            "Printer"@en ,
+            "Institución"@es ,
+            "Körperschaft"@de ;
+          rdfs:label
+            "Tipo de instituição"@pt ,
+            "Rodzaj instytucji"@pl ,
+            "Tipo di istituzione"@it ,
+            "Typ der Körperschaft"@de ,
+            "Type of institution"@en ,
+            "Tipo de institución"@es ,
+            "Type d'institution"@fr ;
+        ] ,
+        [
+          rdf:value
+            "Allemagne"@fr ,
+            "Alemania"@es ,
+            "Germany"@en ,
+            "Germania"@it ,
+            "Deutschland"@de ,
+            "Alemanha"@pt ,
+            "Niemcy"@pl ;
+          rdfs:label
+            "Pays"@fr ,
+            "Kraj"@pl ,
+            "Country"@en ,
+            "Paese"@it ,
+            "Land"@de ,
+            "País"@pt ,
+            "País"@es ;
+        ] ,
+        [
+          rdf:value "Aachen"@none ;
+          rdfs:label
+            "Cidade"@pt ,
+            "Ville"@fr ,
+            "Città"@it ,
+            "Miejscowość"@pl ,
+            "Ort"@de ,
+            "Ciudad"@es ,
+            "City"@en ;
+        ] ;
+      rism:sectionLabel
+        "Zusammenfassung"@de ,
+        "Podsumowanie"@pl ,
+        "Summary"@en ,
+        "Résumé"@fr ,
+        "Riassunto"@it ,
+        "Resumo"@pt ,
+        "Resumen"@es ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2025-05-27T13:13:04Z"^^xsd:dateTime ;
+          rdfs:label
+            "Data utworzenia"@pl ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Date de création"@fr ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:07:42Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ultima modifica"@it ,
+            "Ostatnia modyfikacja"@pl ,
+            "Dernière modification"@fr ,
+            "Last modification"@en ,
+            "Última modificação"@pt ,
+            "Letzte Änderung"@de ,
+            "Fecha de modificación"@es ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/51008800/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/institutions/51008800/sources" ;
+    ] ;
+  rismrel:xp <https://rism.online/places/3900463> ;
+  .
+
+<https://rism.online/institutions/51008800/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "Odniesienia i uwagi"@pl ,
+    "References and notes"@en ,
+    "Bibliografia e note"@it ,
+    "Literatur und Bemerkungen"@de ,
+    "Referencias y notas"@es ;
+  rism:hasNote
+    [
+      rdf:value "Nachgewiesen in Aachen für das Jahr 1862, siehe A-ST Mus.pr. 633"@none ;
+      rdfs:label
+        "Historia de la institución"@es ,
+        "History of institution"@en ,
+        "Storia dell'ente"@it ,
+        "Geschichte der Körperschaft"@de ,
+        "História da instituição"@pt ,
+        "Historia instytucji"@pl ,
+        "Historique de l'institution"@fr ;
+    ] ;
+  .
+
+<https://rism.online/institutions/51008800/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3900463> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relacje"@pl ,
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ,
+    "Relaciones"@es ,
+    "Beziehungen"@de ;
+  .
+
+<https://rism.online/places/3900463>
+  a rism:Place ;
+  rdfs:label "Aachen, Deutschland"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Ort"@de ,
+    "Related place"@en ,
+    "Powiązane miejsce"@pl ,
+    "Luogo correlato"@it ,
+    "Lieu lié"@fr ,
+    "Local relacionado"@pt ,
+    "Lugar relacionado"@es ;
+  .
+
+<https://rism.online/institutions/40004829>
+  a rism:Institution ;
+  rdfs:label "Marx von der Heyden, Strasbourg"@none ;
+  rism:externalAuthorities <https://rism.online/institutions/40004829/external-authorities> ;
+  rism:hasCityName "Strasbourg" ;
+  rism:hasCountryCodes "F" ;
+  rism:hasExternalAuthority
+    <https://rism.online/institutions/40004829/external-authorities/dnb1037517938> ,
+    <https://rism.online/institutions/40004829/external-authorities/viaf158771277> ,
+    <https://rism.online/institutions/40004829/external-authorities/wkpQ95336796> ;
+  rism:notes <https://rism.online/institutions/40004829/notes> ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "institutions/40004829"@none ;
+          rdfs:label
+            "RISM ID number"@en ,
+            "Número de ID de RISM"@es ,
+            "RISM ID"@pl ,
+            "Numero documento RISM"@it ,
+            "RISM Dokumentnummer"@de ,
+            "No. RISM"@fr ,
+            "Número ID RISM"@pt ;
+        ] ,
+        [
+          rdf:value
+            "França"@pt ,
+            "Francja"@pl ,
+            "Frankreich"@de ,
+            "Francia"@es ,
+            "Francia"@it ,
+            "France"@en ,
+            "France"@fr ;
+          rdfs:label
+            "País"@es ,
+            "País"@pt ,
+            "Pays"@fr ,
+            "Country"@en ,
+            "Paese"@it ,
+            "Land"@de ,
+            "Kraj"@pl ;
+        ] ,
+        [
+          rdf:value "Strasbourg"@none ;
+          rdfs:label
+            "Ort"@de ,
+            "City"@en ,
+            "Ciudad"@es ,
+            "Città"@it ,
+            "Cidade"@pt ,
+            "Ville"@fr ,
+            "Miejscowość"@pl ;
+        ] ,
+        [
+          rdf:value
+            "Institution"@en ,
+            "Institution"@fr ,
+            "Editor (publicador)/Editorial (publicadora)"@es ,
+            "Impressor(a)"@pt ,
+            "Impresor"@es ,
+            "Institución"@es ,
+            "Casa editora"@pt ,
+            "Verleger"@de ,
+            "Editore"@it ,
+            "Istituzione"@it ,
+            "Drukarnia"@pl ,
+            "Wydawca"@pl ,
+            "Editeur"@fr ,
+            "Imprimeur"@fr ,
+            "Printer"@en ,
+            "Körperschaft"@de ,
+            "Instituição"@pt ,
+            "Publisher"@en ,
+            "Instytucja"@pl ,
+            "Drucker"@de ,
+            "Stampatore"@it ;
+          rdfs:label
+            "Rodzaj instytucji"@pl ,
+            "Type d'institution"@fr ,
+            "Type of institution"@en ,
+            "Tipo di istituzione"@it ,
+            "Typ der Körperschaft"@de ,
+            "Tipo de instituição"@pt ,
+            "Tipo de institución"@es ;
+        ] ,
+        [
+          rdf:value "Marcus von der Heyden"@none ;
+          rdfs:label
+            "Otra forma del nombre"@es ,
+            "Autre forme de nom"@fr ,
+            "Outra forma do nome"@pt ,
+            "Andere Namensformen"@de ,
+            "Other form of name"@en ,
+            "Wariant nazwy instytucji"@pl ,
+            "Altre forme del nome"@it ;
+        ] ;
+      rism:sectionLabel
+        "Podsumowanie"@pl ,
+        "Résumé"@fr ,
+        "Summary"@en ,
+        "Zusammenfassung"@de ,
+        "Resumo"@pt ,
+        "Riassunto"@it ,
+        "Resumen"@es ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-10T09:33:52Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:07:59Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de modificación"@es ,
+            "Letzte Änderung"@de ,
+            "Última modificação"@pt ,
+            "Ostatnia modyfikacja"@pl ,
+            "Ultima modifica"@it ,
+            "Last modification"@en ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/40004829/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 2 ;
+      rism:url "https://rism.online/institutions/40004829/sources" ;
+    ] ;
+  rismrel:xp <https://rism.online/places/3900104> ;
+  schemaorg:sameAs
+    "https://d-nb.info/gnd/1037517938"^^xsd:anyURI ,
+    "https://viaf.org/viaf/158771277"^^xsd:anyURI ,
+    "https://www.wikidata.org/wiki/Q95336796"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40004829/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Identyfikator innego standardu"@pl ,
+    "Other standard identifier"@en ,
+    "Outro identificador padronizado"@pt ,
+    "Référence d'authorité"@fr ,
+    "Otro identificador estándar"@es ,
+    "Riferimento autorità"@it ,
+    "Normdatenverweise"@de ;
+  rism:hasExternalAuthority
+    <https://rism.online/institutions/40004829/external-authorities/dnb1037517938> ,
+    <https://rism.online/institutions/40004829/external-authorities/viaf158771277> ,
+    <https://rism.online/institutions/40004829/external-authorities/wkpQ95336796> ;
+  .
+
+<https://rism.online/institutions/40004829/external-authorities/dnb1037517938>
+  a rism:ExternalAuthority ;
+  rdf:value "1037517938" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 1037517938"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityScheme "dnb" ;
+  rism:authorityUrl "https://d-nb.info/gnd/1037517938"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40004829/external-authorities/viaf158771277>
+  a rism:ExternalAuthority ;
+  rdf:value "158771277" ;
+  rdfs:label "Virtual Internet Authority File (VIAF): 158771277"@none ;
+  rism:authorityBase "https://viaf.org/viaf/"^^xsd:anyURI ;
+  rism:authorityScheme "viaf" ;
+  rism:authorityUrl "https://viaf.org/viaf/158771277"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40004829/external-authorities/wkpQ95336796>
+  a rism:ExternalAuthority ;
+  rdf:value "Q95336796" ;
+  rdfs:label "Wikidata: Q95336796"@none ;
+  rism:authorityBase "https://www.wikidata.org/wiki/"^^xsd:anyURI ;
+  rism:authorityScheme "wkp" ;
+  rism:authorityUrl "https://www.wikidata.org/wiki/Q95336796"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40004829/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Referencias y notas"@es ,
+    "References and notes"@en ,
+    "Références et notes"@fr ,
+    "Literatur und Bemerkungen"@de ,
+    "Bibliografia e note"@it ,
+    "Notas e referências"@pt ,
+    "Odniesienia i uwagi"@pl ;
+  rism:hasNote
+    [
+      rdf:value "Wirkungsort: Straßburg (1617-1648)"@none ;
+      rdfs:label
+        "Geschichte der Körperschaft"@de ,
+        "Storia dell'ente"@it ,
+        "Historia instytucji"@pl ,
+        "História da instituição"@pt ,
+        "Historique de l'institution"@fr ,
+        "Historia de la institución"@es ,
+        "History of institution"@en ;
+    ] ;
+  .
+
+<https://rism.online/institutions/40004829/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3900104> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relaciones"@es ,
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ,
+    "Relacje"@pl ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Beziehungen"@de ;
+  .
+
+<https://rism.online/places/3900104>
+  a rism:Place ;
+  rdfs:label "Strasbourg, Département Bas-Rhin, France"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Related place"@en ,
+    "Lugar relacionado"@es ,
+    "Powiązane miejsce"@pl ,
+    "Local relacionado"@pt ,
+    "Luogo correlato"@it ,
+    "Lieu lié"@fr ,
+    "Ort"@de ;
+  .
+
+<https://rism.online/institutions/30005555>
+  a rism:Institution ;
+  rdfs:label "Archivio storico diocesano, Firenze (I-Fad)"@none ;
+  rism:hasCityName "Firenze" ;
+  rism:hasCountryCodes "I" ;
+  rism:hasLocation
+    [
+      a rism:LocationAddressSection ;
+      geojson:coordinates ( <https://rism.online/institutions/30005555/location.geojson> ) ;
+      rdfs:label
+        "Local e endereço"@pt ,
+        "Lokalizacja i adres"@pl ,
+        "Ubicación y dirección"@es ,
+        "Adresse"@de ,
+        "Luogo ed indirizzo"@it ,
+        "Location and address"@en ,
+        "Lieu et adresse"@fr ;
+      schemaorg:address
+        [
+          a schemaorg:PostalAddress ;
+          schemaorg:streetAddress
+            [
+              rdf:value "Archivio Storico Diocesano, Piazza Filippo Lippi 21, I-50047, Firenze. Regione Toscana"@none ;
+              rdfs:label
+                "Street address"@en ,
+                "Via e numero civico"@it ,
+                "Adresse"@fr ,
+                "Calle y número"@es ,
+                "Ulica, numer, numer lokalu"@pl ,
+                "Rua e n.º"@pt ,
+                "Strasse"@de ;
+            ] ;
+        ] ;
+    ] ;
+  rism:hasSiglum "I-Fad" ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value
+            "Istituzione"@it ,
+            "Institución"@es ,
+            "Körperschaft"@de ,
+            "Institution"@fr ,
+            "Institution"@en ,
+            "Biblioteca"@it ,
+            "Bibliothek"@de ,
+            "Bibliothèque"@fr ,
+            "Repositorio"@es ,
+            "Biblioteka"@pl ,
+            "Instytucja"@pl ,
+            "Instituição"@pt ,
+            "Library"@en ;
+          rdfs:label
+            "Type d'institution"@fr ,
+            "Rodzaj instytucji"@pl ,
+            "Typ der Körperschaft"@de ,
+            "Tipo di istituzione"@it ,
+            "Tipo de instituição"@pt ,
+            "Tipo de institución"@es ,
+            "Type of institution"@en ;
+        ] ,
+        [
+          rdf:value "I-Fad"@none ;
+          rdfs:label
+            "Sigle"@fr ,
+            "Sigel"@de ,
+            "Sigla"@it ,
+            "Sigla"@es ,
+            "Siglum"@pt ,
+            "Siglum"@pl ,
+            "Siglum"@en ;
+        ] ,
+        [
+          rdf:value "institutions/30005555"@none ;
+          rdfs:label
+            "Número de ID de RISM"@es ,
+            "RISM Dokumentnummer"@de ,
+            "Numero documento RISM"@it ,
+            "RISM ID number"@en ,
+            "Número ID RISM"@pt ,
+            "No. RISM"@fr ,
+            "RISM ID"@pl ;
+        ] ,
+        [
+          rdf:value "Firenze"@none ;
+          rdfs:label
+            "City"@en ,
+            "Miejscowość"@pl ,
+            "Ciudad"@es ,
+            "Cidade"@pt ,
+            "Città"@it ,
+            "Ville"@fr ,
+            "Ort"@de ;
+        ] ,
+        [
+          rdf:value
+            "Itália"@pt ,
+            "Włochy"@pl ,
+            "Italie"@fr ,
+            "Italy"@en ,
+            "Italien"@de ,
+            "Italia"@it ,
+            "Italia"@es ;
+          rdfs:label
+            "País"@pt ,
+            "País"@es ,
+            "Pays"@fr ,
+            "Paese"@it ,
+            "Country"@en ,
+            "Kraj"@pl ,
+            "Land"@de ;
+        ] ;
+      rism:sectionLabel
+        "Summary"@en ,
+        "Résumé"@fr ,
+        "Resumen"@es ,
+        "Zusammenfassung"@de ,
+        "Podsumowanie"@pl ,
+        "Resumo"@pt ,
+        "Riassunto"@it ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Fecha de creación"@es ,
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Data utworzenia"@pl ,
+            "Data di creazione"@it ,
+            "Date de création"@fr ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:06:52Z"^^xsd:dateTime ;
+          rdfs:label
+            "Last modification"@en ,
+            "Ostatnia modyfikacja"@pl ,
+            "Dernière modification"@fr ,
+            "Letzte Änderung"@de ,
+            "Fecha de modificación"@es ,
+            "Ultima modifica"@it ,
+            "Última modificação"@pt ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/30005555/relationships> ;
+  rismrel:xp <https://rism.online/places/3900188> ;
+  .
+
+<https://rism.online/institutions/30005555/location.geojson>
+  a geojson:Feature ;
+  geojson:geometry
+    [
+      a geojson:Point ;
+      geojson:coordinates
+        (
+          1.12569013E1
+          4.37687324E1
+        ) ;
+      rdfs:label
+        "Latitudine, Longitudine"@it ,
+        "Latitude, Longitude"@pt ,
+        "Latitude, Longitude"@fr ,
+        "Latitude, Longitude"@en ,
+        "Breitengrad, Längengrad"@de ,
+        "Szerokość geograficzna, Długość geograficzna"@pl ,
+        "Latitud, Longitud"@es ;
+    ] ;
+  rism:sectionLabel
+    "Lokalizacja"@pl ,
+    "Lieu"@fr ,
+    "Local"@pt ,
+    "Location"@en ,
+    "Lugar"@es ,
+    "Luogo"@it ,
+    "Ort"@de ;
+  .
+
+<https://rism.online/institutions/30005555/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3900188> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ,
+    "Beziehungen"@de ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relacje"@pl ,
+    "Relaciones"@es ;
+  .
+
+<https://rism.online/places/3900188>
+  a rism:Place ;
+  rdfs:label "Firenze, Italia"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Local relacionado"@pt ,
+    "Luogo correlato"@it ,
+    "Lugar relacionado"@es ,
+    "Ort"@de ,
+    "Related place"@en ,
+    "Powiązane miejsce"@pl ,
+    "Lieu lié"@fr ;
+  .
+
+<https://rism.online/institutions/51004014>
+  a rism:Institution ;
+  rdfs:label "Bronisław Rudzki, Warszawa"@none ;
+  rism:externalAuthorities <https://rism.online/institutions/51004014/external-authorities> ;
+  rism:hasCityName "Warszawa" ;
+  rism:hasCountryCodes "PL" ;
+  rism:hasExternalAuthority <https://rism.online/institutions/51004014/external-authorities/viaf305858581> ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "B. Rudzki"@none ;
+          rdfs:label
+            "Outra forma do nome"@pt ,
+            "Other form of name"@en ,
+            "Altre forme del nome"@it ,
+            "Otra forma del nombre"@es ,
+            "Wariant nazwy instytucji"@pl ,
+            "Andere Namensformen"@de ,
+            "Autre forme de nom"@fr ;
+        ] ,
+        [
+          rdf:value "Warszawa"@none ;
+          rdfs:label
+            "Miejscowość"@pl ,
+            "Città"@it ,
+            "Ciudad"@es ,
+            "Ville"@fr ,
+            "Ort"@de ,
+            "Cidade"@pt ,
+            "City"@en ;
+        ] ,
+        [
+          rdf:value "institutions/51004014"@none ;
+          rdfs:label
+            "RISM Dokumentnummer"@de ,
+            "Número ID RISM"@pt ,
+            "RISM ID number"@en ,
+            "Número de ID de RISM"@es ,
+            "Numero documento RISM"@it ,
+            "RISM ID"@pl ,
+            "No. RISM"@fr ;
+        ] ,
+        [
+          rdf:value
+            "Polen"@de ,
+            "Poland"@en ,
+            "Pologne"@fr ,
+            "Polonia"@es ,
+            "Polonia"@it ,
+            "Polónia"@pt ,
+            "Polska"@pl ;
+          rdfs:label
+            "Land"@de ,
+            "Paese"@it ,
+            "Country"@en ,
+            "Pays"@fr ,
+            "País"@pt ,
+            "País"@es ,
+            "Kraj"@pl ;
+        ] ,
+        [
+          rdf:value
+            "Editore"@it ,
+            "Institution"@fr ,
+            "Institution"@en ,
+            "Instituição"@pt ,
+            "Körperschaft"@de ,
+            "Editor (publicador)/Editorial (publicadora)"@es ,
+            "Casa editora"@pt ,
+            "Editeur"@fr ,
+            "Istituzione"@it ,
+            "Verleger"@de ,
+            "Publisher"@en ,
+            "Institución"@es ,
+            "Instytucja"@pl ,
+            "Wydawca"@pl ;
+          rdfs:label
+            "Tipo de instituição"@pt ,
+            "Type d'institution"@fr ,
+            "Rodzaj instytucji"@pl ,
+            "Type of institution"@en ,
+            "Typ der Körperschaft"@de ,
+            "Tipo di istituzione"@it ,
+            "Tipo de institución"@es ;
+        ] ;
+      rism:sectionLabel
+        "Resumen"@es ,
+        "Riassunto"@it ,
+        "Summary"@en ,
+        "Resumo"@pt ,
+        "Résumé"@fr ,
+        "Zusammenfassung"@de ,
+        "Podsumowanie"@pl ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2020-05-31T07:28:45Z"^^xsd:dateTime ;
+          rdfs:label
+            "Data utworzenia"@pl ,
+            "Fecha de creación"@es ,
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ,
+            "Created on"@en ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:06:09Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ostatnia modyfikacja"@pl ,
+            "Última modificação"@pt ,
+            "Dernière modification"@fr ,
+            "Last modification"@en ,
+            "Fecha de modificación"@es ,
+            "Letzte Änderung"@de ,
+            "Ultima modifica"@it ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/51004014/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 286 ;
+      rism:url "https://rism.online/institutions/51004014/sources" ;
+    ] ;
+  rismrel:xp <https://rism.online/places/3900368> ;
+  schemaorg:sameAs "https://viaf.org/viaf/305858581"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/51004014/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Référence d'authorité"@fr ,
+    "Other standard identifier"@en ,
+    "Outro identificador padronizado"@pt ,
+    "Normdatenverweise"@de ,
+    "Riferimento autorità"@it ,
+    "Otro identificador estándar"@es ,
+    "Identyfikator innego standardu"@pl ;
+  rism:hasExternalAuthority <https://rism.online/institutions/51004014/external-authorities/viaf305858581> ;
+  .
+
+<https://rism.online/institutions/51004014/external-authorities/viaf305858581>
+  a rism:ExternalAuthority ;
+  rdf:value "305858581" ;
+  rdfs:label "Virtual Internet Authority File (VIAF): 305858581"@none ;
+  rism:authorityBase "https://viaf.org/viaf/"^^xsd:anyURI ;
+  rism:authorityScheme "viaf" ;
+  rism:authorityUrl "https://viaf.org/viaf/305858581"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/51004014/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3900368> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relacionamentos"@pt ,
+    "Relacje"@pl ,
+    "Beziehungen"@de ,
+    "Relaciones"@es ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relazioni"@it ;
+  .
+
+<https://rism.online/places/3900368>
+  a rism:Place ;
+  rdfs:label "Warszawa, Polska"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:egr
+  rdf:value "egr" ;
+  rdfs:label
+    "Incisore"@it ,
+    "Engraver"@en ,
+    "Grabador"@es ,
+    "Stecher"@de ,
+    "Rytownik"@pl ,
+    "Graveur"@fr ,
+    "Gravador"@pt ;
+  .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Lieu lié"@fr ,
+    "Lugar relacionado"@es ,
+    "Related place"@en ,
+    "Local relacionado"@pt ,
+    "Ort"@de ,
+    "Powiązane miejsce"@pl ,
+    "Luogo correlato"@it ;
+  .
+
+<https://rism.online/institutions/40009325>
+  a rism:Institution ;
+  rdfs:label "Benjamin Cole, London"@none ;
+  relators:egr <https://rism.online/people/40002183> ;
+  rism:externalAuthorities <https://rism.online/institutions/40009325/external-authorities> ;
+  rism:hasCityName "London" ;
+  rism:hasCountryCodes "GB" ;
+  rism:hasExternalAuthority
+    <https://rism.online/institutions/40009325/external-authorities/dnb103758970X> ,
+    <https://rism.online/institutions/40009325/external-authorities/viaf288232595> ,
+    <https://rism.online/institutions/40009325/external-authorities/wkpQ53499425> ;
+  rism:notes <https://rism.online/institutions/40009325/notes> ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "London"@none ;
+          rdfs:label
+            "Città"@it ,
+            "City"@en ,
+            "Miejscowość"@pl ,
+            "Ort"@de ,
+            "Ville"@fr ,
+            "Ciudad"@es ,
+            "Cidade"@pt ;
+        ] ,
+        [
+          rdf:value "institutions/40009325"@none ;
+          rdfs:label
+            "RISM ID"@pl ,
+            "Numero documento RISM"@it ,
+            "RISM ID number"@en ,
+            "No. RISM"@fr ,
+            "Número de ID de RISM"@es ,
+            "RISM Dokumentnummer"@de ,
+            "Número ID RISM"@pt ;
+        ] ,
+        [
+          rdf:value
+            "Sonstige Funktion"@de ,
+            "Publisher"@en ,
+            "Istituzione"@it ,
+            "Editor (publicador)/Editorial (publicadora)"@es ,
+            "Editeur"@fr ,
+            "Otra función"@es ,
+            "Instituição"@pt ,
+            "Verleger"@de ,
+            "Casa editora"@pt ,
+            "Other"@en ,
+            "Autre function"@fr ,
+            "Institution"@fr ,
+            "Institution"@en ,
+            "Institución"@es ,
+            "Editore"@it ,
+            "Instytucja"@pl ,
+            "Körperschaft"@de ,
+            "Outro(a) [oth]"@pt ,
+            "Pozostałe"@pl ,
+            "Wydawca"@pl ,
+            "Altro"@it ;
+          rdfs:label
+            "Tipo de institución"@es ,
+            "Typ der Körperschaft"@de ,
+            "Tipo di istituzione"@it ,
+            "Type of institution"@en ,
+            "Type d'institution"@fr ,
+            "Tipo de instituição"@pt ,
+            "Rodzaj instytucji"@pl ;
+        ] ,
+        [
+          rdf:value
+            "Reino Unido"@pt ,
+            "Reino Unido"@es ,
+            "Regno Unito"@it ,
+            "Royaume-Uni"@fr ,
+            "Vereinigtes Königreich"@de ,
+            "Zjednoczone Królestwo"@pl ,
+            "United Kingdom"@en ;
+          rdfs:label
+            "Pays"@fr ,
+            "Country"@en ,
+            "Kraj"@pl ,
+            "País"@pt ,
+            "País"@es ,
+            "Paese"@it ,
+            "Land"@de ;
+        ] ;
+      rism:sectionLabel
+        "Riassunto"@it ,
+        "Zusammenfassung"@de ,
+        "Resumen"@es ,
+        "Resumo"@pt ,
+        "Podsumowanie"@pl ,
+        "Summary"@en ,
+        "Résumé"@fr ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-10T09:34:58Z"^^xsd:dateTime ;
+          rdfs:label
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Criado em"@pt ,
+            "Data utworzenia"@pl ,
+            "Date de création"@fr ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:04:01Z"^^xsd:dateTime ;
+          rdfs:label
+            "Last modification"@en ,
+            "Dernière modification"@fr ,
+            "Ostatnia modyfikacja"@pl ,
+            "Fecha de modificación"@es ,
+            "Letzte Änderung"@de ,
+            "Ultima modifica"@it ,
+            "Última modificação"@pt ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/40009325/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 4 ;
+      rism:url "https://rism.online/institutions/40009325/sources" ;
+    ] ;
+  rismrel:xp <https://rism.online/places/3900003> ;
+  schemaorg:sameAs
+    "https://d-nb.info/gnd/103758970X"^^xsd:anyURI ,
+    "https://viaf.org/viaf/288232595"^^xsd:anyURI ,
+    "https://www.wikidata.org/wiki/Q53499425"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40009325/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Otro identificador estándar"@es ,
+    "Normdatenverweise"@de ,
+    "Référence d'authorité"@fr ,
+    "Riferimento autorità"@it ,
+    "Other standard identifier"@en ,
+    "Outro identificador padronizado"@pt ,
+    "Identyfikator innego standardu"@pl ;
+  rism:hasExternalAuthority
+    <https://rism.online/institutions/40009325/external-authorities/dnb103758970X> ,
+    <https://rism.online/institutions/40009325/external-authorities/viaf288232595> ,
+    <https://rism.online/institutions/40009325/external-authorities/wkpQ53499425> ;
+  .
+
+<https://rism.online/institutions/40009325/external-authorities/dnb103758970X>
+  a rism:ExternalAuthority ;
+  rdf:value "103758970X" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 103758970X"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityScheme "dnb" ;
+  rism:authorityUrl "https://d-nb.info/gnd/103758970X"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40009325/external-authorities/viaf288232595>
+  a rism:ExternalAuthority ;
+  rdf:value "288232595" ;
+  rdfs:label "Virtual Internet Authority File (VIAF): 288232595"@none ;
+  rism:authorityBase "https://viaf.org/viaf/"^^xsd:anyURI ;
+  rism:authorityScheme "viaf" ;
+  rism:authorityUrl "https://viaf.org/viaf/288232595"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40009325/external-authorities/wkpQ53499425>
+  a rism:ExternalAuthority ;
+  rdf:value "Q53499425" ;
+  rdfs:label "Wikidata: Q53499425"@none ;
+  rism:authorityBase "https://www.wikidata.org/wiki/"^^xsd:anyURI ;
+  rism:authorityScheme "wkp" ;
+  rism:authorityUrl "https://www.wikidata.org/wiki/Q53499425"^^xsd:anyURI ;
+  .
+
+<https://rism.online/institutions/40009325/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Odniesienia i uwagi"@pl ,
+    "Références et notes"@fr ,
+    "References and notes"@en ,
+    "Literatur und Bemerkungen"@de ,
+    "Referencias y notas"@es ,
+    "Notas e referências"@pt ,
+    "Bibliografia e note"@it ;
+  rism:hasNote
+    [
+      rdf:value "Engraving."@none ;
+      rdfs:label
+        "Remarque générale"@fr ,
+        "General note"@en ,
+        "Nota geral"@pt ,
+        "Nota general"@es ,
+        "Nota generale"@it ,
+        "Uwaga ogólna"@pl ,
+        "Bemerkungen"@de ;
+    ] ,
+    [
+      rdf:value "<span>Root, Deane L. (ed.). <i>Grove Music Online. Oxford Music Online.</i> Oxford University Press. <a href=\"http://www.oxfordmusiconline.com\">http://www.oxfordmusiconline.com</a>.</span> [GroveMO \"Cole, Benjamin\" by Stanley Boorman. Retrieved 1 September 2025: https://doi.org/10.1093/gmo/9781561592630.article.06070]."@none ;
+      rdfs:label
+        "Literaturverweis"@de ,
+        "Odniesienie bibliograficzne"@pl ,
+        "Referência bibliográfica"@pt ,
+        "Bibliographic reference"@en ,
+        "Riferimenti bibliografici"@it ,
+        "Referencia bibliográfica"@es ,
+        "Référence bibliographique"@fr ;
+    ] ;
+  .
+
+<https://rism.online/institutions/40009325/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/40002183> ;
+      rism:hasRole relators:egr ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/places/3900003> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relazioni"@it ,
+    "Relacje"@pl ,
+    "Relacionamentos"@pt ,
+    "Relaciones"@es ,
+    "Beziehungen"@de ;
+  .
+
+<https://rism.online/people/40002183>
+  a rism:Person ;
+  rdfs:label "Cole, Benjamin (1697-1783)"@none ;
+  .
+
+<https://rism.online/places/3900003>
+  a rism:Place ;
+  rdfs:label "London, England, United Kingdom"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Lugar relacionado"@es ,
+    "Local relacionado"@pt ,
+    "Ort"@de ,
+    "Powiązane miejsce"@pl ,
+    "Related place"@en ,
+    "Luogo correlato"@it ,
+    "Lieu lié"@fr ;
+  .
+
+<https://rism.online/institutions/40090470>
+  a rism:Institution ;
+  rdfs:label "T. Riedl, Wien"@none ;
+  rism:hasCityName "Wien" ;
+  rism:hasCountryCodes "A" ;
+  rism:notes <https://rism.online/institutions/40090470/notes> ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value
+            "Institution"@en ,
+            "Institution"@fr ,
+            "Istituzione"@it ,
+            "Wydawca"@pl ,
+            "Editeur"@fr ,
+            "Casa editora"@pt ,
+            "Instituição"@pt ,
+            "Editor (publicador)/Editorial (publicadora)"@es ,
+            "Institución"@es ,
+            "Instytucja"@pl ,
+            "Editore"@it ,
+            "Körperschaft"@de ,
+            "Verleger"@de ,
+            "Publisher"@en ;
+          rdfs:label
+            "Type d'institution"@fr ,
+            "Rodzaj instytucji"@pl ,
+            "Type of institution"@en ,
+            "Tipo de institución"@es ,
+            "Tipo de instituição"@pt ,
+            "Tipo di istituzione"@it ,
+            "Typ der Körperschaft"@de ;
+        ] ,
+        [
+          rdf:value "Wien"@none ;
+          rdfs:label
+            "Ville"@fr ,
+            "City"@en ,
+            "Cidade"@pt ,
+            "Ort"@de ,
+            "Ciudad"@es ,
+            "Città"@it ,
+            "Miejscowość"@pl ;
+        ] ,
+        [
+          rdf:value
+            "Österreich"@de ,
+            "Austria"@pl ,
+            "Austria"@es ,
+            "Austria"@it ,
+            "Austria"@en ,
+            "Áustria"@pt ,
+            "Autriche"@fr ;
+          rdfs:label
+            "Country"@en ,
+            "Kraj"@pl ,
+            "País"@es ,
+            "País"@pt ,
+            "Paese"@it ,
+            "Land"@de ,
+            "Pays"@fr ;
+        ] ,
+        [
+          rdf:value "institutions/40090470"@none ;
+          rdfs:label
+            "RISM ID"@pl ,
+            "RISM Dokumentnummer"@de ,
+            "RISM ID number"@en ,
+            "Numero documento RISM"@it ,
+            "Número de ID de RISM"@es ,
+            "Número ID RISM"@pt ,
+            "No. RISM"@fr ;
+        ] ;
+      rism:sectionLabel
+        "Resumen"@es ,
+        "Resumo"@pt ,
+        "Riassunto"@it ,
+        "Zusammenfassung"@de ,
+        "Summary"@en ,
+        "Résumé"@fr ,
+        "Podsumowanie"@pl ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-10T09:34:18Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Fecha de creación"@es ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ,
+            "Data utworzenia"@pl ,
+            "Created on"@en ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:02:46Z"^^xsd:dateTime ;
+          rdfs:label
+            "Last modification"@en ,
+            "Letzte Änderung"@de ,
+            "Ostatnia modyfikacja"@pl ,
+            "Dernière modification"@fr ,
+            "Última modificação"@pt ,
+            "Fecha de modificación"@es ,
+            "Ultima modifica"@it ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/40090470/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/institutions/40090470/sources" ;
+    ] ;
+  rismrel:xp <https://rism.online/places/3900059> ;
+  .
+
+<https://rism.online/institutions/40090470/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Referencias y notas"@es ,
+    "Références et notes"@fr ,
+    "References and notes"@en ,
+    "Odniesienia i uwagi"@pl ,
+    "Notas e referências"@pt ,
+    "Literatur und Bemerkungen"@de ,
+    "Bibliografia e note"@it ;
+  rism:hasNote
+    [
+      rdf:value "Nicht identifiziert."@none ;
+      rdfs:label
+        "Bemerkungen"@de ,
+        "Remarque générale"@fr ,
+        "General note"@en ,
+        "Nota general"@es ,
+        "Nota generale"@it ,
+        "Uwaga ogólna"@pl ,
+        "Nota geral"@pt ;
+    ] ;
+  .
+
+<https://rism.online/institutions/40090470/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3900059> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relazioni"@it ,
+    "Relacionamentos"@pt ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Relacje"@pl ,
+    "Relaciones"@es ,
+    "Beziehungen"@de ;
+  .
+
+<https://rism.online/places/3900059>
+  a rism:Place ;
+  rdfs:label "Wien, Österreich"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:now_in
+  rdf:value "now-in" ;
+  rdfs:label
+    "Agora em"@pt ,
+    "Ora in"@it ,
+    "Maintenant à"@fr ,
+    "Actualmente en"@es ,
+    "Obecnie w …"@pl ,
+    "Heute in"@de ,
+    "Now in"@en ;
+  .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Powiązane miejsce"@pl ,
+    "Related place"@en ,
+    "Luogo correlato"@it ,
+    "Ort"@de ,
+    "Lugar relacionado"@es ,
+    "Local relacionado"@pt ,
+    "Lieu lié"@fr ;
+  .
+
+<https://rism.online/institutions/30000378>
+  a rism:Institution ;
+  rdfs:label "Universitätsbibliothek, Salzburg (A-Su)"@none ;
+  .
+
+<https://rism.online/institutions/30003852>
+  a rism:Institution ;
+  rdfs:label "Bundesstaatliche Studienbibliothek, Salzburg (A-Sst)"@none ;
+  rism:hasCityName "Salzburg" ;
+  rism:hasCountryCodes "A" ;
+  rism:hasSiglum "A-Sst" ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "institutions/30003852"@none ;
+          rdfs:label
+            "RISM ID number"@en ,
+            "RISM ID"@pl ,
+            "Número ID RISM"@pt ,
+            "No. RISM"@fr ,
+            "Numero documento RISM"@it ,
+            "Número de ID de RISM"@es ,
+            "RISM Dokumentnummer"@de ;
+        ] ,
+        [
+          rdf:value "Salzburger Studienbibliothek"@none ;
+          rdfs:label
+            "Other form of name"@en ,
+            "Otra forma del nombre"@es ,
+            "Andere Namensformen"@de ,
+            "Altre forme del nome"@it ,
+            "Autre forme de nom"@fr ,
+            "Wariant nazwy instytucji"@pl ,
+            "Outra forma do nome"@pt ;
+        ] ,
+        [
+          rdf:value "Salzburg"@none ;
+          rdfs:label
+            "Città"@it ,
+            "Miejscowość"@pl ,
+            "Ort"@de ,
+            "Ciudad"@es ,
+            "Cidade"@pt ,
+            "City"@en ,
+            "Ville"@fr ;
+        ] ,
+        [
+          rdf:value
+            "Autriche"@fr ,
+            "Österreich"@de ,
+            "Áustria"@pt ,
+            "Austria"@it ,
+            "Austria"@es ,
+            "Austria"@en ,
+            "Austria"@pl ;
+          rdfs:label
+            "Country"@en ,
+            "Kraj"@pl ,
+            "Paese"@it ,
+            "País"@es ,
+            "País"@pt ,
+            "Pays"@fr ,
+            "Land"@de ;
+        ] ,
+        [
+          rdf:value "A-Sst"@none ;
+          rdfs:label
+            "Sigla"@it ,
+            "Sigla"@es ,
+            "Sigel"@de ,
+            "Sigle"@fr ,
+            "Siglum"@en ,
+            "Siglum"@pl ,
+            "Siglum"@pt ;
+        ] ,
+        [
+          rdf:value
+            "Repositorio"@es ,
+            "Bibliothèque"@fr ,
+            "Biblioteka"@pl ,
+            "Körperschaft"@de ,
+            "Library"@en ,
+            "Instituição"@pt ,
+            "Institution"@fr ,
+            "Institution"@en ,
+            "Istituzione"@it ,
+            "Bibliothek"@de ,
+            "Instytucja"@pl ,
+            "Biblioteca"@it ,
+            "Institución"@es ;
+          rdfs:label
+            "Type of institution"@en ,
+            "Type d'institution"@fr ,
+            "Rodzaj instytucji"@pl ,
+            "Tipo de instituição"@pt ,
+            "Tipo di istituzione"@it ,
+            "Tipo de institución"@es ,
+            "Typ der Körperschaft"@de ;
+        ] ;
+      rism:sectionLabel
+        "Summary"@en ,
+        "Résumé"@fr ,
+        "Resumen"@es ,
+        "Riassunto"@it ,
+        "Podsumowanie"@pl ,
+        "Zusammenfassung"@de ,
+        "Resumo"@pt ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de creación"@es ,
+            "Erstellungsdatum"@de ,
+            "Data di creazione"@it ,
+            "Date de création"@fr ,
+            "Data utworzenia"@pl ,
+            "Criado em"@pt ,
+            "Created on"@en ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:05:40Z"^^xsd:dateTime ;
+          rdfs:label
+            "Última modificação"@pt ,
+            "Ultima modifica"@it ,
+            "Letzte Änderung"@de ,
+            "Fecha de modificación"@es ,
+            "Last modification"@en ,
+            "Dernière modification"@fr ,
+            "Ostatnia modyfikacja"@pl ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/30003852/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 9 ;
+      rism:url "https://rism.online/institutions/30003852/sources" ;
+    ] ;
+  rismrel:now_in <https://rism.online/institutions/30000378> ;
+  rismrel:xp <https://rism.online/places/3900070> ;
+  .
+
+<https://rism.online/institutions/30003852/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/institutions/30000378> ;
+      rism:hasRole rismrel:now_in ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/places/3900070> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relaciones"@es ,
+    "Beziehungen"@de ,
+    "Relazioni"@it ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relacionamentos"@pt ,
+    "Relacje"@pl ;
+  .
+
+<https://rism.online/places/3900070>
+  a rism:Place ;
+  rdfs:label "Salzburg, Österreich"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:xp
+  rdf:value "xp" ;
+  rdfs:label
+    "Related place"@en ,
+    "Ort"@de ,
+    "Powiązane miejsce"@pl ,
+    "Lieu lié"@fr ,
+    "Lugar relacionado"@es ,
+    "Luogo correlato"@it ,
+    "Local relacionado"@pt ;
+  .
+
+<https://rism.online/institutions/51003422>
+  a rism:Institution ;
+  rdfs:label "Sœurs Loret, Antwerpen"@none ;
+  rism:hasCityName "Antwerpen" ;
+  rism:hasCountryCodes "B" ;
+  rism:organizationDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value
+            "Belgien"@de ,
+            "Belgio"@it ,
+            "Belgique"@fr ,
+            "Belgia"@pl ,
+            "Belgium"@en ,
+            "Bélgica"@pt ,
+            "Bélgica"@es ;
+          rdfs:label
+            "Kraj"@pl ,
+            "País"@pt ,
+            "País"@es ,
+            "Pays"@fr ,
+            "Paese"@it ,
+            "Land"@de ,
+            "Country"@en ;
+        ] ,
+        [
+          rdf:value "institutions/51003422"@none ;
+          rdfs:label
+            "No. RISM"@fr ,
+            "RISM ID number"@en ,
+            "Número ID RISM"@pt ,
+            "RISM Dokumentnummer"@de ,
+            "Número de ID de RISM"@es ,
+            "RISM ID"@pl ,
+            "Numero documento RISM"@it ;
+        ] ,
+        [
+          rdf:value
+            "Instytucja"@pl ,
+            "Autre function"@fr ,
+            "Instituição"@pt ,
+            "Institución"@es ,
+            "Otra función"@es ,
+            "Outro(a) [oth]"@pt ,
+            "Sonstige Funktion"@de ,
+            "Pozostałe"@pl ,
+            "Institution"@en ,
+            "Institution"@fr ,
+            "Istituzione"@it ,
+            "Other"@en ,
+            "Altro"@it ,
+            "Körperschaft"@de ;
+          rdfs:label
+            "Tipo de institución"@es ,
+            "Tipo de instituição"@pt ,
+            "Type d'institution"@fr ,
+            "Tipo di istituzione"@it ,
+            "Rodzaj instytucji"@pl ,
+            "Typ der Körperschaft"@de ,
+            "Type of institution"@en ;
+        ] ,
+        [
+          rdf:value "Antwerpen"@none ;
+          rdfs:label
+            "City"@en ,
+            "Ort"@de ,
+            "Miejscowość"@pl ,
+            "Cidade"@pt ,
+            "Città"@it ,
+            "Ville"@fr ,
+            "Ciudad"@es ;
+        ] ;
+      rism:sectionLabel
+        "Podsumowanie"@pl ,
+        "Résumé"@fr ,
+        "Zusammenfassung"@de ,
+        "Summary"@en ,
+        "Riassunto"@it ,
+        "Resumen"@es ,
+        "Resumo"@pt ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2019-10-28T15:41:41Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de creación"@es ,
+            "Criado em"@pt ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Date de création"@fr ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:04:40Z"^^xsd:dateTime ;
+          rdfs:label
+            "Dernière modification"@fr ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Ultima modifica"@it ,
+            "Ostatnia modyfikacja"@pl ,
+            "Fecha de modificación"@es ,
+            "Última modificação"@pt ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/institutions/51003422/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/institutions/51003422/sources" ;
+    ] ;
+  rismrel:xp <https://rism.online/places/3900411> ;
+  .
+
+<https://rism.online/institutions/51003422/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3900411> ;
+      rism:hasRole rismrel:xp ;
+    ] ;
+  rism:sectionLabel
+    "Relacionamentos"@pt ,
+    "Relacje"@pl ,
+    "Relaciones"@es ,
+    "Beziehungen"@de ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Relazioni"@it ;
+  .
+
+<https://rism.online/places/3900411>
+  a rism:Place ;
+  rdfs:label "Antwerpen, Provincie Antwerpen, België/ Belgique/ Belgien"@none ;
+  .

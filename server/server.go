@@ -970,7 +970,7 @@ func (s *Server) toolDefinitions() []ToolDefinition {
 			Type: "function",
 			Function: ToolFunctionDef{
 				Name:        "search_rdf_examples",
-				Description: "Search curated local RDF/Turtle examples for vocabulary, paths, labels, or IDs relevant to the user request.",
+				Description: "Search curated local RDF/Turtle example files for vocabulary, paths, labels, or IDs relevant to the user request, including record-specific files such as person.ttl, institution.ttl, source.ttl, and source-patterns.ttl.",
 				Parameters: objectSchema([]string{"query"}, map[string]any{
 					"query": stringSchema("ripgrep query string"),
 					"limit": integerSchema("maximum number of matches", 8),
@@ -992,7 +992,7 @@ func (s *Server) toolDefinitions() []ToolDefinition {
 			Type: "function",
 			Function: ToolFunctionDef{
 				Name:        "read_rdf_example",
-				Description: "Read a curated RDF example file by relative path after search identifies it.",
+				Description: "Read a curated RDF example file by relative path after search identifies the relevant record-specific Turtle file.",
 				Parameters: objectSchema([]string{"path"}, map[string]any{
 					"path": stringSchema("relative path inside the RDF examples directory"),
 				}),

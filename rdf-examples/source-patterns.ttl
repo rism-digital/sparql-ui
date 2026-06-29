@@ -1,0 +1,62 @@
+# Curated Linked RISM RDF/SPARQL pattern notes for the NL-to-SPARQL harness.
+# These snippets are intentionally small and searchable, not a complete dump.
+
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# Source title and type.
+# SPARQL pattern:
+# ?source a rism:Source ;
+#         rdfs:label ?title .
+# FILTER(LANG(?title) = "en")
+
+# Composer / creator relationship.
+# SPARQL pattern:
+# ?source dcterms:creator ?creator .
+# ?creator dcterms:relation ?person ;
+#          rism:hasRole relators:cre .
+# ?person rdfs:label ?composer .
+# FILTER(LANG(?composer) = "none")
+
+# Dedicatee relationship.
+# SPARQL pattern:
+# ?source rism:relationships/rism:hasRelationship ?relationship .
+# ?relationship dcterms:relation ?person ;
+#               rism:hasRole relators:dte .
+
+# Holdings and institutions.
+# SPARQL pattern:
+# ?source rism:holdings/rism:hasHolding ?holding .
+# ?holding rism:hasHoldingInstitution ?institution .
+# ?institution rism:hasCountryCodes "CH" .
+# ?institution rism:hasSiglum ?siglum .
+
+# Manuscript and printed source typing.
+# SPARQL pattern:
+# ?source rism:sourceTypes/rism:sourceType ?sourceType .
+# ?sourceType a rism:ManuscriptSource .
+# ?sourceType a rism:PrintedSource .
+
+# Dates.
+# SPARQL pattern:
+# ?source rism:hasDates [
+#   rism:earliestDate ?from ;
+#   rism:latestDate ?to
+# ] .
+
+# Incipits and PAE.
+# SPARQL pattern:
+# ?source rism:incipits/rism:hasIncipit ?incipit .
+# ?incipit a rism:Incipit ;
+#          rism:hasPAEData ?pae ;
+#          rism:hasPAEKeysig ?keysig ;
+#          rism:hasPAETimesig ?timesig .
+
+# External resources and IIIF.
+# SPARQL pattern:
+# ?source rism:externalResources/rism:hasExternalResource ?externalResource .
+# ?externalResource rism:url ?url .
+# ?externalResource rism:resourceType "rism:IIIFManifestLink" .

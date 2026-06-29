@@ -1,0 +1,220 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/50020500>
+  a rism:Place ;
+  rdfs:label "Nepomyšl"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/3030769>
+  a rism:Place ;
+  rdfs:label "Irschenhausen"@none ;
+  rism:externalAuthorities <https://rism.online/places/3030769/external-authorities> ;
+  rism:hasExternalAuthority <https://rism.online/places/3030769/external-authorities/tgn7154286> ;
+  schemaorg:sameAs "https://vocab.getty.edu/tgn/7154286"^^xsd:anyURI ;
+  .
+
+<https://rism.online/places/3030769/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Normdatenverweise"@de ,
+    "Outro identificador padronizado"@pt ,
+    "Référence d'authorité"@fr ,
+    "Other standard identifier"@en ,
+    "Identyfikator innego standardu"@pl ,
+    "Riferimento autorità"@it ,
+    "Otro identificador estándar"@es ;
+  rism:hasExternalAuthority <https://rism.online/places/3030769/external-authorities/tgn7154286> ;
+  .
+
+<https://rism.online/places/3030769/external-authorities/tgn7154286>
+  a rism:ExternalAuthority ;
+  rdf:value "7154286" ;
+  rdfs:label "Getty Thesaurus of Geographic Names: 7154286"@none ;
+  rism:authorityBase "https://vocab.getty.edu/tgn/"^^xsd:anyURI ;
+  rism:authorityScheme "tgn" ;
+  rism:authorityUrl "https://vocab.getty.edu/tgn/7154286"^^xsd:anyURI ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/50012707>
+  a rism:Place ;
+  rdfs:label "Vella"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/3905313>
+  a rism:Place ;
+  rdfs:label "Oberstreu"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/3024316>
+  a rism:Place ;
+  rdfs:label "Hodimont-Verviers"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/3903085>
+  a rism:Place ;
+  rdfs:label "Ebersbach/Sa."@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/50013651>
+  a rism:Place ;
+  rdfs:label "Weismain"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/50019056>
+  a rism:Place ;
+  rdfs:label "Vechelde-Wedtlenstedt"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/3905397>
+  a rism:Place ;
+  rdfs:label "Sömmerda"@none ;
+  rism:externalAuthorities <https://rism.online/places/3905397/external-authorities> ;
+  rism:hasExternalAuthority <https://rism.online/places/3905397/external-authorities/tgn1037623> ;
+  schemaorg:sameAs "https://vocab.getty.edu/tgn/1037623"^^xsd:anyURI ;
+  .
+
+<https://rism.online/places/3905397/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Riferimento autorità"@it ,
+    "Identyfikator innego standardu"@pl ,
+    "Other standard identifier"@en ,
+    "Référence d'authorité"@fr ,
+    "Otro identificador estándar"@es ,
+    "Outro identificador padronizado"@pt ,
+    "Normdatenverweise"@de ;
+  rism:hasExternalAuthority <https://rism.online/places/3905397/external-authorities/tgn1037623> ;
+  .
+
+<https://rism.online/places/3905397/external-authorities/tgn1037623>
+  a rism:ExternalAuthority ;
+  rdf:value "1037623" ;
+  rdfs:label "Getty Thesaurus of Geographic Names: 1037623"@none ;
+  rism:authorityBase "https://vocab.getty.edu/tgn/"^^xsd:anyURI ;
+  rism:authorityScheme "tgn" ;
+  rism:authorityUrl "https://vocab.getty.edu/tgn/1037623"^^xsd:anyURI ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/places/50010106>
+  a rism:Place ;
+  rdfs:label "Pontlevoy"@none ;
+  .

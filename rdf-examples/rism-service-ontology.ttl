@@ -1,0 +1,1098 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:created
+  a owl:DatatypeProperty ;
+  rdfs:label "Created"@en ;
+  .
+
+dcterms:creator
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a source, work, or publication to a creator relationship node. The node usually carries dcterms:relation, rism:hasRole, and optionally rism:hasQualifier."@en ;
+  rdfs:label "creator node"@en ;
+  rism:queryPattern "?record dcterms:creator ?creator . ?creator dcterms:relation ?person ; rism:hasRole relators:cre ." ;
+  .
+
+dcterms:modified
+  a owl:DatatypeProperty ;
+  rdfs:label "Modified"@en ;
+  .
+
+dcterms:relation
+  a owl:ObjectProperty ;
+  rdfs:label "Relation"@en ;
+  .
+
+geo:lat
+  a owl:DatatypeProperty ;
+  rdfs:label "Lat"@en ;
+  .
+
+geo:long
+  a owl:DatatypeProperty ;
+  rdfs:label "Long"@en ;
+  .
+
+geojson:coordinates
+  a owl:DatatypeProperty ;
+  rdfs:label "Coordinates"@en ;
+  .
+
+geojson:geometry
+  a owl:ObjectProperty ;
+  rdfs:label "Geometry"@en ;
+  .
+
+rdf:value
+  a owl:DatatypeProperty ;
+  rdfs:comment "Generic literal value used throughout the service for summary items, note content, status codes, external authority identifiers, and labels such as subject terms."@en ;
+  rdfs:label "value"@en ;
+  .
+
+rdfs:label
+  a owl:DatatypeProperty ;
+  rdfs:label "Label"@en ;
+  .
+
+rism:
+  a owl:Ontology ;
+  dcterms:description "Descriptive ontology for the RDF emitted by the RISM service as of the current JSON-LD contexts and serializers. It is intentionally query-oriented and LLM-friendly: it documents classes, predicates, structural wrapper nodes, and common SPARQL paths rather than enforcing strict cardinalities."@en ;
+  dcterms:title "RISM service ontology"@en ;
+  owl:versionInfo "0.2.0" ;
+  rdfs:comment "This file describes service RDF, not every JSON field in API responses. Some route-specific JSON structures are intentionally excluded from RDF by null-mapped context terms."@en ;
+  rdfs:seeAlso <https://rism.online/> ;
+  .
+
+rism:AutographMaterial
+  a owl:Class ;
+  rdfs:label "Autograph manuscript material"@en ;
+  rdfs:subClassOf rism:MaterialType ;
+  rism:queryPattern "?source rism:sourceTypes/rism:materialTypes ?materialType . ?materialType a rism:AutographMaterial ." ;
+  .
+
+rism:CollectionRecord
+  a owl:Class ;
+  rdfs:label "Collection record"@en ;
+  rdfs:subClassOf rism:RecordType ;
+  .
+
+rism:ContentType
+  a owl:Class ;
+  rdfs:label "Content type"@en ;
+  .
+
+rism:DigitalObject
+  a owl:Class ;
+  rdfs:label "Digital object"@en ;
+  .
+
+rism:DigitalObjectsSection
+  a owl:Class ;
+  rdfs:label "Digital objects section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:ExemplarsSection
+  a owl:Class ;
+  rdfs:label "Exemplars section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:ExternalAuthoritiesSection
+  a owl:Class ;
+  rdfs:label "External authorities section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:ExternalAuthority
+  a owl:Class ;
+  rdfs:label "External authority"@en ;
+  .
+
+rism:ExternalRecord
+  a owl:Class ;
+  rdfs:label "External record"@en ;
+  .
+
+rism:ExternalResource
+  a owl:Class ;
+  rdfs:label "External resource"@en ;
+  .
+
+rism:ExternalResourcesSection
+  a owl:Class ;
+  rdfs:label "External resources section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:ExternalWorkReferencesSection
+  a owl:Class ;
+  rdfs:label "External work references section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:Holding
+  a owl:Class ;
+  rdfs:comment "A holding or exemplar for a source, usually linked to a holding institution and carrying copy-specific summaries, notes, and a holding type."@en ;
+  rdfs:label "Holding"@en ;
+  rism:queryPattern "?source rism:holdings/rism:hasHolding ?holding . ?holding rism:hasHoldingInstitution ?institution ." ;
+  .
+
+rism:HoldingType
+  a owl:Class ;
+  rdfs:label "Holding type"@en ;
+  .
+
+rism:Incipit
+  a owl:Class ;
+  rdfs:comment "A musical incipit with Plaine and Easie clef, key signature, time signature, notation data, optional encodings, and summary values."@en ;
+  rdfs:label "Incipit"@en ;
+  rism:queryPattern "?source rism:incipits/rism:hasIncipit ?incipit . ?incipit rism:hasPAEData ?pae ." ;
+  .
+
+rism:IncipitsSection
+  a owl:Class ;
+  rdfs:label "Incipits section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:Institution
+  a owl:Class ;
+  owl:equivalentClass schemaorg:Organization ;
+  rdfs:comment "An institution authority record, including holding institutions, publishers, former owners, and other corporate agents."@en ;
+  rdfs:label "Institution"@en ;
+  rism:queryPattern
+    "?institution a rism:Institution ; rism:hasSiglum ?siglum ." ,
+    "?institution rism:hasLocation/schemaorg:address ?address ." ,
+    "?institution rism:hasSiglum ?siglum ; rism:hasCountryCodes ?countryCode ." ;
+  .
+
+rism:InventoryItem
+  a owl:Class ;
+  rdfs:label "Inventory item"@en ;
+  .
+
+rism:ItemRecord
+  a owl:Class ;
+  rdfs:label "Item record"@en ;
+  rdfs:subClassOf rism:RecordType ;
+  .
+
+rism:LocationAddressSection
+  a owl:Class ;
+  rdfs:label "Location and address section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:ManuscriptHolding
+  a owl:Class ;
+  rdfs:label "Manuscript holding"@en ;
+  rdfs:subClassOf rism:HoldingType ;
+  .
+
+rism:ManuscriptSource
+  a owl:Class ;
+  rdfs:label "Manuscript source"@en ;
+  rdfs:subClassOf rism:SourceType ;
+  rism:queryPattern "?source rism:sourceTypes/rism:sourceType ?sourceType . ?sourceType a rism:ManuscriptSource ." ;
+  .
+
+rism:MaterialGroup
+  a owl:Class ;
+  rdfs:comment "A material-description node within a source. Material groups can carry summaries, notes, relationships, and external resources."@en ;
+  rdfs:label "Material group"@en ;
+  rism:queryPattern "?source rism:materialGroups/rism:hasMaterialGroup ?materialGroup ." ;
+  .
+
+rism:MaterialType
+  a owl:Class ;
+  rdfs:label "Material type"@en ;
+  .
+
+rism:MusicalContent
+  a owl:Class ;
+  rdfs:label "Musical content"@en ;
+  rdfs:subClassOf rism:ContentType ;
+  .
+
+rism:NotesSection
+  a owl:Class ;
+  rdfs:label "Notes section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:PartOfRelationship
+  a owl:Class ;
+  rdfs:label "Part-of relationship type"@en ;
+  .
+
+rism:PartOfSection
+  a owl:Class ;
+  rdfs:label "Part-of section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:Person
+  a owl:Class ;
+  owl:equivalentClass foaf:Person ;
+  rdfs:comment "A person authority record. Person display labels usually use language tag 'none', and gender is exposed directly on the person resource as a plain string literal through schemaorg:gender."@en ;
+  rdfs:label "Person"@en ;
+  rism:queryPattern
+    "?person a rism:Person ; rdfs:label ?name . FILTER(LANG(?name) = \"none\")" ,
+    "?person a rism:Person ; rdfs:label ?name ; schemaorg:gender \"female\" . FILTER(LANG(?name) = \"none\")" ;
+  .
+
+rism:Place
+  a owl:Class ;
+  owl:equivalentClass schemaorg:Place ;
+  rdfs:comment "A place record. In service RDF, place records currently expose their own summary and external-authority data, but embedded JSON lists of sources, people, and institutions are intentionally not mapped into RDF."@en ;
+  rdfs:label "Place"@en ;
+  rism:queryPattern "?place a rism:Place ; rdfs:label ?name ." ;
+  rism:serviceNote
+    "Do not infer RDF paths from the JSON keys sources, people, or institutions on place responses; those keys are intentionally excluded from RDF."@en ,
+    "The place API response contains additional JSON structures that are null-mapped in the place context and therefore do not contribute triples."@en ;
+  .
+
+rism:PrintHolding
+  a owl:Class ;
+  rdfs:label "Print holding"@en ;
+  rdfs:subClassOf rism:HoldingType ;
+  .
+
+rism:PrintedSource
+  a owl:Class ;
+  rdfs:label "Printed source"@en ;
+  rdfs:subClassOf rism:SourceType ;
+  rism:queryPattern "?source rism:sourceTypes/rism:sourceType ?sourceType . ?sourceType a rism:PrintedSource ." ;
+  .
+
+rism:Publication
+  a owl:Class ;
+  rdfs:comment "A bibliographic publication or reference record."@en ;
+  rdfs:label "Publication"@en ;
+  rism:queryPattern "?publication a rism:Publication ." ;
+  .
+
+rism:RecordHistory
+  a owl:Class ;
+  rdfs:comment "Creation and modification metadata for a record."@en ;
+  rdfs:label "Record history"@en ;
+  .
+
+rism:RecordType
+  a owl:Class ;
+  rdfs:label "Record type"@en ;
+  .
+
+rism:ReferencesNotesSection
+  a owl:Class ;
+  rdfs:label "References and notes section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:RelationshipQualifier
+  a owl:Class ;
+  rdfs:label "Relationship qualifier"@en ;
+  .
+
+rism:Section
+  a owl:Class ;
+  rdfs:comment "A structural node used by the service to group repeated or sectioned data."@en ;
+  rdfs:label "Section"@en ;
+  .
+
+rism:SingleItemRecord
+  a owl:Class ;
+  rdfs:label "Single item record"@en ;
+  rdfs:subClassOf rism:RecordType ;
+  .
+
+rism:Source
+  a owl:Class ;
+  rdfs:comment "A source record. Sources can carry creator relationships, dates, summary values, source-type classification, material groups, holdings, incipits, subjects, references and notes, relationships, works, part-of links, and external resources."@en ;
+  rdfs:label "Source"@en ;
+  rism:queryPattern
+    "?source a rism:Source ." ,
+    "?source dcterms:creator ?creator . ?creator dcterms:relation ?person ; rism:hasRole relators:cre ." ,
+    "?source rism:hasDates/rism:earliestDate ?year ." ,
+    "?source rism:holdings/rism:hasHolding ?holding . ?holding rism:hasHoldingInstitution ?institution ." ,
+    "MINUS { ?source rism:partOf/rism:isPartOf ?parent . }" ;
+  rism:serviceNote "To count only top-level sources, exclude child-source rows with MINUS { ?source rism:partOf/rism:isPartOf ?parent . }."@en ;
+  .
+
+rism:SourceType
+  a owl:Class ;
+  rdfs:label "Source type"@en ;
+  .
+
+rism:Subject
+  a owl:Class ;
+  rdfs:comment "A subject heading record used by sources and works."@en ;
+  rdfs:label "Subject heading"@en ;
+  rism:queryPattern
+    "?source rism:subjects/rism:hasSubject ?subject ." ,
+    "?subject a rism:Subject ; rdf:value ?term ." ,
+    "?work rism:formOfWork/rism:hasFormOfWork ?subject ." ;
+  .
+
+rism:VariantNamesSection
+  a owl:Class ;
+  rdfs:label "Variant names section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:Work
+  a owl:Class ;
+  rdfs:comment "A work record. Works can have creators, relationships, incipits, sources, form-of-work links, references and notes, external resources, and summary values."@en ;
+  rdfs:label "Work"@en ;
+  rism:queryPattern
+    "?work a rism:Work ." ,
+    "?work rism:formOfWork/rism:hasFormOfWork ?subject ." ,
+    "?work rism:incipits/rism:hasIncipit ?incipit ." ;
+  .
+
+rism:WorksCatalogsSection
+  a owl:Class ;
+  rdfs:label "Works catalogs section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:WorksSection
+  a owl:Class ;
+  rdfs:label "Works section"@en ;
+  rdfs:subClassOf rism:Section ;
+  .
+
+rism:authorityBase
+  a owl:DatatypeProperty ;
+  rdfs:label "authority base URL"@en ;
+  .
+
+rism:authorityScheme
+  a owl:DatatypeProperty ;
+  rdfs:label "authority scheme"@en ;
+  .
+
+rism:authorityUrl
+  a owl:DatatypeProperty ;
+  rdfs:label "authority URL"@en ;
+  .
+
+rism:biographicalDetails
+  a owl:ObjectProperty ;
+  rdfs:label "Biographical details"@en ;
+  .
+
+rism:composer
+  a owl:ObjectProperty ;
+  rdfs:label "composer"@en ;
+  rdfs:range rism:Person ;
+  .
+
+rism:contentTypes
+  a owl:ObjectProperty ;
+  rdfs:label "content types"@en ;
+  rdfs:range rism:ContentType ;
+  rism:queryPattern "?source rism:sourceTypes/rism:contentTypes ?contentType ." ;
+  .
+
+rism:dateStatement
+  a owl:DatatypeProperty ;
+  rdfs:label "date statement"@en ;
+  .
+
+rism:digitalObjects
+  a owl:ObjectProperty ;
+  rdfs:label "digital objects section"@en ;
+  rdfs:range rism:DigitalObjectsSection ;
+  .
+
+rism:earliestDate
+  a owl:DatatypeProperty ;
+  rdfs:label "earliest date"@en ;
+  .
+
+rism:emailAddress
+  a owl:DatatypeProperty ;
+  rdfs:label "email address"@en ;
+  .
+
+rism:externalAuthorities
+  a owl:ObjectProperty ;
+  rdfs:label "external authorities section"@en ;
+  rdfs:range rism:ExternalAuthoritiesSection ;
+  rism:queryPattern "?record rism:externalAuthorities/rism:hasExternalAuthority ?authority ." ;
+  .
+
+rism:externalResources
+  a owl:ObjectProperty ;
+  rdfs:label "external resources section"@en ;
+  rdfs:range rism:ExternalResourcesSection ;
+  rism:queryPattern "?record rism:externalResources/rism:hasExternalResource ?resource ." ;
+  .
+
+rism:formOfWork
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a work to a wrapper node whose entries are reached by rism:hasFormOfWork."@en ;
+  rdfs:label "form of work section"@en ;
+  .
+
+rism:hasCityName
+  a owl:DatatypeProperty ;
+  rdfs:label "city name"@en ;
+  .
+
+rism:hasCountryCodes
+  a owl:DatatypeProperty ;
+  rdfs:comment "Institution country code exposed directly on institution nodes, including institutions embedded under holdings."@en ;
+  rdfs:domain rism:Institution ;
+  rdfs:label "country codes"@en ;
+  rism:queryPattern
+    "?holding rism:hasHoldingInstitution/rism:hasCountryCodes ?countryCode ." ,
+    "?institution rism:hasCountryCodes ?countryCode ." ;
+  .
+
+rism:hasDates
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a record to a date wrapper node with earliest/latest numeric dates and a date statement."@en ;
+  rdfs:label "has dates"@en ;
+  rism:queryPattern "?record rism:hasDates/rism:earliestDate ?from ." ;
+  .
+
+rism:hasDigitalObject
+  a owl:DatatypeProperty ;
+  rdfs:label "has digital object"@en ;
+  rdfs:range rism:DigitalObject ;
+  .
+
+rism:hasEncoding
+  a owl:ObjectProperty ;
+  rdfs:label "Has encoding"@en ;
+  .
+
+rism:hasExternalAuthority
+  a owl:ObjectProperty ;
+  rdfs:label "has external authority"@en ;
+  rdfs:range rism:ExternalAuthority ;
+  rism:serviceNote "This predicate is used both for section items under rism:externalAuthorities and for top-level authorityLinks emitted through properties."@en ;
+  .
+
+rism:hasExternalRecord
+  a owl:ObjectProperty ;
+  rdfs:label "has external record"@en ;
+  rdfs:range rism:ExternalRecord ;
+  .
+
+rism:hasExternalResource
+  a owl:DatatypeProperty ;
+  rdfs:label "has external resource"@en ;
+  rdfs:range rism:ExternalResource ;
+  .
+
+rism:hasFormOfWork
+  a owl:DatatypeProperty ;
+  rdfs:label "has form of work"@en ;
+  rdfs:range rism:Subject ;
+  .
+
+rism:hasHolding
+  a owl:DatatypeProperty ;
+  rdfs:domain rism:ExemplarsSection ;
+  rdfs:label "has holding"@en ;
+  rdfs:range rism:Holding ;
+  .
+
+rism:hasHoldingInstitution
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a holding node to the institution embedded under heldBy in the service JSON-LD context."@en ;
+  rdfs:domain rism:Holding ;
+  rdfs:label "has holding institution"@en ;
+  rdfs:range rism:Institution ;
+  rism:queryPattern
+    "?holding rism:hasHoldingInstitution ?institution ." ,
+    "?source rism:holdings/rism:hasHolding ?holding . ?holding rism:hasHoldingInstitution ?institution ." ;
+  .
+
+rism:hasIncipit
+  a owl:DatatypeProperty ;
+  rdfs:domain rism:IncipitsSection ;
+  rdfs:label "has incipit"@en ;
+  rdfs:range rism:Incipit ;
+  .
+
+rism:hasInventoryItem
+  a owl:DatatypeProperty ;
+  rdfs:label "Has inventory item"@en ;
+  .
+
+rism:hasKeyMode
+  a owl:DatatypeProperty ;
+  rdfs:label "key or mode"@en ;
+  .
+
+rism:hasLocation
+  a owl:ObjectProperty ;
+  rdfs:label "has location"@en ;
+  rdfs:range rism:LocationAddressSection ;
+  .
+
+rism:hasMaterialGroup
+  a owl:DatatypeProperty ;
+  rdfs:label "has material group"@en ;
+  rdfs:range rism:MaterialGroup ;
+  .
+
+rism:hasNameVariant
+  a owl:DatatypeProperty ;
+  rdfs:label "Has name variant"@en ;
+  .
+
+rism:hasNote
+  a owl:DatatypeProperty ;
+  rdfs:comment "Links a notes or references-and-notes section to a note node that typically carries rdfs:label and rdf:value."@en ;
+  rdfs:label "has note"@en ;
+  .
+
+rism:hasPAEClef
+  a owl:DatatypeProperty ;
+  rdfs:label "PAE clef"@en ;
+  .
+
+rism:hasPAEData
+  a owl:DatatypeProperty ;
+  rdfs:label "PAE notation data"@en ;
+  .
+
+rism:hasPAEKeysig
+  a owl:DatatypeProperty ;
+  rdfs:label "PAE key signature"@en ;
+  .
+
+rism:hasPAETimesig
+  a owl:DatatypeProperty ;
+  rdfs:label "PAE time signature"@en ;
+  .
+
+rism:hasPhysicalDimensions
+  a owl:DatatypeProperty ;
+  rdfs:label "physical dimensions"@en ;
+  .
+
+rism:hasQualifier
+  a owl:ObjectProperty ;
+  rdfs:label "has qualifier"@en ;
+  rdfs:range rism:RelationshipQualifier ;
+  .
+
+rism:hasRelationship
+  a owl:DatatypeProperty ;
+  rdfs:comment "Links a relationship section to a relationship node. Relationship nodes usually use dcterms:relation for the related resource and rism:hasRole for the role."@en ;
+  rdfs:label "has relationship"@en ;
+  rism:queryPattern "?relationship dcterms:relation ?related ; rism:hasRole ?role ." ;
+  .
+
+rism:hasRole
+  a owl:ObjectProperty ;
+  rdfs:comment "A role for creator and relationship nodes. Values commonly come from the Library of Congress relators vocabulary or from local relationship vocabularies such as rismrel:."@en ;
+  rdfs:label "has role"@en ;
+  rism:queryPattern
+    "?creator dcterms:relation ?person ; rism:hasRole relators:cre ." ,
+    "?relationship dcterms:relation ?person ; rism:hasRole relators:dte ." ,
+    "?relationship dcterms:relation ?publisher ; rism:hasRole relators:pbl ." ,
+    "?relationship dcterms:relation ?related ; rism:hasRole ?role ." ;
+  .
+
+rism:hasSiglum
+  a owl:DatatypeProperty ;
+  rdfs:comment "Institution siglum exposed directly on institution nodes."@en ;
+  rdfs:domain rism:Institution ;
+  rdfs:label "siglum"@en ;
+  rism:queryPattern "?institution rism:hasSiglum ?siglum ." ;
+  .
+
+rism:hasSourceItem
+  a owl:DatatypeProperty ;
+  rdfs:label "Has source item"@en ;
+  .
+
+rism:hasSubject
+  a owl:DatatypeProperty ;
+  rdfs:label "has subject"@en ;
+  rdfs:range rism:Subject ;
+  .
+
+rism:hasSummary
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a record or structural node to a summary node, usually carrying rdfs:label and rdf:value, and sometimes classification types such as dcterms:type or pmo:MediumOfPerformance."@en ;
+  rdfs:label "has summary"@en ;
+  rism:queryPattern "?record rism:hasSummary ?summary . ?summary rdf:value ?value ." ;
+  .
+
+rism:hasWork
+  a owl:DatatypeProperty ;
+  rdfs:label "has work"@en ;
+  rdfs:range rism:Work ;
+  .
+
+rism:hasWorkCatalogReference
+  a owl:DatatypeProperty ;
+  rdfs:label "has work catalog reference"@en ;
+  .
+
+rism:hasWorkNode
+  a owl:DatatypeProperty ;
+  rdfs:label "has work node"@en ;
+  .
+
+rism:hasWorkNumber
+  a owl:DatatypeProperty ;
+  rdfs:label "Has work number"@en ;
+  .
+
+rism:holdingType
+  a owl:DatatypeProperty ;
+  rdfs:comment "Current service RDF emits holdingType as a literal naming a holding class, for example \"rism:PrintHolding\"."@en ;
+  rdfs:label "holding type"@en ;
+  .
+
+rism:holdings
+  a owl:ObjectProperty ;
+  rdfs:domain rism:Source ;
+  rdfs:label "holdings section"@en ;
+  rdfs:range rism:ExemplarsSection ;
+  rism:queryPattern "?source rism:holdings/rism:hasHolding ?holding ." ;
+  .
+
+rism:incipits
+  a owl:ObjectProperty ;
+  rdfs:label "incipits section"@en ;
+  rdfs:range rism:IncipitsSection ;
+  rism:queryPattern "?record rism:incipits/rism:hasIncipit ?incipit ." ;
+  .
+
+rism:inventoryItems
+  a owl:ObjectProperty ;
+  rdfs:label "Inventory items"@en ;
+  .
+
+rism:isPartOf
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a part-of section to a part-of node that uses dcterms:relation for the parent resource."@en ;
+  rdfs:label "is part of"@en ;
+  .
+
+rism:latestDate
+  a owl:DatatypeProperty ;
+  rdfs:label "latest date"@en ;
+  .
+
+rism:liturgicalFestivals
+  a owl:ObjectProperty ;
+  rdfs:label "Liturgical festivals"@en ;
+  .
+
+rism:materialGroups
+  a owl:ObjectProperty ;
+  rdfs:domain rism:Source ;
+  rdfs:label "material groups section"@en ;
+  rdfs:range rism:Section ;
+  rism:queryPattern "?source rism:materialGroups/rism:hasMaterialGroup ?materialGroup ." ;
+  .
+
+rism:materialTypes
+  a owl:ObjectProperty ;
+  rdfs:label "material types"@en ;
+  rdfs:range rism:MaterialType ;
+  .
+
+rism:meiEncoding
+  a owl:DatatypeProperty ;
+  rdfs:label "MEI encoding URL"@en ;
+  .
+
+rism:nameVariants
+  a owl:ObjectProperty ;
+  rdfs:label "Name variants"@en ;
+  .
+
+rism:notes
+  a owl:ObjectProperty ;
+  rdfs:label "notes section"@en ;
+  rdfs:range rism:NotesSection ;
+  .
+
+rism:organizationDetails
+  a owl:ObjectProperty ;
+  rdfs:label "Organization details"@en ;
+  .
+
+rism:paeEncoding
+  a owl:DatatypeProperty ;
+  rdfs:label "PAE encoding"@en ;
+  .
+
+rism:partOf
+  a owl:ObjectProperty ;
+  rdfs:label "part-of section"@en ;
+  rdfs:range rism:PartOfSection ;
+  rism:queryPattern "MINUS { ?source rism:partOf/rism:isPartOf ?parent . }" ;
+  .
+
+rism:performanceLocations
+  a owl:ObjectProperty ;
+  rdfs:label "Performance locations"@en ;
+  .
+
+rism:publicationDates
+  a owl:DatatypeProperty ;
+  rdfs:label "Publication dates"@en ;
+  .
+
+rism:queryPattern
+  a owl:AnnotationProperty ;
+  rdfs:comment "A SPARQL path or idiom useful for prompt-to-SPARQL systems."@en ;
+  rdfs:label "query pattern"@en ;
+  .
+
+rism:recordHistory
+  a owl:ObjectProperty ;
+  rdfs:label "Record history"@en ;
+  .
+
+rism:recordType
+  a owl:ObjectProperty ;
+  rdfs:label "record type"@en ;
+  rdfs:range rism:RecordType ;
+  rism:queryPattern "?source rism:sourceTypes/rism:recordType ?recordType ." ;
+  .
+
+rism:referencesNotes
+  a owl:ObjectProperty ;
+  rdfs:label "references and notes section"@en ;
+  rdfs:range rism:ReferencesNotesSection ;
+  rism:queryPattern "?record rism:referencesNotes/rism:hasNote ?note ." ;
+  .
+
+rism:relationships
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a record or material group to a relationship section."@en ;
+  rdfs:label "relationships section"@en ;
+  rism:queryPattern "?record rism:relationships/rism:hasRelationship ?relationship ." ;
+  .
+
+rism:sectionLabel
+  a owl:DatatypeProperty ;
+  rdfs:comment "A human-readable translated label on a section node."@en ;
+  rdfs:label "section label"@en ;
+  .
+
+rism:serviceNote
+  a owl:AnnotationProperty ;
+  rdfs:comment "Implementation note about how the service emits RDF."@en ;
+  rdfs:label "service note"@en ;
+  rism:serviceNote "For route-specific record contexts, class labels are materialized onto the class IRIs through synthesized @included nodes. In service RDF, this means classes such as rism:Source, rism:Person, rism:Subject, rism:Holding, rism:PrintedSource, or rism:AutographMaterial can carry rdfs:label triples even when the instance JSON only contained type/typeLabel pairs."@en ;
+  .
+
+rism:shortTitle
+  a owl:DatatypeProperty ;
+  rdfs:label "Short title"@en ;
+  .
+
+rism:sourceItems
+  a owl:ObjectProperty ;
+  rdfs:label "Source items"@en ;
+  .
+
+rism:sourceType
+  a owl:ObjectProperty ;
+  rdfs:label "source type"@en ;
+  rdfs:range rism:SourceType ;
+  rism:queryPattern "?source rism:sourceTypes/rism:sourceType ?sourceType ." ;
+  .
+
+rism:sourceTypes
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a source to a wrapper node grouping record type, source type, content types, and material types."@en ;
+  rdfs:domain rism:Source ;
+  rdfs:label "source types block"@en ;
+  rism:queryPattern
+    "?source rism:sourceTypes/rism:contentTypes ?contentType ." ,
+    "?source rism:sourceTypes/rism:recordType ?recordType ." ,
+    "?source rism:sourceTypes/rism:sourceType ?sourceType ." ;
+  .
+
+rism:sources
+  a owl:ObjectProperty ;
+  rdfs:label "Sources"@en ;
+  .
+
+rism:status
+  a owl:ObjectProperty ;
+  rdfs:label "Status"@en ;
+  .
+
+rism:subjects
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a source to a subjects wrapper node."@en ;
+  rdfs:label "subjects section"@en ;
+  rism:queryPattern "?source rism:subjects/rism:hasSubject ?subject ." ;
+  .
+
+rism:totalItems
+  a owl:DatatypeProperty ;
+  rdfs:label "total items"@en ;
+  .
+
+rism:website
+  a owl:DatatypeProperty ;
+  rdfs:label "website"@en ;
+  .
+
+rism:workCatalogRelationship
+  a owl:ObjectProperty ;
+  rdfs:label "work catalog relationship"@en ;
+  rdfs:range rism:PartOfRelationship ;
+  .
+
+rism:workReference
+  a owl:ObjectProperty ;
+  rdfs:label "Work reference"@en ;
+  .
+
+rism:workReferences
+  a owl:ObjectProperty ;
+  rdfs:label "work references section"@en ;
+  .
+
+rism:works
+  a owl:ObjectProperty ;
+  rdfs:comment "Depending on context, links a resource to a works section, a nested works wrapper, or a concrete work node."@en ;
+  rdfs:label "works section or relation"@en ;
+  .
+
+rism:worksCatalogs
+  a owl:ObjectProperty ;
+  rdfs:label "works catalogs section"@en ;
+  .
+
+rismrel:active_in
+  a owl:ObjectProperty ;
+  rdfs:comment "Generic activity-location relation introduced to group country_active, place_active, and region_active."@en ;
+  rdfs:label "active in"@en ;
+  rdfs:range rism:Place ;
+  rdfs:subPropertyOf schemaorg:workLocation ;
+  .
+
+rismrel:brother_of
+  a owl:ObjectProperty ;
+  rdfs:domain rism:Person ;
+  rdfs:label "brother of"@en ;
+  rdfs:range rism:Person ;
+  rdfs:subPropertyOf rismrel:sibling_of ;
+  .
+
+rismrel:child_of
+  a owl:ObjectProperty ;
+  rdfs:domain rism:Person ;
+  rdfs:label "child of"@en ;
+  rdfs:range rism:Person ;
+  rdfs:subPropertyOf schemaorg:parent ;
+  .
+
+rismrel:confused_with
+  a owl:ObjectProperty ;
+  rdfs:comment "Editorial or bibliographic confusion relation, not an identity relation."@en ;
+  rdfs:domain rism:Person ;
+  rdfs:label "confused with"@en ;
+  rdfs:range rism:Person ;
+  .
+
+rismrel:father_of
+  a owl:ObjectProperty ;
+  owl:inverseOf rismrel:child_of ;
+  rdfs:domain rism:Person ;
+  rdfs:label "father of"@en ;
+  rdfs:range rism:Person ;
+  rdfs:subPropertyOf rismrel:parent_of ;
+  .
+
+rismrel:go
+  a owl:ObjectProperty ;
+  owl:equivalentProperty schemaorg:birthPlace ;
+  rdfs:label "place of birth"@en ;
+  rdfs:range rism:Place ;
+  .
+
+rismrel:ha
+  a owl:ObjectProperty ;
+  rdfs:comment "Place of origin is kept local because its scope varies across records and is not safely exact to a single Schema.org property."@en ;
+  rdfs:label "place of origin"@en ;
+  rdfs:range rism:Place ;
+  .
+
+rismrel:married_to
+  a owl:ObjectProperty ;
+  owl:equivalentProperty schemaorg:spouse ;
+  rdfs:domain rism:Person ;
+  rdfs:label "married to"@en ;
+  rdfs:range rism:Person ;
+  .
+
+rismrel:mother_of
+  a owl:ObjectProperty ;
+  owl:inverseOf rismrel:child_of ;
+  rdfs:domain rism:Person ;
+  rdfs:label "mother of"@en ;
+  rdfs:range rism:Person ;
+  rdfs:subPropertyOf rismrel:parent_of ;
+  .
+
+rismrel:other
+  a owl:ObjectProperty ;
+  rdfs:domain rism:Person ;
+  rdfs:label "other"@en ;
+  rdfs:range rism:Person ;
+  .
+
+rismrel:parent_of
+  a owl:ObjectProperty ;
+  rdfs:comment "Generic parent relation introduced to group father_of and mother_of."@en ;
+  rdfs:domain rism:Person ;
+  rdfs:label "parent of"@en ;
+  rdfs:range rism:Person ;
+  rdfs:subPropertyOf schemaorg:children ;
+  .
+
+rismrel:related_to
+  a owl:ObjectProperty ;
+  rdfs:comment "Broad local association, only approximately aligned to schemaorg:knows."@en ;
+  rdfs:domain rism:Person ;
+  rdfs:label "related to"@en ;
+  rdfs:range rism:Person ;
+  rdfs:subPropertyOf schemaorg:knows ;
+  .
+
+rismrel:sibling_of
+  a owl:ObjectProperty ;
+  owl:equivalentProperty schemaorg:sibling ;
+  rdfs:comment "Generic sibling relation introduced to group brother_of and sister_of."@en ;
+  rdfs:domain rism:Person ;
+  rdfs:label "sibling of"@en ;
+  rdfs:range rism:Person ;
+  .
+
+rismrel:sister_of
+  a owl:ObjectProperty ;
+  rdfs:domain rism:Person ;
+  rdfs:label "sister of"@en ;
+  rdfs:range rism:Person ;
+  rdfs:subPropertyOf rismrel:sibling_of ;
+  .
+
+rismrel:so
+  a owl:ObjectProperty ;
+  owl:equivalentProperty schemaorg:deathPlace ;
+  rdfs:label "place of death"@en ;
+  rdfs:range rism:Place ;
+  .
+
+rismrel:wl
+  a owl:ObjectProperty ;
+  rdfs:label "country active"@en ;
+  rdfs:range rism:Place ;
+  rdfs:subPropertyOf rismrel:active_in ;
+  .
+
+rismrel:wo
+  a owl:ObjectProperty ;
+  rdfs:label "place active"@en ;
+  rdfs:range rism:Place ;
+  rdfs:subPropertyOf rismrel:active_in ;
+  .
+
+rismrel:wr
+  a owl:ObjectProperty ;
+  rdfs:label "region active"@en ;
+  rdfs:range rism:Place ;
+  rdfs:subPropertyOf rismrel:active_in ;
+  .
+
+rismrel:xp
+  a owl:ObjectProperty ;
+  rdfs:comment "Broad local association to a place, kept local because there is no safely exact external property."@en ;
+  rdfs:label "related place"@en ;
+  rdfs:range rism:Place ;
+  .
+
+schemaorg:address
+  a owl:ObjectProperty ;
+  rdfs:comment "Links an institution location section to a postal-address style node."@en ;
+  rdfs:label "address"@en ;
+  .
+
+schemaorg:addressCountry
+  a owl:DatatypeProperty ;
+  rdfs:label "Address country"@en ;
+  .
+
+schemaorg:addressLocality
+  a owl:DatatypeProperty ;
+  rdfs:label "Address locality"@en ;
+  .
+
+schemaorg:addressRegion
+  a owl:DatatypeProperty ;
+  rdfs:label "Address region"@en ;
+  .
+
+schemaorg:description
+  a owl:DatatypeProperty ;
+  rdfs:label "Description"@en ;
+  .
+
+schemaorg:gender
+  a owl:DatatypeProperty ;
+  rdfs:comment "Linked RISM person RDF exposes gender directly on the person resource as a plain string literal, for example \"female\" or \"male\"."@en ;
+  rdfs:domain rism:Person ;
+  rdfs:label "gender"@en ;
+  rdfs:range xsd:string ;
+  rism:queryPattern
+    "?person schemaorg:gender \"female\" ." ,
+    "?person schemaorg:gender \"male\" ." ,
+    "?person schemaorg:gender ?gender ." ;
+  rism:serviceNote "Gender is emitted from the person properties block as a direct literal on the person resource rather than through a nested node."@en ;
+  .
+
+schemaorg:postalCode
+  a owl:DatatypeProperty ;
+  rdfs:label "Postal code"@en ;
+  .
+
+schemaorg:sameAs
+  a owl:DatatypeProperty ;
+  rdfs:comment "Top-level sameAs links exposed in properties for institutions and places."@en ;
+  rdfs:label "same as"@en ;
+  .
+
+schemaorg:streetAddress
+  a owl:DatatypeProperty ;
+  rdfs:label "Street address"@en ;
+  .
+
+schemaorg:url
+  a owl:DatatypeProperty ;
+  rdfs:label "Url"@en ;
+  .

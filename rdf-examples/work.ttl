@@ -1,0 +1,5366 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Compositeur/Auteur"@fr ,
+    "Komponist/Autor"@de ,
+    "Compositore/Autore"@it ,
+    "Composer/Author"@en ,
+    "Compositor/Autor"@es ,
+    "Compositor/Autor"@pt ,
+    "Kompozytor / Autor"@pl ;
+  .
+
+<https://rism.online/people/83288>
+  a rism:Person ;
+  rdfs:label "Graupner, Christoph (1683-1760)"@none ;
+  .
+
+<https://rism.online/publications/30000114>
+  a rism:Publication ;
+  rdfs:label "Christoph Graupner, Thematisches Verzeichnis der musikalischen Werke, Graupner-Werke-Verzeichnis GWV"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Kompletne"@pl ,
+        "Concluído"@pt ,
+        "Completato"@it ,
+        "Terminé"@fr ,
+        "Abgeschlossen"@de ,
+        "Completed"@en ,
+        "Completado"@es ;
+    ] ;
+  .
+
+<https://rism.online/subjects/25226>
+  a rism:Subject ;
+  rdf:value "Cantatas" ;
+  rdfs:label "Cantatas"@none ;
+  .
+
+<https://rism.online/subjects/25250>
+  a rism:Subject ;
+  rdf:value "Sacred+songs" ;
+  rdfs:label "Sacred songs"@none ;
+  .
+
+<https://rism.online/works/41778>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/83288> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Ach großer Helfer, GWV 1160/26"@de ,
+    "Ach großer Helfer, GWV 1160/26"@es ,
+    "Ach großer Helfer, GWV 1160/26"@it ,
+    "Ach großer Helfer, GWV 1160/26"@fr ,
+    "Ach großer Helfer, GWV 1160/26"@pl ,
+    "Ach großer Helfer, GWV 1160/26"@en ,
+    "Ach großer Helfer, GWV 1160/26"@pt ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork
+        <https://rism.online/subjects/25226> ,
+        <https://rism.online/subjects/25250> ;
+      rism:sectionLabel
+        "Forme de l'œuvre"@fr ,
+        "Werkgattung"@de ,
+        "Form of work"@en ,
+        "Forma dell'opera"@it ,
+        "Forma de la obra"@es ,
+        "Forma da obra"@pt ,
+        "Gatunek dzieła"@pl ;
+    ] ;
+  rism:hasDates
+    [
+      rism:dateStatement "1726" ;
+      rism:earliestDate 1726 ;
+      rism:latestDate 1726 ;
+    ] ;
+  rism:hasSummary
+    [
+      rdf:value "Ach großer Helfer"@none ;
+      rdfs:label
+        "Incipit literário"@pt ,
+        "Íncipit literario"@es ,
+        "Incipit testuale"@it ,
+        "Incipit tekstowy"@pl ,
+        "Incipit du texte"@fr ,
+        "Text incipit"@en ,
+        "Textincipit"@de ;
+    ] ,
+    [
+      rdf:value "Darmstadt, Deutschland (tgn7004428)"@none ;
+      rdfs:label
+        "Luogo di creazione"@it ,
+        "Local de criação"@pt ,
+        "Sitio de creación"@es ,
+        "Miejsce utworzenia"@pl ,
+        "Lieu de création"@fr ,
+        "Place of creation"@en ,
+        "Ort der Erschaffung"@de ;
+    ] ,
+    [
+      rdf:value "1726"@none ;
+      rdfs:label
+        "Daty"@pl ,
+        "Dates"@fr ,
+        "Dates"@en ,
+        "Fechas"@es ,
+        "Datas"@pt ,
+        "Datierungen"@de ,
+        "Date"@it ;
+    ] ,
+    [
+      rdf:value "works/41778"@none ;
+      rdfs:label
+        "Numero documento RISM"@it ,
+        "RISM ID"@pl ,
+        "RISM Dokumentnummer"@de ,
+        "RISM ID number"@en ,
+        "Número ID RISM"@pt ,
+        "Número de ID de RISM"@es ,
+        "No. RISM"@fr ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Ach großer Helfer"@none ;
+      rdfs:label
+        "Titolo uniforme"@it ,
+        "Standardized title"@en ,
+        "Znormalizowany tytuł"@pl ,
+        "Einordnungstitel"@de ,
+        "Titre uniforme"@fr ,
+        "Título uniforme"@es ,
+        "Título uniforme"@pt ;
+    ] ,
+    [
+      rdf:value "Coro, orch, bc"@none ;
+      rdfs:label
+        "Instrumentation condensée"@fr ,
+        "Organico sintetico"@it ,
+        "Resumen de Plantilla/Orgánico"@es ,
+        "Sintese da formação instrumental"@pt ,
+        "Besetzungshinweis"@de ,
+        "Scoring summary"@en ,
+        "Podsumowanie obsady"@pl ;
+    ] ;
+  rism:incipits <https://rism.online/works/41778/incipits> ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Fait partie de"@fr ,
+        "In"@de ,
+        "Fa parte di"@it ,
+        "Item parte de"@pt ,
+        "Jest częścią…"@pl ,
+        "Ítem integrante de"@es ,
+        "Item part of"@en ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/30000114> ;
+          rism:hasWorkNumber "GWV 1160/26" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2024-03-07T15:44:59Z"^^xsd:dateTime ;
+          rdfs:label
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Data utworzenia"@pl ,
+            "Date de création"@fr ,
+            "Fecha de creación"@es ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-20T23:41:47Z"^^xsd:dateTime ;
+          rdfs:label
+            "Última modificação"@pt ,
+            "Dernière modification"@fr ,
+            "Ostatnia modyfikacja"@pl ,
+            "Ultima modifica"@it ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Fecha de modificación"@es ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/41778/references-notes> ;
+  rism:sources
+    [
+      rism:sectionLabel
+        "Źródła"@pl ,
+        "Fonti"@it ,
+        "Sources"@fr ,
+        "Sources"@en ,
+        "Fuentes"@es ,
+        "Quellen"@de ,
+        "Fontes"@pt ;
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/works/41778/sources" ;
+    ] ;
+  .
+
+<https://rism.online/works/41778/incipits>
+  a rism:WorkIncipitsSection ;
+  rism:hasIncipit
+    <https://rism.online/works/41778/incipits/1.1.1> ,
+    <https://rism.online/works/41778/incipits/1.1.2> ;
+  rism:sectionLabel
+    "Incipit"@it ,
+    "Incipit"@pt ,
+    "Incipits"@de ,
+    "Incipits"@fr ,
+    "Incipits"@en ,
+    "Incipity"@pl ,
+    "Íncipits"@es ;
+  .
+
+<https://rism.online/works/41778/incipits/1.1.1>
+  a rism:Incipit ;
+  rdfs:label "1.1.1"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Plaine and Easie code"@en ,
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Plaine and Easie Code"@de ,
+        "Code Plaine and Easie"@fr ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"''1C/F/E/","key":"F","keysig":"bB","timesig":"c"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/41778/incipits/1.1.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "''1C/F/E/" ;
+  rism:hasPAEKeysig "bB" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "F major"@en ,
+        "F-dur"@pl ,
+        "Fa Mayor"@es ,
+        "F-Dur"@de ,
+        "Fa maggiore"@it ,
+        "Fa majeur"@fr ,
+        "Fá maior"@pt ;
+      rdfs:label
+        "Key or mode"@en ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalidad o modo"@es ,
+        "Tonart, Modus"@de ,
+        "Tonalidade, modo"@pt ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "vl 1"@none ;
+      rdfs:label
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Głos/instrument"@pl ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ,
+        "Voice/instrument"@en ,
+        "Voce/strumento"@it ;
+    ] ,
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Metrum"@de ,
+        "Metrum"@pl ,
+        "Time signature"@en ,
+        "Indication de mesure"@fr ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Compasso"@pt ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (chiave di violino)"@it ;
+      rdfs:label
+        "Clé"@fr ,
+        "Clef"@en ,
+        "Klucz"@pl ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@es ,
+        "Clave"@pt ;
+    ] ,
+    [
+      rdf:value "bB"@none ;
+      rdfs:label
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Armure"@fr ,
+        "Akzidentien"@de ,
+        "Znaki przykluczowe"@pl ;
+    ] ;
+  .
+
+<https://rism.online/works/41778/incipits/1.1.2>
+  a rism:Incipit ;
+  rdfs:label "1.1.2"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Plaine and Easie code"@en ,
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Plaine and Easie Code"@de ,
+        "Code Plaine and Easie"@fr ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"F-4","data":"4-,2F8AF/'4D,D-8.F6D/8nBE","key":"F","keysig":"bB","timesig":"c"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/41778/incipits/1.1.2/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "F-4" ;
+  rism:hasPAEData "4-,2F8AF/'4D,D-8.F6D/8nBE" ;
+  rism:hasPAEKeysig "bB" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "F major"@en ,
+        "F-dur"@pl ,
+        "Fa Mayor"@es ,
+        "F-Dur"@de ,
+        "Fa maggiore"@it ,
+        "Fa majeur"@fr ,
+        "Fá maior"@pt ;
+      rdfs:label
+        "Key or mode"@en ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalidad o modo"@es ,
+        "Tonart, Modus"@de ,
+        "Tonalidade, modo"@pt ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "F-4"@none ;
+      rdfs:label
+        "Clé"@fr ,
+        "Clef"@en ,
+        "Klucz"@pl ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@es ,
+        "Clave"@pt ;
+    ] ,
+    [
+      rdf:value "bB"@none ;
+      rdfs:label
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Armure"@fr ,
+        "Akzidentien"@de ,
+        "Znaki przykluczowe"@pl ;
+    ] ,
+    [
+      rdf:value "Ach großer Helfer"@none ;
+      rdfs:label
+        "Incipit literário"@pt ,
+        "Íncipit literario"@es ,
+        "Incipit testuale"@it ,
+        "Incipit tekstowy"@pl ,
+        "Incipit du texte"@fr ,
+        "Text incipit"@en ,
+        "Textincipit"@de ;
+    ] ,
+    [
+      rdf:value "B"@none ;
+      rdfs:label
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Głos/instrument"@pl ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ,
+        "Voice/instrument"@en ,
+        "Voce/strumento"@it ;
+    ] ,
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Metrum"@de ,
+        "Metrum"@pl ,
+        "Time signature"@en ,
+        "Indication de mesure"@fr ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Compasso"@pt ;
+    ] ;
+  .
+
+<https://rism.online/works/41778/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Bill, Oswald; Großpietsch, Christoph. 2005-2017. <i>Christoph Graupner, Thematisches Verzeichnis der musikalischen Werke, Graupner-Werke-Verzeichnis GWV.</i> Stuttgart: Carus. <a href=\"https://christoph-graupner-gesellschaft.de/forschung/gwv-online\">https://christoph-graupner-gesellschaft.de/forschung/gwv-online</a>.</span> [GWV, 1160/26]."@none ;
+      rdfs:label
+        "Catalogue des oeuvres"@fr ,
+        "Katalog utworów"@pl ,
+        "Catalogo delle opere"@it ,
+        "Werkverzeichnis"@de ,
+        "Catalog of works"@en ,
+        "Catálogo de obras"@es ,
+        "Catálogo de obras"@pt ;
+    ] ;
+  rism:sectionLabel
+    "Odniesienia i uwagi"@pl ,
+    "Literatur und Bemerkungen"@de ,
+    "Bibliografia e note"@it ,
+    "Références et notes"@fr ,
+    "Referencias y notas"@es ,
+    "Notas e referências"@pt ,
+    "References and notes"@en ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Compositor/Autor"@pt ,
+    "Compositor/Autor"@es ,
+    "Kompozytor / Autor"@pl ,
+    "Composer/Author"@en ,
+    "Komponist/Autor"@de ,
+    "Compositeur/Auteur"@fr ,
+    "Compositore/Autore"@it ;
+  .
+
+<https://rism.online/people/2539>
+  a rism:Person ;
+  rdfs:label "Bach, Johann Sebastian (1685-1750)"@none ;
+  .
+
+<https://rism.online/publications/11>
+  a rism:Publication ;
+  rdfs:label "Thematisch-systematisches Verzeichnis der musikalischen Werke von Johann Sebastian Bach. Bach-Werke-Verzeichnis"@none ;
+  rism:status
+    [
+      rdf:value "alternate" ;
+      rdfs:label
+        "Alternatif"@fr ,
+        "Alternative"@de ,
+        "Catalogo alternativo"@it ,
+        "Alternatywne"@pl ,
+        "Alternate"@en ,
+        "Alternativo"@pt ,
+        "Alternativo"@es ;
+    ] ;
+  .
+
+<https://rism.online/publications/30019500>
+  a rism:Publication ;
+  rdfs:label "Thematisch-systematisches Verzeichnis der musikalischen Werke von Johann Sebastian Bach. Bach-Werke-Verzeichnis (BWV-3)"@none ;
+  rism:status
+    [
+      rdf:value "partial" ;
+      rdfs:label
+        "Parcialmente concluído"@pt ,
+        "Teilweise abgeschlossen"@de ,
+        "Partiellement terminé"@fr ,
+        "Parzialmente processato"@it ,
+        "Częściowo kompletne"@pl ,
+        "Partially completed"@en ,
+        "Parcialmente completado"@es ;
+    ] ;
+  .
+
+<https://rism.online/subjects/25226>
+  a rism:Subject ;
+  rdf:value "Cantatas" ;
+  rdfs:label "Cantatas"@none ;
+  .
+
+<https://rism.online/subjects/25250>
+  a rism:Subject ;
+  rdf:value "Sacred+songs" ;
+  rdfs:label "Sacred songs"@none ;
+  .
+
+<https://rism.online/works/26027>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/2539> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Tritt auf die Glaubensbahn, BWV-3 152"@pt ,
+    "Tritt auf die Glaubensbahn, BWV-3 152"@es ,
+    "Tritt auf die Glaubensbahn, BWV-3 152"@it ,
+    "Tritt auf die Glaubensbahn, BWV-3 152"@pl ,
+    "Tritt auf die Glaubensbahn, BWV-3 152"@fr ,
+    "Tritt auf die Glaubensbahn, BWV-3 152"@de ,
+    "Tritt auf die Glaubensbahn, BWV-3 152"@en ;
+  rism:externalAuthorities <https://rism.online/works/26027/external-authorities> ;
+  rism:externalResources
+    [
+      rism:hasExternalResource
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Record in Bach digital"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "https://www.bach-digital.de/receive/BachDigitalWork_work_00000186" ;
+        ] ;
+      rism:sectionLabel
+        "Related resources"@en ,
+        "Liens"@fr ,
+        "Powiązane zasoby"@pl ,
+        "Collegamenti"@it ,
+        "Recursos relacionados"@pt ,
+        "Recursos relacionados"@es ,
+        "Links"@de ;
+    ] ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork
+        <https://rism.online/subjects/25226> ,
+        <https://rism.online/subjects/25250> ;
+      rism:sectionLabel
+        "Forma de la obra"@es ,
+        "Werkgattung"@de ,
+        "Forma da obra"@pt ,
+        "Form of work"@en ,
+        "Forma dell'opera"@it ,
+        "Forme de l'œuvre"@fr ,
+        "Gatunek dzieła"@pl ;
+    ] ;
+  rism:hasDates
+    [
+      rism:dateStatement "1714-12-30 (Date of first performance)" ;
+      rism:earliestDate 1714 ;
+      rism:latestDate 1714 ;
+    ] ;
+  rism:hasSummary
+    [
+      rdf:value "V (2), orch, bc"@none ;
+      rdfs:label
+        "Sintese da formação instrumental"@pt ,
+        "Organico sintetico"@it ,
+        "Scoring summary"@en ,
+        "Instrumentation condensée"@fr ,
+        "Podsumowanie obsady"@pl ,
+        "Besetzungshinweis"@de ,
+        "Resumen de Plantilla/Orgánico"@es ;
+    ] ,
+    [
+      rdf:value "works/26027"@none ;
+      rdfs:label
+        "Número de ID de RISM"@es ,
+        "RISM ID number"@en ,
+        "RISM Dokumentnummer"@de ,
+        "RISM ID"@pl ,
+        "Numero documento RISM"@it ,
+        "Número ID RISM"@pt ,
+        "No. RISM"@fr ;
+    ] ,
+    [
+      rdf:value
+        "Leipziger Jahrgang I"@pt ,
+        "Leipziger Jahrgang I"@es ,
+        "Leipziger Jahrgang I"@it ,
+        "Leipziger Jahrgang I"@pl ,
+        "Leipziger Jahrgang I"@fr ,
+        "Leipziger Jahrgang I"@de ,
+        "Leipziger Jahrgang I"@en ;
+      rdfs:label
+        "Titre alternatif"@fr ,
+        "Alternativer Werktitel"@de ,
+        "Alternative work title"@en ,
+        "Título alternativo"@es ,
+        "Título alternativo da obra"@pt ,
+        "Titolo alternativo dell'opera"@it ,
+        "Alternatywny tytuł dzieła"@pl ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Tritt auf die Glaubensbahn"@none ;
+      rdfs:label
+        "Standardized title"@en ,
+        "Titolo uniforme"@it ,
+        "Título uniforme"@pt ,
+        "Título uniforme"@es ,
+        "Einordnungstitel"@de ,
+        "Znormalizowany tytuł"@pl ,
+        "Titre uniforme"@fr ;
+    ] ,
+    [
+      rdf:value "1714-12-30 (Date of first performance)"@none ;
+      rdfs:label
+        "Fechas"@es ,
+        "Date"@it ,
+        "Dates"@fr ,
+        "Dates"@en ,
+        "Datas"@pt ,
+        "Datierungen"@de ,
+        "Daty"@pl ;
+    ] ,
+    [
+      rdf:value
+        "Der Heiland ist gesetzt in Israel zum Fall und Auferstehen"@none ,
+        "Es ärg're sich die kluge Welt"@none ,
+        "Stein der über alle Schätze"@none ,
+        "Tritt auf die Glaubensbahn"@none ,
+        "Wie soll ich dich Liebster der Seelen umfassen"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ;
+  rism:incipits <https://rism.online/works/26027/incipits> ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "In"@de ,
+        "Item part of"@en ,
+        "Item parte de"@pt ,
+        "Fa parte di"@it ,
+        "Ítem integrante de"@es ,
+        "Fait partie de"@fr ,
+        "Jest częścią…"@pl ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/11> ;
+          rism:hasWorkNumber "BWV 152" ;
+          rism:workCatalogRelationship rism:SecondaryPartOf ;
+        ] ,
+        [
+          dcterms:relation <https://rism.online/publications/30019500> ;
+          rism:hasWorkNumber "BWV-3 152" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-04-26T06:22:38Z"^^xsd:dateTime ;
+          rdfs:label
+            "Data di creazione"@it ,
+            "Created on"@en ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ,
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-13T08:38:16Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de modificación"@es ,
+            "Ultima modifica"@it ,
+            "Last modification"@en ,
+            "Ostatnia modyfikacja"@pl ,
+            "Última modificação"@pt ,
+            "Letzte Änderung"@de ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/26027/references-notes> ;
+  rism:sources
+    [
+      rism:sectionLabel
+        "Fontes"@pt ,
+        "Sources"@fr ,
+        "Sources"@en ,
+        "Źródła"@pl ,
+        "Fonti"@it ,
+        "Quellen"@de ,
+        "Fuentes"@es ;
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/works/26027/sources" ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Référence d'authorité"@fr ,
+    "Identyfikator innego standardu"@pl ,
+    "Otro identificador estándar"@es ,
+    "Riferimento autorità"@it ,
+    "Normdatenverweise"@de ,
+    "Outro identificador padronizado"@pt ,
+    "Other standard identifier"@en ;
+  rism:hasExternalAuthority <https://rism.online/works/26027/external-authorities/dnb30000852X> ;
+  .
+
+<https://rism.online/works/26027/external-authorities/dnb30000852X>
+  a rism:ExternalAuthority ;
+  rdf:value "30000852X" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 30000852X"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityUrl "https://d-nb.info/gnd/30000852X"^^xsd:anyURI ;
+  .
+
+<https://rism.online/works/26027/incipits>
+  a rism:WorkIncipitsSection ;
+  rism:hasIncipit
+    <https://rism.online/works/26027/incipits/1.1.1> ,
+    <https://rism.online/works/26027/incipits/1.1.2> ,
+    <https://rism.online/works/26027/incipits/1.2.1> ,
+    <https://rism.online/works/26027/incipits/1.2.2> ,
+    <https://rism.online/works/26027/incipits/1.3.1> ,
+    <https://rism.online/works/26027/incipits/1.4.1> ,
+    <https://rism.online/works/26027/incipits/1.4.2> ,
+    <https://rism.online/works/26027/incipits/1.5.1> ,
+    <https://rism.online/works/26027/incipits/1.6.1> ,
+    <https://rism.online/works/26027/incipits/1.6.2> ;
+  rism:sectionLabel
+    "Íncipits"@es ,
+    "Incipit"@pt ,
+    "Incipit"@it ,
+    "Incipity"@pl ,
+    "Incipits"@fr ,
+    "Incipits"@de ,
+    "Incipits"@en ;
+  .
+
+<https://rism.online/works/26027/incipits/1.1.1>
+  a rism:Incipit ;
+  rdfs:label "1.1.1"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"4-{8''GF}2F/{3FAGF6E3FxD}4E+{3EDCDEFGA}{8.D6E}/","key":"e","keysig":"xF","timesig":"c"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.1.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "4-{8''GF}2F/{3FAGF6E3FxD}4E+{3EDCDEFGA}{8.D6E}/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value
+        "Mi mineur"@fr ,
+        "Mi minore"@it ,
+        "e-moll"@pl ,
+        "e-Moll"@de ,
+        "Mi menor"@pt ,
+        "Mi menor"@es ,
+        "E minor"@en ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "fl"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2(clave aguda estándar)"@es ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.1.2>
+  a rism:Incipit ;
+  rdfs:label "1.1.2 Allegro ma non presto"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.1.2/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"4'B8''C/'A4B/G8A/4E8''C/","key":"e","keysig":"xF","timesig":"3/8"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "4'B8''C/'A4B/G8A/4E8''C/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "3/8" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Mi mineur"@fr ,
+        "Mi minore"@it ,
+        "e-moll"@pl ,
+        "e-Moll"@de ,
+        "Mi menor"@pt ,
+        "Mi menor"@es ,
+        "E minor"@en ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "Allegro ma non presto"@none ;
+      rdfs:label
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Título do movimento, tempo"@pt ,
+        "Satztitel, Tempo"@de ,
+        "Título del movimiento, tempo"@es ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2(clave aguda estándar)"@es ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ,
+    [
+      rdf:value "3/8"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value "ob"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.2.1>
+  a rism:Incipit ;
+  rdfs:label "1.2.1 Aria Hautb. è Basso."@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.2.1/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"8-{8'BAGFE}/{6xDxC,B'C}{DEFG}{AGAF}/","key":"e","keysig":"xF","timesig":"3/4"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "8-{8'BAGFE}/{6xDxC,B'C}{DEFG}{AGAF}/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "3/4" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2(clave aguda estándar)"@es ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ,
+    [
+      rdf:value "ob"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value "3/4"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value "Aria Hautb. è Basso."@none ;
+      rdfs:label
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Título do movimento, tempo"@pt ,
+        "Satztitel, Tempo"@de ,
+        "Título del movimiento, tempo"@es ;
+    ] ,
+    [
+      rdf:value
+        "Mi mineur"@fr ,
+        "Mi minore"@it ,
+        "e-moll"@pl ,
+        "e-Moll"@de ,
+        "Mi menor"@pt ,
+        "Mi menor"@es ,
+        "E minor"@en ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.2.2>
+  a rism:Incipit ;
+  rdfs:label "1.2.2"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"F-4","data":"=10/8-,BAGFE/4xD4-4-/=1/8-8BAGFE/","key":"e","keysig":"xF","timesig":"3/4"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.2.2/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "F-4" ;
+  rism:hasPAEData "=10/8-,BAGFE/4xD4-4-/=1/8-8BAGFE/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "3/4" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Mi mineur"@fr ,
+        "Mi minore"@it ,
+        "e-moll"@pl ,
+        "e-Moll"@de ,
+        "Mi menor"@pt ,
+        "Mi menor"@es ,
+        "E minor"@en ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "F-4"@none ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ,
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value "Tritt auf die Glaubensbahn"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ,
+    [
+      rdf:value "3/4"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value "B"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.3.1>
+  a rism:Incipit ;
+  rdfs:label "1.3.1 Recit[ativ]."@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"F-4","data":"4-8-8,,B,EEFG/4C8-,,A8.,A6A8AF/","key":"e","keysig":"xF","timesig":"c"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.3.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "F-4" ;
+  rism:hasPAEData "4-8-8,,B,EEFG/4C8-,,A8.,A6A8AF/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value "F-4"@none ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ,
+    [
+      rdf:value
+        "Mi mineur"@fr ,
+        "Mi minore"@it ,
+        "e-moll"@pl ,
+        "e-Moll"@de ,
+        "Mi menor"@pt ,
+        "Mi menor"@es ,
+        "E minor"@en ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "Der Heiland ist gesetzt in Israel zum Fall und Auferstehen"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ,
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value "B"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value "Recit[ativ]."@none ;
+      rdfs:label
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Título do movimento, tempo"@pt ,
+        "Satztitel, Tempo"@de ,
+        "Título del movimiento, tempo"@es ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.4.1>
+  a rism:Incipit ;
+  rdfs:label "1.4.1 Aria. Adagio"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"1''D+/4D+{6DGFA}{GBAC}{B3'''CD6C''B}/{AGFE}{8BB}{6BGFE}{8AA}/","key":"G","keysig":"xF","timesig":"c"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.4.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "1''D+/4D+{6DGFA}{GBAC}{B3'''CD6C''B}/{AGFE}{8BB}{6BGFE}{8AA}/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value "fl"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2(clave aguda estándar)"@es ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ,
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value
+        "Sol maior"@pt ,
+        "G major"@en ,
+        "Sol majeur"@fr ,
+        "G-dur"@pl ,
+        "Sol maggiore"@it ,
+        "G-Dur"@de ,
+        "Sol Mayor"@es ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "Aria. Adagio"@none ;
+      rdfs:label
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Título do movimento, tempo"@pt ,
+        "Satztitel, Tempo"@de ,
+        "Título del movimiento, tempo"@es ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.4.2>
+  a rism:Incipit ;
+  rdfs:label "1.4.2"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.4.2/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"=8/1''D+/8D'D{6EG}{FA}4G+{6G3AB}{6AG}/8F6ED8ABt''CC{6C3DE}8D/","key":"G","keysig":"xF","timesig":"c"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "=8/1''D+/8D'D{6EG}{FA}4G+{6G3AB}{6AG}/8F6ED8ABt''CC{6C3DE}8D/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value
+        "Sol maior"@pt ,
+        "G major"@en ,
+        "Sol majeur"@fr ,
+        "G-dur"@pl ,
+        "Sol maggiore"@it ,
+        "G-Dur"@de ,
+        "Sol Mayor"@es ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "S"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value "Stein der über alle Schätze"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ,
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2(clave aguda estándar)"@es ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.5.1>
+  a rism:Incipit ;
+  rdfs:label "1.5.1 Recit[ativ]."@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.5.1/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"F-4","data":"4-8-8,xD8.'C6CC,ABF/8G6-6G8BG4E6-6GFE/","key":"G","keysig":"xF","timesig":"c"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "F-4" ;
+  rism:hasPAEData "4-8-8,xD8.'C6CC,ABF/8G6-6G8BG4E6-6GFE/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value
+        "Sol maior"@pt ,
+        "G major"@en ,
+        "Sol majeur"@fr ,
+        "G-dur"@pl ,
+        "Sol maggiore"@it ,
+        "G-Dur"@de ,
+        "Sol Mayor"@es ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value "B"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value "Es ärg're sich die kluge Welt"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ,
+    [
+      rdf:value "Recit[ativ]."@none ;
+      rdfs:label
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Título do movimento, tempo"@pt ,
+        "Satztitel, Tempo"@de ,
+        "Título del movimiento, tempo"@es ;
+    ] ,
+    [
+      rdf:value "F-4"@none ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.6.1>
+  a rism:Incipit ;
+  rdfs:label "1.6.1 Andante"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.6.1/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"4'B/4.''E8xD4E4.'A8B4''C/","key":"e","keysig":"xF","timesig":"6/4"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "4'B/4.''E8xD4E4.'A8B4''C/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "6/4" ;
+  rism:hasSummary
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value "Andante"@none ;
+      rdfs:label
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Título do movimento, tempo"@pt ,
+        "Satztitel, Tempo"@de ,
+        "Título del movimiento, tempo"@es ;
+    ] ,
+    [
+      rdf:value "ob"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value
+        "Mi mineur"@fr ,
+        "Mi minore"@it ,
+        "e-moll"@pl ,
+        "e-Moll"@de ,
+        "Mi menor"@pt ,
+        "Mi menor"@es ,
+        "E minor"@en ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "6/4"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2(clave aguda estándar)"@es ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/incipits/1.6.2>
+  a rism:Incipit ;
+  rdfs:label "1.6.2"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Kod Plaine and Easie"@pl ,
+        "Codice Plaine and Easie"@it ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie code"@en ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie Code"@de ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"=15/2-4-4-4'B/4.''E8xD4E4.'A8B4''C/4.'B8''C4'AG{8FE}4-/","key":"e","keysig":"xF","timesig":"6/4"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/26027/incipits/1.6.2/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "=15/2-4-4-4'B/4.''E8xD4E4.'A8B4''C/4.'B8''C4'AG{8FE}4-/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "6/4" ;
+  rism:hasSummary
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Akzidentien"@de ,
+        "Key signature"@en ,
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armure"@fr ;
+    ] ,
+    [
+      rdf:value "S"@none ;
+      rdfs:label
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Besetzung"@de ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value
+        "Mi mineur"@fr ,
+        "Mi minore"@it ,
+        "e-moll"@pl ,
+        "e-Moll"@de ,
+        "Mi menor"@pt ,
+        "Mi menor"@es ,
+        "E minor"@en ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ;
+    ] ,
+    [
+      rdf:value "Wie soll ich dich Liebster der Seelen umfassen"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ,
+    [
+      rdf:value "6/4"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2(clave aguda estándar)"@es ;
+      rdfs:label
+        "Clé"@fr ,
+        "Chiave"@it ,
+        "Schlüssel"@de ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ;
+  .
+
+<https://rism.online/works/26027/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Blanken, Christine; Wolff, Christoph; Wollny, Peter (eds.). 2022. <i>Thematisch-systematisches Verzeichnis der musikalischen Werke von Johann Sebastian Bach. Bach-Werke-Verzeichnis (BWV-3).</i> Wiesbaden: Breitkopf & Härtel. <a href=\"https://d-nb.info/1259824411/04\">https://d-nb.info/1259824411/04</a>.</span> [BWV-3, 152]."@none ;
+      rdfs:label
+        "Catálogo de obras"@pt ,
+        "Catálogo de obras"@es ,
+        "Catalogo delle opere"@it ,
+        "Katalog utworów"@pl ,
+        "Catalogue des oeuvres"@fr ,
+        "Catalog of works"@en ,
+        "Werkverzeichnis"@de ;
+    ] ;
+  rism:sectionLabel
+    "Referencias y notas"@es ,
+    "Odniesienia i uwagi"@pl ,
+    "References and notes"@en ,
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "Bibliografia e note"@it ,
+    "Literatur und Bemerkungen"@de ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Kompozytor / Autor"@pl ,
+    "Compositeur/Auteur"@fr ,
+    "Compositore/Autore"@it ,
+    "Composer/Author"@en ,
+    "Komponist/Autor"@de ,
+    "Compositor/Autor"@pt ,
+    "Compositor/Autor"@es ;
+  .
+
+<https://rism.online/people/88790>
+  a rism:Person ;
+  rdfs:label "Mendelssohn Bartholdy, Felix (1809-1847)"@none ;
+  .
+
+<https://rism.online/publications/30025296>
+  a rism:Publication ;
+  rdfs:label "Felix Mendelssohn Bartholdy - thematisch-systematisches Verzeichnis der musikalischen Werke (MWV)"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Completado"@es ,
+        "Abgeschlossen"@de ,
+        "Kompletne"@pl ,
+        "Completed"@en ,
+        "Completato"@it ,
+        "Terminé"@fr ,
+        "Concluído"@pt ;
+    ] ;
+  .
+
+<https://rism.online/subjects/25227>
+  a rism:Subject ;
+  rdf:value "Lieder" ;
+  rdfs:label "Lieder"@none ;
+  .
+
+<https://rism.online/works/32418>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/88790> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Weiter rastlos atemlos vorüber festlich helles Schloss–d-moll, MWV K 49"@pl ,
+    "Weiter rastlos atemlos vorüber festlich helles Schloss–Ré menor, MWV K 49"@pt ,
+    "Weiter rastlos atemlos vorüber festlich helles Schloss–Re menor, MWV K 49"@es ,
+    "Weiter rastlos atemlos vorüber festlich helles Schloss–Re minore, MWV K 49"@it ,
+    "Weiter rastlos atemlos vorüber festlich helles Schloss–d-Moll, MWV K 49"@de ,
+    "Weiter rastlos atemlos vorüber festlich helles Schloss–D minor, MWV K 49"@en ,
+    "Weiter rastlos atemlos vorüber festlich helles Schloss–Ré mineur, MWV K 49"@fr ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork <https://rism.online/subjects/25227> ;
+      rism:sectionLabel
+        "Forma de la obra"@es ,
+        "Werkgattung"@de ,
+        "Forma da obra"@pt ,
+        "Form of work"@en ,
+        "Forma dell'opera"@it ,
+        "Forme de l'œuvre"@fr ,
+        "Gatunek dzieła"@pl ;
+    ] ;
+  rism:hasDates
+    [
+      rism:dateStatement "1830 (um 1830)" ;
+      rism:earliestDate 1830 ;
+      rism:latestDate 1830 ;
+    ] ;
+  rism:hasKeyMode "d" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "„Weiter, rastlos, atemlos, vorüber, festlich helles Schloss“ („An Marie“)"@pl ,
+        "„Weiter, rastlos, atemlos, vorüber, festlich helles Schloss“ („An Marie“)"@fr ,
+        "„Weiter, rastlos, atemlos, vorüber, festlich helles Schloss“ („An Marie“)"@it ,
+        "„Weiter, rastlos, atemlos, vorüber, festlich helles Schloss“ („An Marie“)"@de ,
+        "„Weiter, rastlos, atemlos, vorüber, festlich helles Schloss“ („An Marie“)"@pt ,
+        "„Weiter, rastlos, atemlos, vorüber, festlich helles Schloss“ („An Marie“)"@es ,
+        "„Weiter, rastlos, atemlos, vorüber, festlich helles Schloss“ („An Marie“)"@en ,
+        "An Marie"@pl ,
+        "An Marie"@fr ,
+        "An Marie"@it ,
+        "An Marie"@de ,
+        "An Marie"@pt ,
+        "An Marie"@es ,
+        "An Marie"@en ;
+      rdfs:label
+        "Alternatywny tytuł dzieła"@pl ,
+        "Título alternativo"@es ,
+        "Alternativer Werktitel"@de ,
+        "Título alternativo da obra"@pt ,
+        "Titre alternatif"@fr ,
+        "Titolo alternativo dell'opera"@it ,
+        "Alternative work title"@en ;
+    ] ,
+    [
+      rdf:value "works/32418"@none ;
+      rdfs:label
+        "No. RISM"@fr ,
+        "RISM Dokumentnummer"@de ,
+        "Número de ID de RISM"@es ,
+        "Número ID RISM"@pt ,
+        "RISM ID"@pl ,
+        "RISM ID number"@en ,
+        "Numero documento RISM"@it ;
+    ] ,
+    [
+      rdf:value "1830 (um 1830)"@none ;
+      rdfs:label
+        "Fechas"@es ,
+        "Daty"@pl ,
+        "Datierungen"@de ,
+        "Dates"@fr ,
+        "Dates"@en ,
+        "Datas"@pt ,
+        "Date"@it ;
+    ] ,
+    [
+      rdf:value
+        "d-moll"@pl ,
+        "Ré mineur"@fr ,
+        "D minor"@en ,
+        "Re minore"@it ,
+        "Re menor"@es ,
+        "Ré menor"@pt ,
+        "d-Moll"@de ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonart, Modus"@de ,
+        "Tonalità, modo"@it ,
+        "Tonalité, mode"@fr ,
+        "Tonacja lub modus"@pl ,
+        "Key or mode"@en ,
+        "Tonalidade, modo"@pt ;
+    ] ,
+    [
+      rdf:value "V, pf"@none ;
+      rdfs:label
+        "Organico sintetico"@it ,
+        "Instrumentation condensée"@fr ,
+        "Sintese da formação instrumental"@pt ,
+        "Resumen de Plantilla/Orgánico"@es ,
+        "Scoring summary"@en ,
+        "Besetzungshinweis"@de ,
+        "Podsumowanie obsady"@pl ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Weiter rastlos atemlos vorüber festlich helles Schloss"@none ;
+      rdfs:label
+        "Título uniforme"@pt ,
+        "Título uniforme"@es ,
+        "Einordnungstitel"@de ,
+        "Titolo uniforme"@it ,
+        "Standardized title"@en ,
+        "Titre uniforme"@fr ,
+        "Znormalizowany tytuł"@pl ;
+    ] ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Item parte de"@pt ,
+        "Item part of"@en ,
+        "Ítem integrante de"@es ,
+        "In"@de ,
+        "Fa parte di"@it ,
+        "Fait partie de"@fr ,
+        "Jest częścią…"@pl ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/30025296> ;
+          rism:hasWorkNumber "MWV K 49" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-04-26T06:31:59Z"^^xsd:dateTime ;
+          rdfs:label
+            "Data di creazione"@it ,
+            "Fecha de creación"@es ,
+            "Created on"@en ,
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Erstellungsdatum"@de ,
+            "Data utworzenia"@pl ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:44:09Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de modificación"@es ,
+            "Letzte Änderung"@de ,
+            "Última modificação"@pt ,
+            "Ultima modifica"@it ,
+            "Dernière modification"@fr ,
+            "Last modification"@en ,
+            "Ostatnia modyfikacja"@pl ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/32418/references-notes> ;
+  rism:sources
+    [
+      rism:sectionLabel
+        "Fuentes"@es ,
+        "Fonti"@it ,
+        "Quellen"@de ,
+        "Źródła"@pl ,
+        "Fontes"@pt ,
+        "Sources"@fr ,
+        "Sources"@en ;
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/works/32418/sources" ;
+    ] ;
+  .
+
+<https://rism.online/works/32418/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Wehner, Ralf (ed.). 2009. <i>Felix Mendelssohn Bartholdy - thematisch-systematisches Verzeichnis der musikalischen Werke (MWV).</i> Leipziger Ausgabe der Werke von Felix Mendelssohn Bartholdy, Ser. 13, vol. 1A. Wiesbaden ; Leipzig [u.a.]: Breitkopf & Härtel. <a href=\"https://www.saw-leipzig.de/de/projekte/leipziger-ausgabe-der-werke-von-felix-mendelssohn-bartholdy/thematisch-systematisches-werkverzeichnis\">https://www.saw-leipzig.de/de/projekte/leipziger-ausgabe-der-werke-von-felix-mendelssohn-bartholdy/thematisch-systematisches-werkverzeichnis</a>.</span> [MWV, K 49]."@none ;
+      rdfs:label
+        "Catálogo de obras"@pt ,
+        "Catálogo de obras"@es ,
+        "Catalogue des oeuvres"@fr ,
+        "Katalog utworów"@pl ,
+        "Werkverzeichnis"@de ,
+        "Catalog of works"@en ,
+        "Catalogo delle opere"@it ;
+    ] ;
+  rism:sectionLabel
+    "Literatur und Bemerkungen"@de ,
+    "Odniesienia i uwagi"@pl ,
+    "Notas e referências"@pt ,
+    "Bibliografia e note"@it ,
+    "Références et notes"@fr ,
+    "Referencias y notas"@es ,
+    "References and notes"@en ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Compositore/Autore"@it ,
+    "Compositeur/Auteur"@fr ,
+    "Compositor/Autor"@es ,
+    "Compositor/Autor"@pt ,
+    "Composer/Author"@en ,
+    "Komponist/Autor"@de ,
+    "Kompozytor / Autor"@pl ;
+  .
+
+<https://rism.online/people/33668>
+  a rism:Person ;
+  rdfs:label "Purcell, Henry (1659-1695)"@none ;
+  .
+
+<https://rism.online/publications/123>
+  a rism:Publication ;
+  rdfs:label "Henry Purcell (1659-1695). An analytical catalogue of his music"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Concluído"@pt ,
+        "Completed"@en ,
+        "Abgeschlossen"@de ,
+        "Completato"@it ,
+        "Completado"@es ,
+        "Terminé"@fr ,
+        "Kompletne"@pl ;
+    ] ;
+  .
+
+<https://rism.online/works/41184>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/33668> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Love Triumphant, ZimP 582"@es ,
+    "Love Triumphant, ZimP 582"@en ,
+    "Love Triumphant, ZimP 582"@fr ,
+    "Love Triumphant, ZimP 582"@pl ,
+    "Love Triumphant, ZimP 582"@de ,
+    "Love Triumphant, ZimP 582"@it ,
+    "Love Triumphant, ZimP 582"@pt ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Nature Will Prevail"@es ,
+        "Nature Will Prevail"@en ,
+        "Nature Will Prevail"@fr ,
+        "Nature Will Prevail"@pl ,
+        "Nature Will Prevail"@de ,
+        "Nature Will Prevail"@it ,
+        "Nature Will Prevail"@pt ;
+      rdfs:label
+        "Título alternativo da obra"@pt ,
+        "Título alternativo"@es ,
+        "Alternativer Werktitel"@de ,
+        "Alternatywny tytuł dzieła"@pl ,
+        "Alternative work title"@en ,
+        "Titre alternatif"@fr ,
+        "Titolo alternativo dell'opera"@it ;
+    ] ,
+    [
+      rdf:value "works/41184"@none ;
+      rdfs:label
+        "Número de ID de RISM"@es ,
+        "RISM ID"@pl ,
+        "Numero documento RISM"@it ,
+        "RISM Dokumentnummer"@de ,
+        "Número ID RISM"@pt ,
+        "RISM ID number"@en ,
+        "No. RISM"@fr ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Love Triumphant"@none ;
+      rdfs:label
+        "Einordnungstitel"@de ,
+        "Standardized title"@en ,
+        "Znormalizowany tytuł"@pl ,
+        "Título uniforme"@es ,
+        "Título uniforme"@pt ,
+        "Titre uniforme"@fr ,
+        "Titolo uniforme"@it ;
+    ] ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Item part of"@en ,
+        "Fait partie de"@fr ,
+        "Item parte de"@pt ,
+        "In"@de ,
+        "Fa parte di"@it ,
+        "Jest częścią…"@pl ,
+        "Ítem integrante de"@es ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/123> ;
+          rism:hasWorkNumber "ZimP 582" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-05-11T09:44:56Z"^^xsd:dateTime ;
+          rdfs:label
+            "Date de création"@fr ,
+            "Data utworzenia"@pl ,
+            "Created on"@en ,
+            "Erstellungsdatum"@de ,
+            "Data di creazione"@it ,
+            "Criado em"@pt ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:45:43Z"^^xsd:dateTime ;
+          rdfs:label
+            "Última modificação"@pt ,
+            "Last modification"@en ,
+            "Fecha de modificación"@es ,
+            "Ostatnia modyfikacja"@pl ,
+            "Dernière modification"@fr ,
+            "Letzte Änderung"@de ,
+            "Ultima modifica"@it ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/41184/references-notes> ;
+  .
+
+<https://rism.online/works/41184/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Zimmerman, Franklin B.. 1963. <i>Henry Purcell (1659-1695). An analytical catalogue of his music.</i> London.</span> [ZimP, 582]."@none ;
+      rdfs:label
+        "Catalogue des oeuvres"@fr ,
+        "Werkverzeichnis"@de ,
+        "Catalogo delle opere"@it ,
+        "Catalog of works"@en ,
+        "Catálogo de obras"@es ,
+        "Catálogo de obras"@pt ,
+        "Katalog utworów"@pl ;
+    ] ;
+  rism:sectionLabel
+    "Literatur und Bemerkungen"@de ,
+    "Notas e referências"@pt ,
+    "Referencias y notas"@es ,
+    "References and notes"@en ,
+    "Bibliografia e note"@it ,
+    "Odniesienia i uwagi"@pl ,
+    "Références et notes"@fr ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Compositore/Autore"@it ,
+    "Composer/Author"@en ,
+    "Compositor/Autor"@pt ,
+    "Compositor/Autor"@es ,
+    "Komponist/Autor"@de ,
+    "Compositeur/Auteur"@fr ,
+    "Kompozytor / Autor"@pl ;
+  .
+
+<https://rism.online/people/2539>
+  a rism:Person ;
+  rdfs:label "Bach, Johann Sebastian (1685-1750)"@none ;
+  .
+
+<https://rism.online/publications/11>
+  a rism:Publication ;
+  rdfs:label "Thematisch-systematisches Verzeichnis der musikalischen Werke von Johann Sebastian Bach. Bach-Werke-Verzeichnis"@none ;
+  rism:status
+    [
+      rdf:value "alternate" ;
+      rdfs:label
+        "Alternate"@en ,
+        "Alternatywne"@pl ,
+        "Alternative"@de ,
+        "Catalogo alternativo"@it ,
+        "Alternatif"@fr ,
+        "Alternativo"@pt ,
+        "Alternativo"@es ;
+    ] ;
+  .
+
+<https://rism.online/publications/30019500>
+  a rism:Publication ;
+  rdfs:label "Thematisch-systematisches Verzeichnis der musikalischen Werke von Johann Sebastian Bach. Bach-Werke-Verzeichnis (BWV-3)"@none ;
+  rism:status
+    [
+      rdf:value "partial" ;
+      rdfs:label
+        "Parcialmente concluído"@pt ,
+        "Parzialmente processato"@it ,
+        "Parcialmente completado"@es ,
+        "Partially completed"@en ,
+        "Teilweise abgeschlossen"@de ,
+        "Partiellement terminé"@fr ,
+        "Częściowo kompletne"@pl ;
+    ] ;
+  .
+
+<https://rism.online/subjects/25187>
+  a rism:Subject ;
+  rdf:value "Fugues+%28inst.%29" ;
+  rdfs:label "Fugues (inst.)"@none ;
+  .
+
+<https://rism.online/subjects/25204>
+  a rism:Subject ;
+  rdf:value "Preludes" ;
+  rdfs:label "Preludes"@none ;
+  .
+
+<https://rism.online/subjects/3000134>
+  a rism:Subject ;
+  rdf:value "Keyboard+pieces" ;
+  rdfs:label "Keyboard pieces"@none ;
+  .
+
+<https://rism.online/works/25603>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/2539> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Preludes and Fugues–G major, BWV-3 550"@en ,
+    "Preludes and Fugues–Sol maior, BWV-3 550"@pt ,
+    "Preludes and Fugues–Sol majeur, BWV-3 550"@fr ,
+    "Preludes and Fugues–G-Dur, BWV-3 550"@de ,
+    "Preludes and Fugues–G-dur, BWV-3 550"@pl ,
+    "Preludes and Fugues–Sol Mayor, BWV-3 550"@es ,
+    "Preludes and Fugues–Sol maggiore, BWV-3 550"@it ;
+  rism:externalAuthorities <https://rism.online/works/25603/external-authorities> ;
+  rism:externalResources
+    [
+      rism:hasExternalResource
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Record in Bach digital"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "https://www.bach-digital.de/receive/BachDigitalWork_work_00000630" ;
+        ] ;
+      rism:sectionLabel
+        "Recursos relacionados"@pt ,
+        "Recursos relacionados"@es ,
+        "Links"@de ,
+        "Liens"@fr ,
+        "Powiązane zasoby"@pl ,
+        "Related resources"@en ,
+        "Collegamenti"@it ;
+    ] ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork
+        <https://rism.online/subjects/25187> ,
+        <https://rism.online/subjects/25204> ,
+        <https://rism.online/subjects/3000134> ;
+      rism:sectionLabel
+        "Form of work"@en ,
+        "Gatunek dzieła"@pl ,
+        "Forma dell'opera"@it ,
+        "Forme de l'œuvre"@fr ,
+        "Forma de la obra"@es ,
+        "Forma da obra"@pt ,
+        "Werkgattung"@de ;
+    ] ;
+  rism:hasDates
+    [
+      rism:dateStatement "1708/1717 (Possibly from the early Weimar period)" ;
+      rism:earliestDate 1708 ;
+      rism:latestDate 1717 ;
+    ] ;
+  rism:hasKeyMode "G" ;
+  rism:hasSummary
+    [
+      rdf:value "1708/1717 (Possibly from the early Weimar period)"@none ;
+      rdfs:label
+        "Fechas"@es ,
+        "Datierungen"@de ,
+        "Daty"@pl ,
+        "Datas"@pt ,
+        "Date"@it ,
+        "Dates"@en ,
+        "Dates"@fr ;
+    ] ,
+    [
+      rdf:value "org"@none ;
+      rdfs:label
+        "Besetzungshinweis"@de ,
+        "Scoring summary"@en ,
+        "Instrumentation condensée"@fr ,
+        "Organico sintetico"@it ,
+        "Podsumowanie obsady"@pl ,
+        "Resumen de Plantilla/Orgánico"@es ,
+        "Sintese da formação instrumental"@pt ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Preludes and Fugues"@none ;
+      rdfs:label
+        "Titre uniforme"@fr ,
+        "Standardized title"@en ,
+        "Título uniforme"@pt ,
+        "Título uniforme"@es ,
+        "Einordnungstitel"@de ,
+        "Znormalizowany tytuł"@pl ,
+        "Titolo uniforme"@it ;
+    ] ,
+    [
+      rdf:value
+        "Sol majeur"@fr ,
+        "Sol Mayor"@es ,
+        "G-dur"@pl ,
+        "G-Dur"@de ,
+        "Sol maggiore"@it ,
+        "G major"@en ,
+        "Sol maior"@pt ;
+      rdfs:label
+        "Tonart, Modus"@de ,
+        "Tonacja lub modus"@pl ,
+        "Tonalidad o modo"@es ,
+        "Tonalité, mode"@fr ,
+        "Key or mode"@en ,
+        "Tonalidade, modo"@pt ,
+        "Tonalità, modo"@it ;
+    ] ,
+    [
+      rdf:value "works/25603"@none ;
+      rdfs:label
+        "RISM Dokumentnummer"@de ,
+        "No. RISM"@fr ,
+        "Numero documento RISM"@it ,
+        "Número ID RISM"@pt ,
+        "RISM ID number"@en ,
+        "Número de ID de RISM"@es ,
+        "RISM ID"@pl ;
+    ] ;
+  rism:incipits <https://rism.online/works/25603/incipits> ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Fait partie de"@fr ,
+        "Jest częścią…"@pl ,
+        "Ítem integrante de"@es ,
+        "In"@de ,
+        "Item part of"@en ,
+        "Fa parte di"@it ,
+        "Item parte de"@pt ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/11> ;
+          rism:hasWorkNumber "BWV 550" ;
+          rism:workCatalogRelationship rism:SecondaryPartOf ;
+        ] ,
+        [
+          dcterms:relation <https://rism.online/publications/30019500> ;
+          rism:hasWorkNumber "BWV-3 550" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-04-26T06:22:19Z"^^xsd:dateTime ;
+          rdfs:label
+            "Created on"@en ,
+            "Data utworzenia"@pl ,
+            "Criado em"@pt ,
+            "Fecha de creación"@es ,
+            "Date de création"@fr ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-13T08:38:05Z"^^xsd:dateTime ;
+          rdfs:label
+            "Última modificação"@pt ,
+            "Ultima modifica"@it ,
+            "Fecha de modificación"@es ,
+            "Ostatnia modyfikacja"@pl ,
+            "Last modification"@en ,
+            "Letzte Änderung"@de ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/25603/references-notes> ;
+  rism:sources
+    [
+      rism:sectionLabel
+        "Źródła"@pl ,
+        "Quellen"@de ,
+        "Sources"@en ,
+        "Sources"@fr ,
+        "Fontes"@pt ,
+        "Fuentes"@es ,
+        "Fonti"@it ;
+      rism:totalItems 9 ;
+      rism:url "https://rism.online/works/25603/sources" ;
+    ] ;
+  .
+
+<https://rism.online/works/25603/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Identyfikator innego standardu"@pl ,
+    "Other standard identifier"@en ,
+    "Outro identificador padronizado"@pt ,
+    "Référence d'authorité"@fr ,
+    "Normdatenverweise"@de ,
+    "Otro identificador estándar"@es ,
+    "Riferimento autorità"@it ;
+  rism:hasExternalAuthority <https://rism.online/works/25603/external-authorities/dnb300010753> ;
+  .
+
+<https://rism.online/works/25603/external-authorities/dnb300010753>
+  a rism:ExternalAuthority ;
+  rdf:value "300010753" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 300010753"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityUrl "https://d-nb.info/gnd/300010753"^^xsd:anyURI ;
+  .
+
+<https://rism.online/works/25603/incipits>
+  a rism:WorkIncipitsSection ;
+  rism:hasIncipit
+    <https://rism.online/works/25603/incipits/1.1.1> ,
+    <https://rism.online/works/25603/incipits/1.2.1> ;
+  rism:sectionLabel
+    "Incipit"@pt ,
+    "Incipit"@it ,
+    "Íncipits"@es ,
+    "Incipits"@en ,
+    "Incipits"@fr ,
+    "Incipits"@de ,
+    "Incipity"@pl ;
+  .
+
+<https://rism.online/works/25603/incipits/1.1.1>
+  a rism:Incipit ;
+  rdfs:label "1.1.1 Fantasia."@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/25603/incipits/1.1.1/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Plaine and Easie Code"@de ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Codice Plaine and Easie"@it ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie code"@en ,
+        "Kod Plaine and Easie"@pl ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"8-{''GFG}2D8-{GFG}/2'B8-{''GFE}{DC'BA}/","key":"G","keysig":"xF","timesig":"3/2"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "8-{''GFG}2D8-{GFG}/2'B8-{''GFE}{DC'BA}/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "3/2" ;
+  rism:hasSummary
+    [
+      rdf:value "org"@none ;
+      rdfs:label
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Voice/instrument"@en ,
+        "Voix/instrument"@fr ,
+        "Głos/instrument"@pl ,
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ;
+    ] ,
+    [
+      rdf:value
+        "Sol majeur"@fr ,
+        "Sol Mayor"@es ,
+        "G-dur"@pl ,
+        "G-Dur"@de ,
+        "Sol maggiore"@it ,
+        "G major"@en ,
+        "Sol maior"@pt ;
+      rdfs:label
+        "Tonart, Modus"@de ,
+        "Tonacja lub modus"@pl ,
+        "Tonalidad o modo"@es ,
+        "Tonalité, mode"@fr ,
+        "Key or mode"@en ,
+        "Tonalidade, modo"@pt ,
+        "Tonalità, modo"@it ;
+    ] ,
+    [
+      rdf:value
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (clé de sol)"@fr ;
+      rdfs:label
+        "Klucz"@pl ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Schlüssel"@de ,
+        "Clé"@fr ,
+        "Chiave"@it ;
+    ] ,
+    [
+      rdf:value "3/2"@none ;
+      rdfs:label
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Compasso"@pt ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ,
+        "Indicación de compás"@es ;
+    ] ,
+    [
+      rdf:value "Fantasia."@none ;
+      rdfs:label
+        "Satztitel, Tempo"@de ,
+        "Intestazione, tempo"@it ,
+        "Titre, tempo"@fr ,
+        "Título do movimento, tempo"@pt ,
+        "Título del movimiento, tempo"@es ,
+        "Tytuł części, tempo"@pl ,
+        "Title of movement, tempo"@en ;
+    ] ,
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Armure"@fr ,
+        "Znaki przykluczowe"@pl ,
+        "Akzidentien"@de ;
+    ] ;
+  .
+
+<https://rism.online/works/25603/incipits/1.2.1>
+  a rism:Incipit ;
+  rdfs:label "1.2.1 alla breve"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/25603/incipits/1.2.1/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Plaine and Easie Code"@de ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Codice Plaine and Easie"@it ,
+        "Code Plaine and Easie"@fr ,
+        "Plaine and Easie code"@en ,
+        "Kod Plaine and Easie"@pl ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"F-4","data":"'4DDD/{8,B'D,G'D}{,B'D,GB}/4E'EEE/","key":"G","keysig":"xF","timesig":"c/"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "F-4" ;
+  rism:hasPAEData "'4DDD/{8,B'D,G'D}{,B'D,GB}/4E'EEE/" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "c/" ;
+  rism:hasSummary
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Armadura de clave"@pt ,
+        "Armadura de clave"@es ,
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Armure"@fr ,
+        "Znaki przykluczowe"@pl ,
+        "Akzidentien"@de ;
+    ] ,
+    [
+      rdf:value "F-4"@none ;
+      rdfs:label
+        "Klucz"@pl ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Clef"@en ,
+        "Schlüssel"@de ,
+        "Clé"@fr ,
+        "Chiave"@it ;
+    ] ,
+    [
+      rdf:value
+        "Sol majeur"@fr ,
+        "Sol Mayor"@es ,
+        "G-dur"@pl ,
+        "G-Dur"@de ,
+        "Sol maggiore"@it ,
+        "G major"@en ,
+        "Sol maior"@pt ;
+      rdfs:label
+        "Tonart, Modus"@de ,
+        "Tonacja lub modus"@pl ,
+        "Tonalidad o modo"@es ,
+        "Tonalité, mode"@fr ,
+        "Key or mode"@en ,
+        "Tonalidade, modo"@pt ,
+        "Tonalità, modo"@it ;
+    ] ,
+    [
+      rdf:value "alla breve"@none ;
+      rdfs:label
+        "Satztitel, Tempo"@de ,
+        "Intestazione, tempo"@it ,
+        "Titre, tempo"@fr ,
+        "Título do movimento, tempo"@pt ,
+        "Título del movimiento, tempo"@es ,
+        "Tytuł części, tempo"@pl ,
+        "Title of movement, tempo"@en ;
+    ] ,
+    [
+      rdf:value "org"@none ;
+      rdfs:label
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Voice/instrument"@en ,
+        "Voix/instrument"@fr ,
+        "Głos/instrument"@pl ,
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ;
+    ] ,
+    [
+      rdf:value "c/"@none ;
+      rdfs:label
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Compasso"@pt ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indication de mesure"@fr ,
+        "Indicación de compás"@es ;
+    ] ;
+  .
+
+<https://rism.online/works/25603/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Blanken, Christine; Wolff, Christoph; Wollny, Peter (eds.). 2022. <i>Thematisch-systematisches Verzeichnis der musikalischen Werke von Johann Sebastian Bach. Bach-Werke-Verzeichnis (BWV-3).</i> Wiesbaden: Breitkopf & Härtel. <a href=\"https://d-nb.info/1259824411/04\">https://d-nb.info/1259824411/04</a>.</span> [BWV-3, 550]."@none ;
+      rdfs:label
+        "Catalogue des oeuvres"@fr ,
+        "Catalogo delle opere"@it ,
+        "Katalog utworów"@pl ,
+        "Catálogo de obras"@pt ,
+        "Catálogo de obras"@es ,
+        "Catalog of works"@en ,
+        "Werkverzeichnis"@de ;
+    ] ;
+  rism:sectionLabel
+    "Références et notes"@fr ,
+    "Literatur und Bemerkungen"@de ,
+    "References and notes"@en ,
+    "Notas e referências"@pt ,
+    "Referencias y notas"@es ,
+    "Odniesienia i uwagi"@pl ,
+    "Bibliografia e note"@it ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Kompozytor / Autor"@pl ,
+    "Composer/Author"@en ,
+    "Compositor/Autor"@es ,
+    "Compositor/Autor"@pt ,
+    "Compositeur/Auteur"@fr ,
+    "Compositore/Autore"@it ,
+    "Komponist/Autor"@de ;
+  .
+
+<https://rism.online/people/26730>
+  a rism:Person ;
+  rdfs:label "Pollini, Francesco (1762-1846)"@none ;
+  .
+
+<https://rism.online/publications/50007446>
+  a rism:Publication ;
+  rdfs:label "Francesco Pollini Catalog"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Concluído"@pt ,
+        "Terminé"@fr ,
+        "Kompletne"@pl ,
+        "Completato"@it ,
+        "Completado"@es ,
+        "Abgeschlossen"@de ,
+        "Completed"@en ;
+    ] ;
+  .
+
+<https://rism.online/subjects/25315>
+  a rism:Subject ;
+  rdf:value "Canzonettas" ;
+  rdfs:label "Canzonettas"@none ;
+  .
+
+<https://rism.online/works/50935>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/26730> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Fior che nasceste–Sol maggiore, AndP C.137"@it ,
+    "Fior che nasceste–G-Dur, AndP C.137"@de ,
+    "Fior che nasceste–G-dur, AndP C.137"@pl ,
+    "Fior che nasceste–G major, AndP C.137"@en ,
+    "Fior che nasceste–Sol majeur, AndP C.137"@fr ,
+    "Fior che nasceste–Sol Mayor, AndP C.137"@es ,
+    "Fior che nasceste–Sol maior, AndP C.137"@pt ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork <https://rism.online/subjects/25315> ;
+      rism:sectionLabel
+        "Forma dell'opera"@it ,
+        "Forma de la obra"@es ,
+        "Gatunek dzieła"@pl ,
+        "Forme de l'œuvre"@fr ,
+        "Werkgattung"@de ,
+        "Forma da obra"@pt ,
+        "Form of work"@en ;
+    ] ;
+  rism:hasDates
+    [
+      rism:dateStatement "1803/1823 (Estremi delle pubblicazioni di musica vocale da camera di Pollini)" ;
+      rism:earliestDate 1803 ;
+      rism:latestDate 1823 ;
+    ] ;
+  rism:hasKeyMode "G" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Avventurosi fior"@none ,
+        "Fior che nasceste"@none ;
+      rdfs:label
+        "Íncipit literario"@es ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ,
+        "Incipit literário"@pt ,
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ;
+    ] ,
+    [
+      rdf:value "S, pf"@none ;
+      rdfs:label
+        "Scoring summary"@en ,
+        "Sintese da formação instrumental"@pt ,
+        "Resumen de Plantilla/Orgánico"@es ,
+        "Besetzungshinweis"@de ,
+        "Organico sintetico"@it ,
+        "Instrumentation condensée"@fr ,
+        "Podsumowanie obsady"@pl ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Fior che nasceste"@none ;
+      rdfs:label
+        "Einordnungstitel"@de ,
+        "Título uniforme"@es ,
+        "Título uniforme"@pt ,
+        "Standardized title"@en ,
+        "Titre uniforme"@fr ,
+        "Znormalizowany tytuł"@pl ,
+        "Titolo uniforme"@it ;
+    ] ,
+    [
+      rdf:value "1803/1823 (Estremi delle pubblicazioni di musica vocale da camera di Pollini)"@none ;
+      rdfs:label
+        "Fechas"@es ,
+        "Datas"@pt ,
+        "Date"@it ,
+        "Dates"@en ,
+        "Dates"@fr ,
+        "Datierungen"@de ,
+        "Daty"@pl ;
+    ] ,
+    [
+      rdf:value
+        "Sol maior"@pt ,
+        "G-dur"@pl ,
+        "Sol maggiore"@it ,
+        "G major"@en ,
+        "G-Dur"@de ,
+        "Sol majeur"@fr ,
+        "Sol Mayor"@es ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonacja lub modus"@pl ,
+        "Key or mode"@en ;
+    ] ,
+    [
+      rdf:value "works/50935"@none ;
+      rdfs:label
+        "Número ID RISM"@pt ,
+        "Número de ID de RISM"@es ,
+        "Numero documento RISM"@it ,
+        "RISM ID number"@en ,
+        "No. RISM"@fr ,
+        "RISM Dokumentnummer"@de ,
+        "RISM ID"@pl ;
+    ] ;
+  rism:incipits <https://rism.online/works/50935/incipits> ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Fa parte di"@it ,
+        "Item parte de"@pt ,
+        "Jest częścią…"@pl ,
+        "In"@de ,
+        "Ítem integrante de"@es ,
+        "Fait partie de"@fr ,
+        "Item part of"@en ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/50007446> ;
+          rism:hasWorkNumber "AndP C.137" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2025-10-29T11:39:37Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de creación"@es ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Data di creazione"@it ,
+            "Criado em"@pt ,
+            "Date de création"@fr ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:47:22Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ultima modifica"@it ,
+            "Ostatnia modyfikacja"@pl ,
+            "Last modification"@en ,
+            "Fecha de modificación"@es ,
+            "Última modificação"@pt ,
+            "Letzte Änderung"@de ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/50935/references-notes> ;
+  rism:sources
+    [
+      rism:sectionLabel
+        "Źródła"@pl ,
+        "Fonti"@it ,
+        "Fontes"@pt ,
+        "Fuentes"@es ,
+        "Quellen"@de ,
+        "Sources"@en ,
+        "Sources"@fr ;
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/works/50935/sources" ;
+    ] ;
+  .
+
+<https://rism.online/works/50935/incipits>
+  a rism:WorkIncipitsSection ;
+  rism:hasIncipit
+    <https://rism.online/works/50935/incipits/1.1.1> ,
+    <https://rism.online/works/50935/incipits/1.2.1> ;
+  rism:sectionLabel
+    "Incipity"@pl ,
+    "Incipit"@pt ,
+    "Incipit"@it ,
+    "Íncipits"@es ,
+    "Incipits"@en ,
+    "Incipits"@fr ,
+    "Incipits"@de ;
+  .
+
+<https://rism.online/works/50935/incipits/1.1.1>
+  a rism:Incipit ;
+  rdfs:label "1.1.1 Andante"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/50935/incipits/1.1.1/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Codice Plaine and Easie"@it ,
+        "Plaine and Easie Code"@de ,
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Code Plaine and Easie"@fr ,
+        "Kod Plaine and Easie"@pl ,
+        "Plaine and Easie code"@en ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"=3/'8.F6G8F4F8F/{FB}''8D4C'8A/4B''8D'4D8-/","key":"B|b","keysig":"bBE","timesig":"6/8"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "=3/'8.F6G8F4F8F/{FB}''8D4C'8A/4B''8D'4D8-/" ;
+  rism:hasPAEKeysig "bBE" ;
+  rism:hasPAETimesig "6/8" ;
+  rism:hasSummary
+    [
+      rdf:value "Andante"@none ;
+      rdfs:label
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Intestazione, tempo"@it ,
+        "Título do movimento, tempo"@pt ,
+        "Título del movimiento, tempo"@es ,
+        "Satztitel, Tempo"@de ,
+        "Title of movement, tempo"@en ;
+    ] ,
+    [
+      rdf:value "bBE"@none ;
+      rdfs:label
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armure"@fr ,
+        "Key signature"@en ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Akzidentien"@de ;
+    ] ,
+    [
+      rdf:value "6/8"@none ;
+      rdfs:label
+        "Misura"@it ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indicación de compás"@es ,
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Time signature"@en ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (treble clef)"@en ;
+      rdfs:label
+        "Chiave"@it ,
+        "Clé"@fr ,
+        "Clave"@es ,
+        "Clave"@pt ,
+        "Schlüssel"@de ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ,
+    [
+      rdf:value
+        "B-Dur"@de ,
+        "Si♭ majeur"@fr ,
+        "Si bemol Mayor"@es ,
+        "B-dur"@pl ,
+        "B♭ major"@en ,
+        "Si bemol maior"@pt ,
+        "Si♭ maggiore"@it ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonacja lub modus"@pl ,
+        "Key or mode"@en ;
+    ] ,
+    [
+      rdf:value "Fior che nasceste"@none ;
+      rdfs:label
+        "Íncipit literario"@es ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ,
+        "Incipit literário"@pt ,
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ;
+    ] ,
+    [
+      rdf:value "S"@none ;
+      rdfs:label
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Głos/instrument"@pl ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ;
+    ] ;
+  .
+
+<https://rism.online/works/50935/incipits/1.2.1>
+  a rism:Incipit ;
+  rdfs:label "1.2.1 Andante"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Codice Plaine and Easie"@it ,
+        "Plaine and Easie Code"@de ,
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Code Plaine and Easie"@fr ,
+        "Kod Plaine and Easie"@pl ,
+        "Plaine and Easie code"@en ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"{8''DC}/48'BGA''D/8q''D4'G8-","key":"G","keysig":"xF","timesig":"6/8"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/50935/incipits/1.2.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "{8''DC}/48'BGA''D/8q''D4'G8-" ;
+  rism:hasPAEKeysig "xF" ;
+  rism:hasPAETimesig "6/8" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Sol maior"@pt ,
+        "G-dur"@pl ,
+        "Sol maggiore"@it ,
+        "G major"@en ,
+        "G-Dur"@de ,
+        "Sol majeur"@fr ,
+        "Sol Mayor"@es ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonacja lub modus"@pl ,
+        "Key or mode"@en ;
+    ] ,
+    [
+      rdf:value "6/8"@none ;
+      rdfs:label
+        "Misura"@it ,
+        "Metrum"@pl ,
+        "Metrum"@de ,
+        "Indicación de compás"@es ,
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Time signature"@en ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (treble clef)"@en ;
+      rdfs:label
+        "Chiave"@it ,
+        "Clé"@fr ,
+        "Clave"@es ,
+        "Clave"@pt ,
+        "Schlüssel"@de ,
+        "Clef"@en ,
+        "Klucz"@pl ;
+    ] ,
+    [
+      rdf:value "Andante"@none ;
+      rdfs:label
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Intestazione, tempo"@it ,
+        "Título do movimento, tempo"@pt ,
+        "Título del movimiento, tempo"@es ,
+        "Satztitel, Tempo"@de ,
+        "Title of movement, tempo"@en ;
+    ] ,
+    [
+      rdf:value "xF"@none ;
+      rdfs:label
+        "Znaki przykluczowe"@pl ,
+        "Armatura di chiave"@it ,
+        "Armure"@fr ,
+        "Key signature"@en ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Akzidentien"@de ;
+    ] ,
+    [
+      rdf:value "S"@none ;
+      rdfs:label
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Głos/instrument"@pl ,
+        "Voix/instrument"@fr ,
+        "Voice/instrument"@en ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ;
+    ] ,
+    [
+      rdf:value "Avventurosi fior"@none ;
+      rdfs:label
+        "Íncipit literario"@es ,
+        "Incipit tekstowy"@pl ,
+        "Textincipit"@de ,
+        "Text incipit"@en ,
+        "Incipit literário"@pt ,
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ;
+    ] ;
+  .
+
+<https://rism.online/works/50935/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Andreacchio, Sara; Bacciagaluppi, Claudio; Di Grazia, Gigliola; Miucci, Leonardo. 2025. <i>Francesco Pollini Catalog.</i> Bern: Hochschule der Künste Bern / RISM Digital Center. <a href=\"https://www.hkb-interpretation.ch/francescopollini\">https://www.hkb-interpretation.ch/francescopollini</a>.</span> [AndP, C.137]."@none ;
+      rdfs:label
+        "Werkverzeichnis"@de ,
+        "Katalog utworów"@pl ,
+        "Catálogo de obras"@es ,
+        "Catálogo de obras"@pt ,
+        "Catalog of works"@en ,
+        "Catalogue des oeuvres"@fr ,
+        "Catalogo delle opere"@it ;
+    ] ;
+  rism:sectionLabel
+    "Notas e referências"@pt ,
+    "Referencias y notas"@es ,
+    "Références et notes"@fr ,
+    "Bibliografia e note"@it ,
+    "Literatur und Bemerkungen"@de ,
+    "Odniesienia i uwagi"@pl ,
+    "References and notes"@en ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Komponist/Autor"@de ,
+    "Compositeur/Auteur"@fr ,
+    "Composer/Author"@en ,
+    "Compositore/Autore"@it ,
+    "Kompozytor / Autor"@pl ,
+    "Compositor/Autor"@pt ,
+    "Compositor/Autor"@es ;
+  .
+
+<https://rism.online/people/88790>
+  a rism:Person ;
+  rdfs:label "Mendelssohn Bartholdy, Felix (1809-1847)"@none ;
+  .
+
+<https://rism.online/publications/30025296>
+  a rism:Publication ;
+  rdfs:label "Felix Mendelssohn Bartholdy - thematisch-systematisches Verzeichnis der musikalischen Werke (MWV)"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Kompletne"@pl ,
+        "Completado"@es ,
+        "Concluído"@pt ,
+        "Completato"@it ,
+        "Completed"@en ,
+        "Terminé"@fr ,
+        "Abgeschlossen"@de ;
+    ] ;
+  .
+
+<https://rism.online/subjects/3902024>
+  a rism:Subject ;
+  rdf:value "Piano+music" ;
+  rdfs:label "Piano music"@none ;
+  .
+
+<https://rism.online/subjects/50001437>
+  a rism:Subject ;
+  rdf:value "Piano+pieces" ;
+  rdfs:label "Piano pieces"@none ;
+  .
+
+<https://rism.online/works/42456>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/88790> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Andante–g-moll, MWV T 3"@pl ,
+    "Andante–Sol menor, MWV T 3"@pt ,
+    "Andante–Sol menor, MWV T 3"@es ,
+    "Andante–Sol mineur, MWV T 3"@fr ,
+    "Andante–G minor, MWV T 3"@en ,
+    "Andante–g-Moll, MWV T 3"@de ,
+    "Andante–Sol minore, MWV T 3"@it ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork
+        <https://rism.online/subjects/3902024> ,
+        <https://rism.online/subjects/50001437> ;
+      rism:sectionLabel
+        "Form of work"@en ,
+        "Forma dell'opera"@it ,
+        "Gatunek dzieła"@pl ,
+        "Forma da obra"@pt ,
+        "Werkgattung"@de ,
+        "Forme de l'œuvre"@fr ,
+        "Forma de la obra"@es ;
+    ] ;
+  rism:hasDates
+    [
+      rism:dateStatement "1840/1849 (1840er Jahre)" ;
+      rism:earliestDate 1840 ;
+      rism:latestDate 1849 ;
+    ] ;
+  rism:hasKeyMode "g" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Andante g-Moll, Fragment"@en ,
+        "Andante g-Moll, Fragment"@pt ,
+        "Andante g-Moll, Fragment"@fr ,
+        "Andante g-Moll, Fragment"@it ,
+        "Andante g-Moll, Fragment"@de ,
+        "Andante g-Moll, Fragment"@es ,
+        "Andante g-Moll, Fragment"@pl ;
+      rdfs:label
+        "Alternativer Werktitel"@de ,
+        "Titre alternatif"@fr ,
+        "Alternatywny tytuł dzieła"@pl ,
+        "Título alternativo"@es ,
+        "Alternative work title"@en ,
+        "Titolo alternativo dell'opera"@it ,
+        "Título alternativo da obra"@pt ;
+    ] ,
+    [
+      rdf:value "pf 4hands"@none ;
+      rdfs:label
+        "Scoring summary"@en ,
+        "Besetzungshinweis"@de ,
+        "Sintese da formação instrumental"@pt ,
+        "Instrumentation condensée"@fr ,
+        "Podsumowanie obsady"@pl ,
+        "Resumen de Plantilla/Orgánico"@es ,
+        "Organico sintetico"@it ;
+    ] ,
+    [
+      rdf:value
+        "Sol mineur"@fr ,
+        "G minor"@en ,
+        "Sol minore"@it ,
+        "Sol menor"@pt ,
+        "Sol menor"@es ,
+        "g-Moll"@de ,
+        "g-moll"@pl ;
+      rdfs:label
+        "Tonalidade, modo"@pt ,
+        "Tonalidad o modo"@es ,
+        "Key or mode"@en ,
+        "Tonalité, mode"@fr ,
+        "Tonacja lub modus"@pl ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ;
+    ] ,
+    [
+      rdf:value "1840/1849 (1840er Jahre)"@none ;
+      rdfs:label
+        "Datas"@pt ,
+        "Daty"@pl ,
+        "Fechas"@es ,
+        "Date"@it ,
+        "Datierungen"@de ,
+        "Dates"@en ,
+        "Dates"@fr ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Andante"@none ;
+      rdfs:label
+        "Titolo uniforme"@it ,
+        "Einordnungstitel"@de ,
+        "Standardized title"@en ,
+        "Titre uniforme"@fr ,
+        "Znormalizowany tytuł"@pl ,
+        "Título uniforme"@pt ,
+        "Título uniforme"@es ;
+    ] ,
+    [
+      rdf:value "works/42456"@none ;
+      rdfs:label
+        "No. RISM"@fr ,
+        "Numero documento RISM"@it ,
+        "RISM ID number"@en ,
+        "RISM ID"@pl ,
+        "Número de ID de RISM"@es ,
+        "RISM Dokumentnummer"@de ,
+        "Número ID RISM"@pt ;
+    ] ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Ítem integrante de"@es ,
+        "Fait partie de"@fr ,
+        "In"@de ,
+        "Fa parte di"@it ,
+        "Item part of"@en ,
+        "Item parte de"@pt ,
+        "Jest częścią…"@pl ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/30025296> ;
+          rism:hasWorkNumber "MWV T 3" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2024-03-11T13:51:35Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de creación"@es ,
+            "Date de création"@fr ,
+            "Created on"@en ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ,
+            "Data utworzenia"@pl ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:45:57Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ostatnia modyfikacja"@pl ,
+            "Dernière modification"@fr ,
+            "Ultima modifica"@it ,
+            "Last modification"@en ,
+            "Letzte Änderung"@de ,
+            "Última modificação"@pt ,
+            "Fecha de modificación"@es ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/42456/references-notes> ;
+  .
+
+<https://rism.online/works/42456/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Wehner, Ralf (ed.). 2009. <i>Felix Mendelssohn Bartholdy - thematisch-systematisches Verzeichnis der musikalischen Werke (MWV).</i> Leipziger Ausgabe der Werke von Felix Mendelssohn Bartholdy, Ser. 13, vol. 1A. Wiesbaden ; Leipzig [u.a.]: Breitkopf & Härtel. <a href=\"https://www.saw-leipzig.de/de/projekte/leipziger-ausgabe-der-werke-von-felix-mendelssohn-bartholdy/thematisch-systematisches-werkverzeichnis\">https://www.saw-leipzig.de/de/projekte/leipziger-ausgabe-der-werke-von-felix-mendelssohn-bartholdy/thematisch-systematisches-werkverzeichnis</a>.</span> [MWV, T 3]."@none ;
+      rdfs:label
+        "Catálogo de obras"@pt ,
+        "Catálogo de obras"@es ,
+        "Werkverzeichnis"@de ,
+        "Catalog of works"@en ,
+        "Catalogo delle opere"@it ,
+        "Katalog utworów"@pl ,
+        "Catalogue des oeuvres"@fr ;
+    ] ,
+    [
+      rdf:value "Fragment"@none ;
+      rdfs:label
+        "General note"@en ,
+        "Nota generale"@it ,
+        "Uwaga ogólna"@pl ,
+        "Nota general"@es ,
+        "Nota geral"@pt ,
+        "Bemerkungen"@de ,
+        "Remarque générale"@fr ;
+    ] ;
+  rism:sectionLabel
+    "Bibliografia e note"@it ,
+    "Odniesienia i uwagi"@pl ,
+    "Notas e referências"@pt ,
+    "References and notes"@en ,
+    "Referencias y notas"@es ,
+    "Literatur und Bemerkungen"@de ,
+    "Références et notes"@fr ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Compositor/Autor"@pt ,
+    "Compositor/Autor"@es ,
+    "Kompozytor / Autor"@pl ,
+    "Composer/Author"@en ,
+    "Compositeur/Auteur"@fr ,
+    "Compositore/Autore"@it ,
+    "Komponist/Autor"@de ;
+  .
+
+<https://rism.online/people/30001209>
+  a rism:Person ;
+  rdfs:label "Gallus, Iacobus (1550-1591)"@none ;
+  .
+
+<https://rism.online/publications/30026871>
+  a rism:Publication ;
+  rdfs:label "Jacob Handl-Gallus: Werk - Überlieferung - Rezeption. Mit thematischem Katalog"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Kompletne"@pl ,
+        "Concluído"@pt ,
+        "Completato"@it ,
+        "Abgeschlossen"@de ,
+        "Terminé"@fr ,
+        "Completed"@en ,
+        "Completado"@es ;
+    ] ;
+  .
+
+<https://rism.online/subjects/25235>
+  a rism:Subject ;
+  rdf:value "Antiphons" ;
+  rdfs:label "Antiphons"@none ;
+  .
+
+<https://rism.online/subjects/25240>
+  a rism:Subject ;
+  rdf:value "Motets" ;
+  rdfs:label "Motets"@none ;
+  .
+
+<https://rism.online/subjects/25250>
+  a rism:Subject ;
+  rdf:value "Sacred+songs" ;
+  rdfs:label "Sacred songs"@none ;
+  .
+
+<https://rism.online/works/39649>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/30001209> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Pueri Hebraeorum tollentes ramos olivarum, HK 129"@pt ,
+    "Pueri Hebraeorum tollentes ramos olivarum, HK 129"@en ,
+    "Pueri Hebraeorum tollentes ramos olivarum, HK 129"@es ,
+    "Pueri Hebraeorum tollentes ramos olivarum, HK 129"@pl ,
+    "Pueri Hebraeorum tollentes ramos olivarum, HK 129"@de ,
+    "Pueri Hebraeorum tollentes ramos olivarum, HK 129"@fr ,
+    "Pueri Hebraeorum tollentes ramos olivarum, HK 129"@it ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork
+        <https://rism.online/subjects/25235> ,
+        <https://rism.online/subjects/25240> ,
+        <https://rism.online/subjects/25250> ;
+      rism:sectionLabel
+        "Form of work"@en ,
+        "Forma dell'opera"@it ,
+        "Werkgattung"@de ,
+        "Forma de la obra"@es ,
+        "Gatunek dzieła"@pl ,
+        "Forme de l'œuvre"@fr ,
+        "Forma da obra"@pt ;
+    ] ;
+  rism:hasDates
+    [
+      rism:dateStatement "1587 (Datum der Erstveröffentlichung)" ;
+      rism:earliestDate 1587 ;
+      rism:latestDate 1587 ;
+    ] ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Opus musicum"@pt ,
+        "Opus musicum"@en ,
+        "Opus musicum"@es ,
+        "Opus musicum"@pl ,
+        "Opus musicum"@de ,
+        "Opus musicum"@fr ,
+        "Opus musicum"@it ,
+        "Pueri Hebraeorum tolentes"@pt ,
+        "Pueri Hebraeorum tolentes"@en ,
+        "Pueri Hebraeorum tolentes"@es ,
+        "Pueri Hebraeorum tolentes"@pl ,
+        "Pueri Hebraeorum tolentes"@de ,
+        "Pueri Hebraeorum tolentes"@fr ,
+        "Pueri Hebraeorum tolentes"@it ;
+      rdfs:label
+        "Título alternativo"@es ,
+        "Titolo alternativo dell'opera"@it ,
+        "Alternativer Werktitel"@de ,
+        "Alternatywny tytuł dzieła"@pl ,
+        "Titre alternatif"@fr ,
+        "Alternative work title"@en ,
+        "Título alternativo da obra"@pt ;
+    ] ,
+    [
+      rdf:value "V (4)"@none ;
+      rdfs:label
+        "Podsumowanie obsady"@pl ,
+        "Resumen de Plantilla/Orgánico"@es ,
+        "Besetzungshinweis"@de ,
+        "Scoring summary"@en ,
+        "Organico sintetico"@it ,
+        "Instrumentation condensée"@fr ,
+        "Sintese da formação instrumental"@pt ;
+    ] ,
+    [
+      rdf:value
+        "Pueri Hebraeorum tollentes ramos olivarum, obviaverunt Domino"@none ,
+        "Pueri Hebraeorum vestimenta, prosternebant in via"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Incipit tekstowy"@pl ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Pueri Hebraeorum tollentes ramos olivarum"@none ;
+      rdfs:label
+        "Znormalizowany tytuł"@pl ,
+        "Título uniforme"@pt ,
+        "Título uniforme"@es ,
+        "Titre uniforme"@fr ,
+        "Einordnungstitel"@de ,
+        "Standardized title"@en ,
+        "Titolo uniforme"@it ;
+    ] ,
+    [
+      rdf:value "works/39649"@none ;
+      rdfs:label
+        "Número de ID de RISM"@es ,
+        "RISM ID number"@en ,
+        "RISM ID"@pl ,
+        "Número ID RISM"@pt ,
+        "No. RISM"@fr ,
+        "RISM Dokumentnummer"@de ,
+        "Numero documento RISM"@it ;
+    ] ,
+    [
+      rdf:value "1587 (Datum der Erstveröffentlichung)"@none ;
+      rdfs:label
+        "Dates"@en ,
+        "Dates"@fr ,
+        "Datas"@pt ,
+        "Fechas"@es ,
+        "Date"@it ,
+        "Daty"@pl ,
+        "Datierungen"@de ;
+    ] ;
+  rism:incipits <https://rism.online/works/39649/incipits> ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Jest częścią…"@pl ,
+        "Fait partie de"@fr ,
+        "Item parte de"@pt ,
+        "In"@de ,
+        "Ítem integrante de"@es ,
+        "Fa parte di"@it ,
+        "Item part of"@en ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/30026871> ;
+          rism:hasWorkNumber "HK 129" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-04-26T06:38:04Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de creación"@es ,
+            "Data utworzenia"@pl ,
+            "Date de création"@fr ,
+            "Erstellungsdatum"@de ,
+            "Data di creazione"@it ,
+            "Created on"@en ,
+            "Criado em"@pt ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:45:27Z"^^xsd:dateTime ;
+          rdfs:label
+            "Dernière modification"@fr ,
+            "Letzte Änderung"@de ,
+            "Fecha de modificación"@es ,
+            "Última modificação"@pt ,
+            "Ostatnia modyfikacja"@pl ,
+            "Last modification"@en ,
+            "Ultima modifica"@it ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/39649/references-notes> ;
+  rism:sources
+    [
+      rism:sectionLabel
+        "Fontes"@pt ,
+        "Fonti"@it ,
+        "Fuentes"@es ,
+        "Sources"@en ,
+        "Sources"@fr ,
+        "Źródła"@pl ,
+        "Quellen"@de ;
+      rism:totalItems 3 ;
+      rism:url "https://rism.online/works/39649/sources" ;
+    ] ;
+  .
+
+<https://rism.online/works/39649/incipits>
+  a rism:WorkIncipitsSection ;
+  rism:hasIncipit
+    <https://rism.online/works/39649/incipits/1.1.1> ,
+    <https://rism.online/works/39649/incipits/1.2.1> ;
+  rism:sectionLabel
+    "Incipit"@pt ,
+    "Incipit"@it ,
+    "Incipity"@pl ,
+    "Íncipits"@es ,
+    "Incipits"@en ,
+    "Incipits"@de ,
+    "Incipits"@fr ;
+  .
+
+<https://rism.online/works/39649/incipits/1.1.1>
+  a rism:Incipit ;
+  rdfs:label "1.1.1 [Prima pars]"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Plaine and Easie code"@en ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie Code"@de ,
+        "Codice Plaine and Easie"@it ,
+        "Code Plaine and Easie"@fr ,
+        "Kod Plaine and Easie"@pl ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"C+1","data":"9-1A''C'A+G2''CC1'B''C2-'FA''C'AG4AG1F2E4FGAB1''C2C","keysig":"n","timesig":"c/"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/39649/incipits/1.1.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "C+1" ;
+  rism:hasPAEData "9-1A''C'A+G2''CC1'B''C2-'FA''C'AG4AG1F2E4FGAB1''C2C" ;
+  rism:hasPAEKeysig "n" ;
+  rism:hasPAETimesig "c/" ;
+  rism:hasSummary
+    [
+      rdf:value "[Prima pars]"@none ;
+      rdfs:label
+        "Intestazione, tempo"@it ,
+        "Titre, tempo"@fr ,
+        "Título del movimiento, tempo"@es ,
+        "Tytuł części, tempo"@pl ,
+        "Título do movimento, tempo"@pt ,
+        "Satztitel, Tempo"@de ,
+        "Title of movement, tempo"@en ;
+    ] ,
+    [
+      rdf:value "C+1"@none ;
+      rdfs:label
+        "Clé"@fr ,
+        "Clef"@en ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Schlüssel"@de ,
+        "Klucz"@pl ,
+        "Chiave"@it ;
+    ] ,
+    [
+      rdf:value "c/"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ;
+    ] ,
+    [
+      rdf:value "Pueri Hebraeorum tollentes ramos olivarum, obviaverunt Domino"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Incipit tekstowy"@pl ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ,
+    [
+      rdf:value "S"@none ;
+      rdfs:label
+        "Besetzung"@de ,
+        "Voce/strumento"@it ,
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Głos/instrument"@pl ,
+        "Voice/instrument"@en ,
+        "Voix/instrument"@fr ;
+    ] ;
+  .
+
+<https://rism.online/works/39649/incipits/1.2.1>
+  a rism:Incipit ;
+  rdfs:label "1.2.1 II. Pars"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Plaine and Easie code"@en ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Plaine and Easie Code"@de ,
+        "Codice Plaine and Easie"@it ,
+        "Code Plaine and Easie"@fr ,
+        "Kod Plaine and Easie"@pl ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"C+1","data":"1-9A1''C2'A''C1D9C2'AFA1''C2'A''CC1'A2''CC1C","keysig":"n","timesig":"c/"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/39649/incipits/1.2.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "C+1" ;
+  rism:hasPAEData "1-9A1''C2'A''C1D9C2'AFA1''C2'A''CC1'A2''CC1C" ;
+  rism:hasPAEKeysig "n" ;
+  rism:hasPAETimesig "c/" ;
+  rism:hasSummary
+    [
+      rdf:value "S"@none ;
+      rdfs:label
+        "Besetzung"@de ,
+        "Voce/strumento"@it ,
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Głos/instrument"@pl ,
+        "Voice/instrument"@en ,
+        "Voix/instrument"@fr ;
+    ] ,
+    [
+      rdf:value "C+1"@none ;
+      rdfs:label
+        "Clé"@fr ,
+        "Clef"@en ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Schlüssel"@de ,
+        "Klucz"@pl ,
+        "Chiave"@it ;
+    ] ,
+    [
+      rdf:value "II. Pars"@none ;
+      rdfs:label
+        "Intestazione, tempo"@it ,
+        "Titre, tempo"@fr ,
+        "Título del movimiento, tempo"@es ,
+        "Tytuł części, tempo"@pl ,
+        "Título do movimento, tempo"@pt ,
+        "Satztitel, Tempo"@de ,
+        "Title of movement, tempo"@en ;
+    ] ,
+    [
+      rdf:value "c/"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ,
+        "Metrum"@pl ,
+        "Metrum"@de ;
+    ] ,
+    [
+      rdf:value "Pueri Hebraeorum vestimenta, prosternebant in via"@none ;
+      rdfs:label
+        "Incipit du texte"@fr ,
+        "Incipit testuale"@it ,
+        "Incipit tekstowy"@pl ,
+        "Íncipit literario"@es ,
+        "Incipit literário"@pt ,
+        "Textincipit"@de ,
+        "Text incipit"@en ;
+    ] ;
+  .
+
+<https://rism.online/works/39649/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Motnik, Marko (ed.). 2012. <i>Jacob Handl-Gallus: Werk - Überlieferung - Rezeption. Mit thematischem Katalog.</i> Wiener Forum für ältere Musikgeschichte, vol. 5. Tutzing: Hans Schneider. <a href=\"https://d-nb.info/1024862089/04\">https://d-nb.info/1024862089/04</a>.</span> [HK, 129]."@none ;
+      rdfs:label
+        "Werkverzeichnis"@de ,
+        "Catalogo delle opere"@it ,
+        "Catálogo de obras"@pt ,
+        "Catálogo de obras"@es ,
+        "Catalogue des oeuvres"@fr ,
+        "Catalog of works"@en ,
+        "Katalog utworów"@pl ;
+    ] ;
+  rism:sectionLabel
+    "Bibliografia e note"@it ,
+    "Literatur und Bemerkungen"@de ,
+    "Odniesienia i uwagi"@pl ,
+    "Referencias y notas"@es ,
+    "Références et notes"@fr ,
+    "References and notes"@en ,
+    "Notas e referências"@pt ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Composer/Author"@en ,
+    "Compositor/Autor"@es ,
+    "Compositor/Autor"@pt ,
+    "Kompozytor / Autor"@pl ,
+    "Compositeur/Auteur"@fr ,
+    "Compositore/Autore"@it ,
+    "Komponist/Autor"@de ;
+  .
+
+<https://rism.online/people/33668>
+  a rism:Person ;
+  rdfs:label "Purcell, Henry (1659-1695)"@none ;
+  .
+
+<https://rism.online/publications/123>
+  a rism:Publication ;
+  rdfs:label "Henry Purcell (1659-1695). An analytical catalogue of his music"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Completed"@en ,
+        "Completato"@it ,
+        "Concluído"@pt ,
+        "Completado"@es ,
+        "Abgeschlossen"@de ,
+        "Kompletne"@pl ,
+        "Terminé"@fr ;
+    ] ;
+  .
+
+<https://rism.online/subjects/25213>
+  a rism:Subject ;
+  rdf:value "Sonatas" ;
+  rdfs:label "Sonatas"@none ;
+  .
+
+<https://rism.online/subjects/3901022>
+  a rism:Subject ;
+  rdf:value "Trio+sonatas" ;
+  rdfs:label "Trio sonatas"@none ;
+  .
+
+<https://rism.online/works/32797>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/33668> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Sonatas–c-moll, ZimP 798"@pl ,
+    "Sonatas–Do minore, ZimP 798"@it ,
+    "Sonatas–c-Moll, ZimP 798"@de ,
+    "Sonatas–C minor, ZimP 798"@en ,
+    "Sonatas–Do mineur, ZimP 798"@fr ,
+    "Sonatas–Do menor, ZimP 798"@es ,
+    "Sonatas–Dó menor, ZimP 798"@pt ;
+  rism:externalAuthorities <https://rism.online/works/32797/external-authorities> ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork
+        <https://rism.online/subjects/25213> ,
+        <https://rism.online/subjects/3901022> ;
+      rism:sectionLabel
+        "Forme de l'œuvre"@fr ,
+        "Form of work"@en ,
+        "Gatunek dzieła"@pl ,
+        "Forma dell'opera"@it ,
+        "Werkgattung"@de ,
+        "Forma da obra"@pt ,
+        "Forma de la obra"@es ;
+    ] ;
+  rism:hasKeyMode "c" ;
+  rism:hasSummary
+    [
+      rdf:value "works/32797"@none ;
+      rdfs:label
+        "No. RISM"@fr ,
+        "Número ID RISM"@pt ,
+        "RISM Dokumentnummer"@de ,
+        "RISM ID"@pl ,
+        "Número de ID de RISM"@es ,
+        "RISM ID number"@en ,
+        "Numero documento RISM"@it ;
+    ] ,
+    [
+      rdf:value
+        "Do mineur"@fr ,
+        "c-Moll"@de ,
+        "C minor"@en ,
+        "c-moll"@pl ,
+        "Do menor"@es ,
+        "Dó menor"@pt ,
+        "Do minore"@it ;
+      rdfs:label
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonalidad o modo"@es ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Sonatas"@none ;
+      rdfs:label
+        "Título uniforme"@es ,
+        "Título uniforme"@pt ,
+        "Einordnungstitel"@de ,
+        "Titre uniforme"@fr ,
+        "Standardized title"@en ,
+        "Titolo uniforme"@it ,
+        "Znormalizowany tytuł"@pl ;
+    ] ,
+    [
+      rdf:value "vl (2), bc"@none ;
+      rdfs:label
+        "Instrumentation condensée"@fr ,
+        "Podsumowanie obsady"@pl ,
+        "Organico sintetico"@it ,
+        "Resumen de Plantilla/Orgánico"@es ,
+        "Scoring summary"@en ,
+        "Sintese da formação instrumental"@pt ,
+        "Besetzungshinweis"@de ;
+    ] ;
+  rism:incipits <https://rism.online/works/32797/incipits> ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Jest częścią…"@pl ,
+        "In"@de ,
+        "Item part of"@en ,
+        "Item parte de"@pt ,
+        "Fait partie de"@fr ,
+        "Ítem integrante de"@es ,
+        "Fa parte di"@it ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/123> ;
+          rism:hasWorkNumber "ZimP 798" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-04-26T06:32:29Z"^^xsd:dateTime ;
+          rdfs:label
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Data utworzenia"@pl ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:44:12Z"^^xsd:dateTime ;
+          rdfs:label
+            "Última modificação"@pt ,
+            "Ultima modifica"@it ,
+            "Fecha de modificación"@es ,
+            "Ostatnia modyfikacja"@pl ,
+            "Last modification"@en ,
+            "Letzte Änderung"@de ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/32797/references-notes> ;
+  rism:sources
+    [
+      rism:sectionLabel
+        "Fontes"@pt ,
+        "Fuentes"@es ,
+        "Quellen"@de ,
+        "Fonti"@it ,
+        "Źródła"@pl ,
+        "Sources"@fr ,
+        "Sources"@en ;
+      rism:totalItems 6 ;
+      rism:url "https://rism.online/works/32797/sources" ;
+    ] ;
+  .
+
+<https://rism.online/works/32797/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Other standard identifier"@en ,
+    "Identyfikator innego standardu"@pl ,
+    "Otro identificador estándar"@es ,
+    "Riferimento autorità"@it ,
+    "Outro identificador padronizado"@pt ,
+    "Normdatenverweise"@de ,
+    "Référence d'authorité"@fr ;
+  rism:hasExternalAuthority <https://rism.online/works/32797/external-authorities/dnb300252439> ;
+  .
+
+<https://rism.online/works/32797/external-authorities/dnb300252439>
+  a rism:ExternalAuthority ;
+  rdf:value "300252439" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 300252439"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityUrl "https://d-nb.info/gnd/300252439"^^xsd:anyURI ;
+  .
+
+<https://rism.online/works/32797/incipits>
+  a rism:WorkIncipitsSection ;
+  rism:hasIncipit
+    <https://rism.online/works/32797/incipits/1.1.1> ,
+    <https://rism.online/works/32797/incipits/1.2.1> ,
+    <https://rism.online/works/32797/incipits/1.3.1> ,
+    <https://rism.online/works/32797/incipits/1.4.1> ,
+    <https://rism.online/works/32797/incipits/1.5.1> ;
+  rism:sectionLabel
+    "Incipity"@pl ,
+    "Íncipits"@es ,
+    "Incipits"@de ,
+    "Incipits"@fr ,
+    "Incipits"@en ,
+    "Incipit"@it ,
+    "Incipit"@pt ;
+  .
+
+<https://rism.online/works/32797/incipits/1.1.1>
+  a rism:Incipit ;
+  rdfs:label "1.1.1 Sonata IX."@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/32797/incipits/1.1.1/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Plaine and Easie code"@en ,
+        "Codice Plaine and Easie"@it ,
+        "Plaine and Easie Code"@de ,
+        "Kod Plaine and Easie"@pl ,
+        "Code Plaine and Easie"@fr ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"8-{''GGG}{GA}{DE}/4nE4.F8D{E6DC}/4G","key":"c","keysig":"bBEA","timesig":"c"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "8-{''GGG}{GA}{DE}/4nE4.F8D{E6DC}/4G" ;
+  rism:hasPAEKeysig "bBEA" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Do mineur"@fr ,
+        "c-Moll"@de ,
+        "C minor"@en ,
+        "c-moll"@pl ,
+        "Do menor"@es ,
+        "Dó menor"@pt ,
+        "Do minore"@it ;
+      rdfs:label
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonalidad o modo"@es ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (clé de sol)"@fr ;
+      rdfs:label
+        "Klucz"@pl ,
+        "Clef"@en ,
+        "Schlüssel"@de ,
+        "Clé"@fr ,
+        "Clave"@es ,
+        "Clave"@pt ,
+        "Chiave"@it ;
+    ] ,
+    [
+      rdf:value "Sonata IX."@none ;
+      rdfs:label
+        "Título del movimiento, tempo"@es ,
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Título do movimento, tempo"@pt ,
+        "Titre, tempo"@fr ,
+        "Satztitel, Tempo"@de ;
+    ] ,
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Metrum"@de ,
+        "Metrum"@pl ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ;
+    ] ,
+    [
+      rdf:value "bBEA"@none ;
+      rdfs:label
+        "Armure"@fr ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Akzidentien"@de ,
+        "Znaki przykluczowe"@pl ;
+    ] ,
+    [
+      rdf:value "vl 1"@none ;
+      rdfs:label
+        "Voice/instrument"@en ,
+        "Głos/instrument"@pl ,
+        "Voix/instrument"@fr ,
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ;
+    ] ;
+  .
+
+<https://rism.online/works/32797/incipits/1.2.1>
+  a rism:Incipit ;
+  rdfs:label "1.2.1 Largo"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/32797/incipits/1.2.1/mei"^^xsd:anyURI ;
+    ] ,
+    [
+      rdfs:label
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Plaine and Easie code"@en ,
+        "Codice Plaine and Easie"@it ,
+        "Plaine and Easie Code"@de ,
+        "Kod Plaine and Easie"@pl ,
+        "Code Plaine and Easie"@fr ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"2''GGG/2.G4A2G/","key":"c","keysig":"bBEA","timesig":"3"}"^^rdf:JSON ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "2''GGG/2.G4A2G/" ;
+  rism:hasPAEKeysig "bBEA" ;
+  rism:hasPAETimesig "3" ;
+  rism:hasSummary
+    [
+      rdf:value "3"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Metrum"@de ,
+        "Metrum"@pl ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (clé de sol)"@fr ;
+      rdfs:label
+        "Klucz"@pl ,
+        "Clef"@en ,
+        "Schlüssel"@de ,
+        "Clé"@fr ,
+        "Clave"@es ,
+        "Clave"@pt ,
+        "Chiave"@it ;
+    ] ,
+    [
+      rdf:value "Largo"@none ;
+      rdfs:label
+        "Título del movimiento, tempo"@es ,
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Título do movimento, tempo"@pt ,
+        "Titre, tempo"@fr ,
+        "Satztitel, Tempo"@de ;
+    ] ,
+    [
+      rdf:value
+        "Do mineur"@fr ,
+        "c-Moll"@de ,
+        "C minor"@en ,
+        "c-moll"@pl ,
+        "Do menor"@es ,
+        "Dó menor"@pt ,
+        "Do minore"@it ;
+      rdfs:label
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonalidad o modo"@es ;
+    ] ,
+    [
+      rdf:value "bBEA"@none ;
+      rdfs:label
+        "Armure"@fr ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Akzidentien"@de ,
+        "Znaki przykluczowe"@pl ;
+    ] ,
+    [
+      rdf:value "vl 1"@none ;
+      rdfs:label
+        "Voice/instrument"@en ,
+        "Głos/instrument"@pl ,
+        "Voix/instrument"@fr ,
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ;
+    ] ;
+  .
+
+<https://rism.online/works/32797/incipits/1.3.1>
+  a rism:Incipit ;
+  rdfs:label "1.3.1 Canzona."@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Plaine and Easie code"@en ,
+        "Codice Plaine and Easie"@it ,
+        "Plaine and Easie Code"@de ,
+        "Kod Plaine and Easie"@pl ,
+        "Code Plaine and Easie"@fr ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"8-{6''CD}{8EC}{DnEFD}/{EC}{6AGFE}{8DC}{8.C6'nB}/''8C","key":"c","keysig":"bBEA","timesig":"c"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/32797/incipits/1.3.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "8-{6''CD}{8EC}{DnEFD}/{EC}{6AGFE}{8DC}{8.C6'nB}/''8C" ;
+  rism:hasPAEKeysig "bBEA" ;
+  rism:hasPAETimesig "c" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Do mineur"@fr ,
+        "c-Moll"@de ,
+        "C minor"@en ,
+        "c-moll"@pl ,
+        "Do menor"@es ,
+        "Dó menor"@pt ,
+        "Do minore"@it ;
+      rdfs:label
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonalidad o modo"@es ;
+    ] ,
+    [
+      rdf:value "vl 1"@none ;
+      rdfs:label
+        "Voice/instrument"@en ,
+        "Głos/instrument"@pl ,
+        "Voix/instrument"@fr ,
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ;
+    ] ,
+    [
+      rdf:value "c"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Metrum"@de ,
+        "Metrum"@pl ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ;
+    ] ,
+    [
+      rdf:value "Canzona."@none ;
+      rdfs:label
+        "Título del movimiento, tempo"@es ,
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Título do movimento, tempo"@pt ,
+        "Titre, tempo"@fr ,
+        "Satztitel, Tempo"@de ;
+    ] ,
+    [
+      rdf:value "bBEA"@none ;
+      rdfs:label
+        "Armure"@fr ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Akzidentien"@de ,
+        "Znaki przykluczowe"@pl ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (clé de sol)"@fr ;
+      rdfs:label
+        "Klucz"@pl ,
+        "Clef"@en ,
+        "Schlüssel"@de ,
+        "Clé"@fr ,
+        "Clave"@es ,
+        "Clave"@pt ,
+        "Chiave"@it ;
+    ] ;
+  .
+
+<https://rism.online/works/32797/incipits/1.4.1>
+  a rism:Incipit ;
+  rdfs:label "1.4.1 Adagio"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Plaine and Easie code"@en ,
+        "Codice Plaine and Easie"@it ,
+        "Plaine and Easie Code"@de ,
+        "Kod Plaine and Easie"@pl ,
+        "Code Plaine and Easie"@fr ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"4''nE{8.E6E}4.F8G/2nE4bE{8.E6E}/","key":"c","keysig":"bBEA","timesig":"c/"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/32797/incipits/1.4.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "4''nE{8.E6E}4.F8G/2nE4bE{8.E6E}/" ;
+  rism:hasPAEKeysig "bBEA" ;
+  rism:hasPAETimesig "c/" ;
+  rism:hasSummary
+    [
+      rdf:value
+        "Do mineur"@fr ,
+        "c-Moll"@de ,
+        "C minor"@en ,
+        "c-moll"@pl ,
+        "Do menor"@es ,
+        "Dó menor"@pt ,
+        "Do minore"@it ;
+      rdfs:label
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonalidad o modo"@es ;
+    ] ,
+    [
+      rdf:value "Adagio"@none ;
+      rdfs:label
+        "Título del movimiento, tempo"@es ,
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Título do movimento, tempo"@pt ,
+        "Titre, tempo"@fr ,
+        "Satztitel, Tempo"@de ;
+    ] ,
+    [
+      rdf:value "c/"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Metrum"@de ,
+        "Metrum"@pl ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (clé de sol)"@fr ;
+      rdfs:label
+        "Klucz"@pl ,
+        "Clef"@en ,
+        "Schlüssel"@de ,
+        "Clé"@fr ,
+        "Clave"@es ,
+        "Clave"@pt ,
+        "Chiave"@it ;
+    ] ,
+    [
+      rdf:value "vl 1"@none ;
+      rdfs:label
+        "Voice/instrument"@en ,
+        "Głos/instrument"@pl ,
+        "Voix/instrument"@fr ,
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ;
+    ] ,
+    [
+      rdf:value "bBEA"@none ;
+      rdfs:label
+        "Armure"@fr ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Akzidentien"@de ,
+        "Znaki przykluczowe"@pl ;
+    ] ;
+  .
+
+<https://rism.online/works/32797/incipits/1.5.1>
+  a rism:Incipit ;
+  rdfs:label "1.5.1 Allegro"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Código Plaine and Easie"@es ,
+        "Código Plaine and Easie"@pt ,
+        "Plaine and Easie code"@en ,
+        "Codice Plaine and Easie"@it ,
+        "Plaine and Easie Code"@de ,
+        "Kod Plaine and Easie"@pl ,
+        "Code Plaine and Easie"@fr ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"{''8.C6C8D}{8.E6D8C}/4D8G{8.G6A8F}/4.G4-8-/","key":"c","keysig":"bBEA","timesig":"6/4"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/32797/incipits/1.5.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "{''8.C6C8D}{8.E6D8C}/4D8G{8.G6A8F}/4.G4-8-/" ;
+  rism:hasPAEKeysig "bBEA" ;
+  rism:hasPAETimesig "6/4" ;
+  rism:hasSummary
+    [
+      rdf:value "bBEA"@none ;
+      rdfs:label
+        "Armure"@fr ,
+        "Armadura de clave"@es ,
+        "Armadura de clave"@pt ,
+        "Armatura di chiave"@it ,
+        "Key signature"@en ,
+        "Akzidentien"@de ,
+        "Znaki przykluczowe"@pl ;
+    ] ,
+    [
+      rdf:value
+        "Do mineur"@fr ,
+        "c-Moll"@de ,
+        "C minor"@en ,
+        "c-moll"@pl ,
+        "Do menor"@es ,
+        "Dó menor"@pt ,
+        "Do minore"@it ;
+      rdfs:label
+        "Tonacja lub modus"@pl ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonalidad o modo"@es ;
+    ] ,
+    [
+      rdf:value "6/4"@none ;
+      rdfs:label
+        "Compasso"@pt ,
+        "Indication de mesure"@fr ,
+        "Metrum"@de ,
+        "Metrum"@pl ,
+        "Indicación de compás"@es ,
+        "Misura"@it ,
+        "Time signature"@en ;
+    ] ,
+    [
+      rdf:value "Allegro"@none ;
+      rdfs:label
+        "Título del movimiento, tempo"@es ,
+        "Intestazione, tempo"@it ,
+        "Title of movement, tempo"@en ,
+        "Tytuł części, tempo"@pl ,
+        "Título do movimento, tempo"@pt ,
+        "Titre, tempo"@fr ,
+        "Satztitel, Tempo"@de ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (klucz wiolinowy)"@pl ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (treble clef)"@en ,
+        "G-2 (clé de sol)"@fr ;
+      rdfs:label
+        "Klucz"@pl ,
+        "Clef"@en ,
+        "Schlüssel"@de ,
+        "Clé"@fr ,
+        "Clave"@es ,
+        "Clave"@pt ,
+        "Chiave"@it ;
+    ] ,
+    [
+      rdf:value "vl 1"@none ;
+      rdfs:label
+        "Voice/instrument"@en ,
+        "Głos/instrument"@pl ,
+        "Voix/instrument"@fr ,
+        "Voce/strumento"@it ,
+        "Besetzung"@de ,
+        "Voz/instrumento"@es ,
+        "Voz/instrumento"@pt ;
+    ] ;
+  .
+
+<https://rism.online/works/32797/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Zimmerman, Franklin B.. 1963. <i>Henry Purcell (1659-1695). An analytical catalogue of his music.</i> London.</span> [ZimP, 798]."@none ;
+      rdfs:label
+        "Catálogo de obras"@es ,
+        "Catálogo de obras"@pt ,
+        "Catalogo delle opere"@it ,
+        "Werkverzeichnis"@de ,
+        "Katalog utworów"@pl ,
+        "Catalog of works"@en ,
+        "Catalogue des oeuvres"@fr ;
+    ] ;
+  rism:sectionLabel
+    "Literatur und Bemerkungen"@de ,
+    "Odniesienia i uwagi"@pl ,
+    "References and notes"@en ,
+    "Referencias y notas"@es ,
+    "Références et notes"@fr ,
+    "Bibliografia e note"@it ,
+    "Notas e referências"@pt ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:cre
+  rdf:value "cre" ;
+  rdfs:label
+    "Compositor/Autor"@pt ,
+    "Compositor/Autor"@es ,
+    "Kompozytor / Autor"@pl ,
+    "Compositeur/Auteur"@fr ,
+    "Komponist/Autor"@de ,
+    "Compositore/Autore"@it ,
+    "Composer/Author"@en ;
+  .
+
+relators:lyr
+  rdf:value "lyr" ;
+  rdfs:label
+    "Lyricist"@en ,
+    "Poeta"@it ,
+    "Autor słów"@pl ,
+    "Letrista"@pt ,
+    "Letrista"@es ,
+    "Parolier"@fr ,
+    "Textdichter"@de ;
+  .
+
+<https://rism.online/people/50916>
+  a rism:Person ;
+  rdfs:label "Chezy, Helmina von (1783-1856)"@none ;
+  .
+
+<https://rism.online/people/88790>
+  a rism:Person ;
+  rdfs:label "Mendelssohn Bartholdy, Felix (1809-1847)"@none ;
+  .
+
+<https://rism.online/publications/30025296>
+  a rism:Publication ;
+  rdfs:label "Felix Mendelssohn Bartholdy - thematisch-systematisches Verzeichnis der musikalischen Werke (MWV)"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Completed"@en ,
+        "Kompletne"@pl ,
+        "Concluído"@pt ,
+        "Abgeschlossen"@de ,
+        "Completado"@es ,
+        "Completato"@it ,
+        "Terminé"@fr ;
+    ] ;
+  .
+
+<https://rism.online/subjects/25460>
+  a rism:Subject ;
+  rdf:value "Partsongs" ;
+  rdfs:label "Partsongs"@none ;
+  .
+
+<https://rism.online/works/32192>
+  a rism:Work ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/88790> ;
+      rism:hasRole relators:cre ;
+    ] ;
+  rdfs:label
+    "Im Grünen–La maggiore, MWV F 8"@it ,
+    "Im Grünen–La majeur, MWV F 8"@fr ,
+    "Im Grünen–Lá  maior, MWV F 8"@pt ,
+    "Im Grünen–A-dur, MWV F 8"@pl ,
+    "Im Grünen–A major, MWV F 8"@en ,
+    "Im Grünen–A-Dur, MWV F 8"@de ,
+    "Im Grünen–La Mayor, MWV F 8"@es ;
+  relators:lyr <https://rism.online/people/50916> ;
+  rism:externalAuthorities <https://rism.online/works/32192/external-authorities> ;
+  rism:formOfWork
+    [
+      rism:hasFormOfWork <https://rism.online/subjects/25460> ;
+      rism:sectionLabel
+        "Werkgattung"@de ,
+        "Forma dell'opera"@it ,
+        "Forme de l'œuvre"@fr ,
+        "Gatunek dzieła"@pl ,
+        "Forma de la obra"@es ,
+        "Form of work"@en ,
+        "Forma da obra"@pt ;
+    ] ;
+  rism:hasDates
+    [
+      rism:dateStatement "1837 (23. November 1837)" ;
+      rism:earliestDate 1837 ;
+      rism:latestDate 1837 ;
+    ] ;
+  rism:hasKeyMode "A" ;
+  rism:hasSummary
+    [
+      a
+        dcterms:identifier ,
+        pmo:OpusNumberStatement ;
+      rdf:value "op. 59/1"@none ;
+      rdfs:label
+        "Número de Opus"@es ,
+        "Opus"@de ,
+        "N.o d'opera"@it ,
+        "Opus number"@en ,
+        "Número de opus"@pt ,
+        "Numer opus"@pl ,
+        "No. de Opus"@fr ;
+    ] ,
+    [
+      rdf:value "1837 (23. November 1837)"@none ;
+      rdfs:label
+        "Fechas"@es ,
+        "Datierungen"@de ,
+        "Daty"@pl ,
+        "Datas"@pt ,
+        "Dates"@fr ,
+        "Dates"@en ,
+        "Date"@it ;
+    ] ,
+    [
+      rdf:value
+        "A major"@en ,
+        "Lá  maior"@pt ,
+        "La maggiore"@it ,
+        "La majeur"@fr ,
+        "A-Dur"@de ,
+        "A-dur"@pl ,
+        "La Mayor"@es ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonacja lub modus"@pl ;
+    ] ,
+    [
+      a
+        dcterms:title ,
+        rism:StandardizedTitle ;
+      rdf:value "Im Grünen"@none ;
+      rdfs:label
+        "Titolo uniforme"@it ,
+        "Einordnungstitel"@de ,
+        "Título uniforme"@pt ,
+        "Título uniforme"@es ,
+        "Standardized title"@en ,
+        "Titre uniforme"@fr ,
+        "Znormalizowany tytuł"@pl ;
+    ] ,
+    [
+      rdf:value "Im Grün erwacht der frische Mut"@none ;
+      rdfs:label
+        "Incipit literário"@pt ,
+        "Incipit du texte"@fr ,
+        "Incipit tekstowy"@pl ,
+        "Text incipit"@en ,
+        "Íncipit literario"@es ,
+        "Textincipit"@de ,
+        "Incipit testuale"@it ;
+    ] ,
+    [
+      rdf:value "works/32192"@none ;
+      rdfs:label
+        "Número ID RISM"@pt ,
+        "RISM ID"@pl ,
+        "Número de ID de RISM"@es ,
+        "RISM ID number"@en ,
+        "RISM Dokumentnummer"@de ,
+        "Numero documento RISM"@it ,
+        "No. RISM"@fr ;
+    ] ,
+    [
+      rdf:value "Coro"@none ;
+      rdfs:label
+        "Instrumentation condensée"@fr ,
+        "Sintese da formação instrumental"@pt ,
+        "Scoring summary"@en ,
+        "Podsumowanie obsady"@pl ,
+        "Besetzungshinweis"@de ,
+        "Organico sintetico"@it ,
+        "Resumen de Plantilla/Orgánico"@es ;
+    ] ,
+    [
+      rdf:value
+        "Im Grünen „Im Grün erwacht der frische Mut“ op. 59 Nr. 1"@de ,
+        "Im Grünen „Im Grün erwacht der frische Mut“ op. 59 Nr. 1"@pt ,
+        "Im Grünen „Im Grün erwacht der frische Mut“ op. 59 Nr. 1"@it ,
+        "Im Grünen „Im Grün erwacht der frische Mut“ op. 59 Nr. 1"@es ,
+        "Im Grünen „Im Grün erwacht der frische Mut“ op. 59 Nr. 1"@fr ,
+        "Im Grünen „Im Grün erwacht der frische Mut“ op. 59 Nr. 1"@en ,
+        "Im Grünen „Im Grün erwacht der frische Mut“ op. 59 Nr. 1"@pl ,
+        "Sechs Lieder im Freien zu singen III"@de ,
+        "Sechs Lieder im Freien zu singen III"@pt ,
+        "Sechs Lieder im Freien zu singen III"@it ,
+        "Sechs Lieder im Freien zu singen III"@es ,
+        "Sechs Lieder im Freien zu singen III"@fr ,
+        "Sechs Lieder im Freien zu singen III"@en ,
+        "Sechs Lieder im Freien zu singen III"@pl ,
+        "Im Grün erwacht der frische Mut"@de ,
+        "Im Grün erwacht der frische Mut"@pt ,
+        "Im Grün erwacht der frische Mut"@it ,
+        "Im Grün erwacht der frische Mut"@es ,
+        "Im Grün erwacht der frische Mut"@fr ,
+        "Im Grün erwacht der frische Mut"@en ,
+        "Im Grün erwacht der frische Mut"@pl ;
+      rdfs:label
+        "Alternatywny tytuł dzieła"@pl ,
+        "Alternative work title"@en ,
+        "Titre alternatif"@fr ,
+        "Título alternativo da obra"@pt ,
+        "Título alternativo"@es ,
+        "Alternativer Werktitel"@de ,
+        "Titolo alternativo dell'opera"@it ;
+    ] ;
+  rism:incipits <https://rism.online/works/32192/incipits> ;
+  rism:partOf
+    [
+      a rism:PartOfSection ;
+      rdfs:label
+        "Fait partie de"@fr ,
+        "Item part of"@en ,
+        "Jest częścią…"@pl ,
+        "Ítem integrante de"@es ,
+        "Item parte de"@pt ,
+        "Fa parte di"@it ,
+        "In"@de ;
+      rism:isPartOf
+        [
+          dcterms:relation <https://rism.online/publications/30025296> ;
+          rism:hasWorkNumber "MWV F 8" ;
+          rism:workCatalogRelationship rism:PrimaryPartOf ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-04-26T06:31:47Z"^^xsd:dateTime ;
+          rdfs:label
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Data di creazione"@it ,
+            "Date de création"@fr ,
+            "Erstellungsdatum"@de ,
+            "Data utworzenia"@pl ,
+            "Criado em"@pt ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:44:06Z"^^xsd:dateTime ;
+          rdfs:label
+            "Letzte Änderung"@de ,
+            "Fecha de modificación"@es ,
+            "Last modification"@en ,
+            "Ultima modifica"@it ,
+            "Ostatnia modyfikacja"@pl ,
+            "Dernière modification"@fr ,
+            "Última modificação"@pt ;
+        ] ;
+    ] ;
+  rism:referencesNotes <https://rism.online/works/32192/references-notes> ;
+  rism:relationships <https://rism.online/works/32192/relationships> ;
+  rism:sources
+    [
+      rism:sectionLabel
+        "Quellen"@de ,
+        "Fuentes"@es ,
+        "Fontes"@pt ,
+        "Fonti"@it ,
+        "Źródła"@pl ,
+        "Sources"@fr ,
+        "Sources"@en ;
+      rism:totalItems 9 ;
+      rism:url "https://rism.online/works/32192/sources" ;
+    ] ;
+  .
+
+<https://rism.online/works/32192/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Référence d'authorité"@fr ,
+    "Normdatenverweise"@de ,
+    "Identyfikator innego standardu"@pl ,
+    "Riferimento autorità"@it ,
+    "Otro identificador estándar"@es ,
+    "Other standard identifier"@en ,
+    "Outro identificador padronizado"@pt ;
+  rism:hasExternalAuthority <https://rism.online/works/32192/external-authorities/dnb300428561> ;
+  .
+
+<https://rism.online/works/32192/external-authorities/dnb300428561>
+  a rism:ExternalAuthority ;
+  rdf:value "300428561" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 300428561"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityUrl "https://d-nb.info/gnd/300428561"^^xsd:anyURI ;
+  .
+
+<https://rism.online/works/32192/incipits>
+  a rism:WorkIncipitsSection ;
+  rism:hasIncipit <https://rism.online/works/32192/incipits/1.1.1> ;
+  rism:sectionLabel
+    "Íncipits"@es ,
+    "Incipits"@de ,
+    "Incipits"@fr ,
+    "Incipits"@en ,
+    "Incipity"@pl ,
+    "Incipit"@pt ,
+    "Incipit"@it ;
+  .
+
+<https://rism.online/works/32192/incipits/1.1.1>
+  a rism:Incipit ;
+  rdfs:label "1.1.1 Andante von moto"@none ;
+  rism:hasEncoding
+    [
+      rdfs:label
+        "Code Plaine and Easie"@fr ,
+        "Kod Plaine and Easie"@pl ,
+        "Plaine and Easie Code"@de ,
+        "Plaine and Easie code"@en ,
+        "Código Plaine and Easie"@pt ,
+        "Código Plaine and Easie"@es ,
+        "Codice Plaine and Easie"@it ;
+      rism:format "application/json" ;
+      rism:paeEncoding "{"clef":"G-2","data":"8'G{G''E}C/4.'B4A8A{A''F}D/4.'B+48B''DFA/4.G+48GEDE/4.C+4C8-","key":"C","keysig":"n","timesig":"9/8"}"^^rdf:JSON ;
+    ] ,
+    [
+      rdfs:label "MEI"@none ;
+      rism:format "application/mei+xml" ;
+      rism:meiEncoding "https://rism.online/works/32192/incipits/1.1.1/mei"^^xsd:anyURI ;
+    ] ;
+  rism:hasPAEClef "G-2" ;
+  rism:hasPAEData "8'G{G''E}C/4.'B4A8A{A''F}D/4.'B+48B''DFA/4.G+48GEDE/4.C+4C8-" ;
+  rism:hasPAEKeysig "n" ;
+  rism:hasPAETimesig "9/8" ;
+  rism:hasSummary
+    [
+      rdf:value "Andante von moto"@none ;
+      rdfs:label
+        "Título do movimento, tempo"@pt ,
+        "Title of movement, tempo"@en ,
+        "Intestazione, tempo"@it ,
+        "Satztitel, Tempo"@de ,
+        "Tytuł części, tempo"@pl ,
+        "Titre, tempo"@fr ,
+        "Título del movimiento, tempo"@es ;
+    ] ,
+    [
+      rdf:value
+        "Do Mayor"@es ,
+        "C-Dur"@de ,
+        "C-dur"@pl ,
+        "Do maggiore"@it ,
+        "C major"@en ,
+        "Dó maior"@pt ,
+        "Do majeur"@fr ;
+      rdfs:label
+        "Tonalidad o modo"@es ,
+        "Tonalità, modo"@it ,
+        "Tonart, Modus"@de ,
+        "Tonalité, mode"@fr ,
+        "Tonalidade, modo"@pt ,
+        "Key or mode"@en ,
+        "Tonacja lub modus"@pl ;
+    ] ,
+    [
+      rdf:value "Im Grün erwacht der frische Mut"@none ;
+      rdfs:label
+        "Incipit literário"@pt ,
+        "Incipit du texte"@fr ,
+        "Incipit tekstowy"@pl ,
+        "Text incipit"@en ,
+        "Íncipit literario"@es ,
+        "Textincipit"@de ,
+        "Incipit testuale"@it ;
+    ] ,
+    [
+      rdf:value
+        "G-2 (Violin-Schlüssel)"@de ,
+        "G-2 (clé de sol)"@fr ,
+        "G-2 (treble clef)"@en ,
+        "G-2(clave aguda estándar)"@es ,
+        "G-2 (clave aguda)"@pt ,
+        "G-2 (chiave di violino)"@it ,
+        "G-2 (klucz wiolinowy)"@pl ;
+      rdfs:label
+        "Schlüssel"@de ,
+        "Clef"@en ,
+        "Klucz"@pl ,
+        "Clave"@pt ,
+        "Clave"@es ,
+        "Chiave"@it ,
+        "Clé"@fr ;
+    ] ,
+    [
+      rdf:value "B 1"@none ;
+      rdfs:label
+        "Voce/strumento"@it ,
+        "Głos/instrument"@pl ,
+        "Voz/instrumento"@pt ,
+        "Voz/instrumento"@es ,
+        "Voix/instrument"@fr ,
+        "Besetzung"@de ,
+        "Voice/instrument"@en ;
+    ] ,
+    [
+      rdf:value "9/8"@none ;
+      rdfs:label
+        "Indication de mesure"@fr ,
+        "Time signature"@en ,
+        "Metrum"@de ,
+        "Metrum"@pl ,
+        "Compasso"@pt ,
+        "Misura"@it ,
+        "Indicación de compás"@es ;
+    ] ;
+  .
+
+<https://rism.online/works/32192/references-notes>
+  a rism:ReferencesNotesSection ;
+  rism:hasNote
+    [
+      rdf:value "<span>Wehner, Ralf (ed.). 2009. <i>Felix Mendelssohn Bartholdy - thematisch-systematisches Verzeichnis der musikalischen Werke (MWV).</i> Leipziger Ausgabe der Werke von Felix Mendelssohn Bartholdy, Ser. 13, vol. 1A. Wiesbaden ; Leipzig [u.a.]: Breitkopf & Härtel. <a href=\"https://www.saw-leipzig.de/de/projekte/leipziger-ausgabe-der-werke-von-felix-mendelssohn-bartholdy/thematisch-systematisches-werkverzeichnis\">https://www.saw-leipzig.de/de/projekte/leipziger-ausgabe-der-werke-von-felix-mendelssohn-bartholdy/thematisch-systematisches-werkverzeichnis</a>.</span> [MWV, F 8]."@none ;
+      rdfs:label
+        "Werkverzeichnis"@de ,
+        "Katalog utworów"@pl ,
+        "Catalogo delle opere"@it ,
+        "Catalogue des oeuvres"@fr ,
+        "Catalog of works"@en ,
+        "Catálogo de obras"@pt ,
+        "Catálogo de obras"@es ;
+    ] ;
+  rism:sectionLabel
+    "Bibliografia e note"@it ,
+    "Literatur und Bemerkungen"@de ,
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "Odniesienia i uwagi"@pl ,
+    "References and notes"@en ,
+    "Referencias y notas"@es ;
+  .
+
+<https://rism.online/works/32192/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/50916> ;
+      rism:hasRole relators:lyr ;
+    ] ;
+  rism:sectionLabel
+    "Relacje"@pl ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Beziehungen"@de ,
+    "Relazioni"@it ,
+    "Relaciones"@es ,
+    "Relacionamentos"@pt ;
+  .

@@ -98,12 +98,18 @@ Optional backend settings:
 
 The NL-to-SPARQL backend exposes a coding harness to the LLM with tools for:
 
-- searching `rdf-examples/` with ripgrep
+- searching `rdf-examples/` with ripgrep across record-specific Turtle files such as `person.ttl`, `place.ttl`, `institution.ttl`, `source.ttl`, `work.ttl`, `publication.ttl`, and `source-patterns.ttl`
 - searching the configured RISM service ontology for labels, comments, and `rism:queryPattern` annotations
 - reading a selected RDF example file
 - listing common Linked RISM predicates/classes
 - sampling predicates for a class or triples for a subject
 - validating draft SPARQL
+
+The intended split is:
+
+- `rism-service-ontology.ttl` for classes, predicates, comments, and query-pattern hints
+- record-specific `.ttl` files for concrete RDF structure by entity type
+- `source-patterns.ttl` for cross-cutting source, relationship, and holding patterns
 
 The local RDF search tool requires `rg` (ripgrep) to be installed, or `RG_PATH` must point to a compatible executable.
 

@@ -1,0 +1,2275 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Odniesienie do innego kompozytora"@pl ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Rimando ad altro compositore"@it ,
+    "Referência cruzada de compositor"@pt ,
+    "Komponistenquerverweis"@de ,
+    "Composer cross-reference"@en ,
+    "Referencia cruzada de compositor"@es ;
+  .
+
+relators:aut
+  rdf:value "aut" ;
+  rdfs:label
+    "Auteur"@fr ,
+    "Autore"@it ,
+    "Author"@en ,
+    "Autor"@de ,
+    "Autor"@es ,
+    "Autor"@pl ,
+    "Autor"@pt ;
+  .
+
+<https://rism.online/people/51038761>
+  a rism:Person ;
+  rdfs:label "Doyle, John G. (20.sc)"@none ;
+  .
+
+<https://rism.online/people/80113>
+  a rism:Person ;
+  rdfs:label "Gottschalk, Louis Moreau (1829-1869)"@none ;
+  .
+
+<https://rism.online/publications/51004233>
+  a rism:Publication ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/51038761> ;
+      rism:hasRole relators:aut ;
+    ] ;
+  rdfs:label "The piano music of Louis Moreau Gottschalk (1829-1869)"@none ;
+  relators:att <https://rism.online/people/80113> ;
+  rism:composer <https://rism.online/people/80113> ;
+  rism:externalResources
+    [
+      rism:hasExternalResource
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Available online through ProQuest"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "https://www.proquest.com/dissertations-theses/piano-music-louis-moreau-gottschalk-1829-1869/docview/301862085/se-2" ;
+        ] ;
+      rism:sectionLabel
+        "Related resources"@en ,
+        "Links"@de ,
+        "Collegamenti"@it ,
+        "Liens"@fr ,
+        "Powiązane zasoby"@pl ,
+        "Recursos relacionados"@es ,
+        "Recursos relacionados"@pt ;
+    ] ;
+  rism:hasSummary
+    [
+      rdf:value "172 p."@none ;
+      rdfs:label
+        "Extent"@en ,
+        "Extensão"@pt ,
+        "Extensión"@es ,
+        "Estensione"@it ,
+        "Zakres"@pl ,
+        "Extension"@fr ,
+        "Umfang"@de ;
+    ] ,
+    [
+      rdf:value "DoyleG 1960"@none ;
+      rdfs:label
+        "Kurztitel"@de ,
+        "Skrócony tytuł"@pl ,
+        "Short title"@en ,
+        "Titre abrégé"@fr ,
+        "Título abreviado"@pt ,
+        "Título breve"@es ,
+        "Titolo breve"@it ;
+    ] ;
+  rism:notes <https://rism.online/publications/51004233/notes> ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2025-07-21T10:20:36Z"^^xsd:dateTime ;
+          rdfs:label
+            "Date de création"@fr ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ,
+            "Created on"@en ,
+            "Data utworzenia"@pl ,
+            "Fecha de creación"@es ,
+            "Erstellungsdatum"@de ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2025-07-22T07:08:10Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de modificación"@es ,
+            "Ostatnia modyfikacja"@pl ,
+            "Última modificação"@pt ,
+            "Ultima modifica"@it ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/51004233/relationships> ;
+  rism:shortTitle "DoyleG 1960"@none ;
+  rism:status
+    [
+      rdf:value "alternate" ;
+      rdfs:label
+        "Alternative"@de ,
+        "Alternativo"@es ,
+        "Alternativo"@pt ,
+        "Alternate"@en ,
+        "Alternatywne"@pl ,
+        "Catalogo alternativo"@it ,
+        "Alternatif"@fr ;
+    ] ;
+  .
+
+<https://rism.online/publications/51004233/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Notas e referências"@pt ,
+    "Odniesienia i uwagi"@pl ,
+    "Références et notes"@fr ,
+    "Bibliografia e note"@it ,
+    "References and notes"@en ,
+    "Referencias y notas"@es ,
+    "Literatur und Bemerkungen"@de ;
+  rism:hasNote
+    [
+      rdf:value
+        "Do not cite as catalog of works. Cite as Secondary literature (691). For full catalog of works, see DoyG."@none ,
+        "Piano compositions numbered 1-103. Lost compositions are unnumbered."@none ,
+        "p. 46-88: Thematic index"@none ;
+      rdfs:label
+        "Nota general"@es ,
+        "Nota geral"@pt ,
+        "Nota generale"@it ,
+        "Remarque générale"@fr ,
+        "Bemerkungen"@de ,
+        "Uwaga ogólna"@pl ,
+        "General note"@en ;
+    ] ;
+  .
+
+<https://rism.online/publications/51004233/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/80113> ;
+      rism:hasRole relators:att ;
+    ] ;
+  rism:sectionLabel
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Beziehungen"@de ,
+    "Relaciones"@es ,
+    "Relacje"@pl ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Composer cross-reference"@en ,
+    "Referência cruzada de compositor"@pt ,
+    "Rimando ad altro compositore"@it ,
+    "Odniesienie do innego kompozytora"@pl ,
+    "Komponistenquerverweis"@de ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Referencia cruzada de compositor"@es ;
+  .
+
+relators:aut
+  rdf:value "aut" ;
+  rdfs:label
+    "Autor"@es ,
+    "Autor"@pl ,
+    "Autor"@pt ,
+    "Autor"@de ,
+    "Author"@en ,
+    "Auteur"@fr ,
+    "Autore"@it ;
+  .
+
+<https://rism.online/people/30003267>
+  a rism:Person ;
+  rdfs:label "Vivaldi, Antonio (1678-1741)"@none ;
+  .
+
+<https://rism.online/people/30027301>
+  a rism:Person ;
+  rdfs:label "Ryom, Peter (1937*)"@none ;
+  .
+
+<https://rism.online/publications/30020110>
+  a rism:Publication ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/30027301> ;
+      rism:hasRole relators:aut ;
+    ] ;
+  rdfs:label "Antonio Vivaldi: Thematisch-systematisches Verzeichnis seiner Werke (RV)"@none ;
+  relators:att <https://rism.online/people/30003267> ;
+  rism:composer <https://rism.online/people/30003267> ;
+  rism:hasSummary
+    [
+      rdf:value "2007"@none ;
+      rdfs:label
+        "Date"@fr ,
+        "Date"@en ,
+        "Data"@pl ,
+        "Data"@pt ,
+        "Data"@it ,
+        "Datum"@de ,
+        "Fecha"@es ;
+    ] ,
+    [
+      rdf:value "XXX, 633 p."@none ;
+      rdfs:label
+        "Estensione"@it ,
+        "Zakres"@pl ,
+        "Extensão"@pt ,
+        "Extensión"@es ,
+        "Extension"@fr ,
+        "Umfang"@de ,
+        "Extent"@en ;
+    ] ,
+    [
+      a dcterms:language ;
+      rdf:value
+        "Tedesco"@it ,
+        "German"@en ,
+        "Alemán"@es ,
+        "Allemand"@fr ,
+        "Niemiecki"@pl ,
+        "Deutsch"@de ,
+        "Alemão"@pt ;
+      rdfs:label
+        "Idioma do texto"@pt ,
+        "Idioma del texto"@es ,
+        "Langue du texte chanté"@fr ,
+        "Język tekstu"@pl ,
+        "Sprachcode"@de ,
+        "Lingua del testo cantato"@it ,
+        "Language of text"@en ;
+    ] ,
+    [
+      rdf:value "Breitkopf & Härtel"@none ;
+      rdfs:label
+        "Editor, copista"@es ,
+        "Editor, copista"@pt ,
+        "Publisher, copyist"@en ,
+        "Schreiber, Verleger, Verlag"@de ,
+        "Copista, editore, casa editrice"@it ,
+        "Wydawca, kopista"@pl ,
+        "Copiste ou maison d'édition"@fr ;
+    ] ,
+    [
+      rdf:value "Wiesbaden; Leipzig; Paris"@none ;
+      rdfs:label
+        "Luogo"@it ,
+        "Lugar de publicación"@es ,
+        "Place of publication"@en ,
+        "Verlagsort"@de ,
+        "Local"@pt ,
+        "Endroit"@fr ,
+        "Miejsce publikacji"@pl ;
+    ] ,
+    [
+      rdf:value "978-3-7651-0372-8"@none ;
+      rdfs:label
+        "ISBN"@es ,
+        "ISBN"@pl ,
+        "ISBN"@fr ,
+        "ISBN"@pt ,
+        "ISBN"@en ,
+        "ISBN"@de ,
+        "ISBN"@it ;
+    ] ,
+    [
+      rdf:value "RV"@none ;
+      rdfs:label
+        "Título breve"@es ,
+        "Short title"@en ,
+        "Título abreviado"@pt ,
+        "Kurztitel"@de ,
+        "Skrócony tytuł"@pl ,
+        "Titolo breve"@it ,
+        "Titre abrégé"@fr ;
+    ] ;
+  rism:notes <https://rism.online/publications/30020110/notes> ;
+  rism:publicationDates "2007"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Data utworzenia"@pl ,
+            "Created on"@en ,
+            "Date de création"@fr ,
+            "Fecha de creación"@es ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2025-08-28T09:29:07Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de modificación"@es ,
+            "Última modificação"@pt ,
+            "Letzte Änderung"@de ,
+            "Dernière modification"@fr ,
+            "Last modification"@en ,
+            "Ultima modifica"@it ,
+            "Ostatnia modyfikacja"@pl ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/30020110/relationships> ;
+  rism:shortTitle "RV"@none ;
+  rism:status
+    [
+      rdf:value "alternate" ;
+      rdfs:label
+        "Alternatif"@fr ,
+        "Alternative"@de ,
+        "Catalogo alternativo"@it ,
+        "Alternate"@en ,
+        "Alternatywne"@pl ,
+        "Alternativo"@es ,
+        "Alternativo"@pt ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 972 ;
+      schemaorg:url "https://rism.online/publications/30020110/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/30020110/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Notas e referências"@pt ,
+    "Odniesienia i uwagi"@pl ,
+    "Bibliografia e note"@it ,
+    "Références et notes"@fr ,
+    "Referencias y notas"@es ,
+    "References and notes"@en ,
+    "Literatur und Bemerkungen"@de ;
+  rism:hasNote
+    [
+      rdf:value
+        "Citation: Kurztitel Verzeichnis-Nr."@none ,
+        "RV 212/Cad.II (\"Cadenza II\" aus \"Concerto D-Dur\")"@none ,
+        "RV 703/1 (Nr. 1 aus Sinfonia von \"Bajazet\")"@none ,
+        "RV 703/II:9 (Recitativo \"Asteria, siamo al soglio\" aus Akt 2 von \"Bajazet\")"@none ,
+        "RV 739/unb. (\"Sei tiranno\" - Akt und Szene unbekannt - aus 1. geänderter Fassung von \"La verita in cimento\")"@none ,
+        "RV 749.26 (\"Si tu vuoi\" - einzelne, nicht zuordenbare Arie)"@none ,
+        "RV 805 (\"Concerto G-dur\")"@none ,
+        "RV Anh.84 (\"Orlando Furioso\")"@none ;
+      rdfs:label
+        "Remarque générale"@fr ,
+        "Nota generale"@it ,
+        "Bemerkungen"@de ,
+        "Nota geral"@pt ,
+        "Nota general"@es ,
+        "Uwaga ogólna"@pl ,
+        "General note"@en ;
+    ] ;
+  .
+
+<https://rism.online/publications/30020110/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/30003267> ;
+      rism:hasRole relators:att ;
+    ] ;
+  rism:sectionLabel
+    "Relaciones"@es ,
+    "Relacionamentos"@pt ,
+    "Beziehungen"@de ,
+    "Relazioni"@it ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relacje"@pl ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Referência cruzada de compositor"@pt ,
+    "Odniesienie do innego kompozytora"@pl ,
+    "Composer cross-reference"@en ,
+    "Rimando ad altro compositore"@it ,
+    "Referencia cruzada de compositor"@es ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Komponistenquerverweis"@de ;
+  .
+
+relators:aut
+  rdf:value "aut" ;
+  rdfs:label
+    "Author"@en ,
+    "Autore"@it ,
+    "Autor"@pt ,
+    "Autor"@de ,
+    "Autor"@pl ,
+    "Autor"@es ,
+    "Auteur"@fr ;
+  .
+
+relators:edt
+  rdf:value "edt" ;
+  rdfs:label
+    "Editor"@pt ,
+    "Editor"@en ,
+    "Edytor"@pl ,
+    "Editeur"@fr ,
+    "Curatore"@it ,
+    "Herausgeber"@de ,
+    "Editor (curador)/Editorial"@es ;
+  .
+
+<https://rism.online/institutions/51003675>
+  a rism:Institution ;
+  rdfs:label "Hochschule der Künste Bern (HKB), Bern"@none ;
+  .
+
+<https://rism.online/people/26730>
+  a rism:Person ;
+  rdfs:label "Pollini, Francesco (1762-1846)"@none ;
+  .
+
+<https://rism.online/people/30088060>
+  a rism:Person ;
+  rdfs:label "Bacciagaluppi, Claudio (1971*)"@none ;
+  .
+
+<https://rism.online/people/51016430>
+  a rism:Person ;
+  rdfs:label "Andreacchio, Sara (1991*)"@none ;
+  .
+
+<https://rism.online/people/51016431>
+  a rism:Person ;
+  rdfs:label "Di Grazia, Gigliola (1995*)"@none ;
+  .
+
+<https://rism.online/people/51016432>
+  a rism:Person ;
+  rdfs:label "Miucci, Leonardo (1982*)"@none ;
+  .
+
+<https://rism.online/publications/50007446>
+  a rism:Publication ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/51016430> ;
+      rism:hasRole relators:aut ;
+    ] ;
+  rdfs:label "Francesco Pollini Catalog"@none ;
+  relators:att <https://rism.online/people/26730> ;
+  relators:aut
+    <https://rism.online/people/30088060> ,
+    <https://rism.online/people/51016431> ,
+    <https://rism.online/people/51016432> ;
+  relators:edt <https://rism.online/institutions/51003675> ;
+  rism:composer <https://rism.online/people/26730> ;
+  rism:externalResources
+    [
+      rism:hasExternalResource
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Publication on the HKB website"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "https://www.hkb-interpretation.ch/francescopollini" ;
+        ] ,
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Publication in the series Work catalogs in RISM Online"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "https://catalogs.rism.online/AndP/" ;
+        ] ;
+      rism:sectionLabel
+        "Powiązane zasoby"@pl ,
+        "Liens"@fr ,
+        "Links"@de ,
+        "Recursos relacionados"@pt ,
+        "Recursos relacionados"@es ,
+        "Related resources"@en ,
+        "Collegamenti"@it ;
+    ] ;
+  rism:hasSummary
+    [
+      rdf:value "Bern"@none ;
+      rdfs:label
+        "Endroit"@fr ,
+        "Verlagsort"@de ,
+        "Lugar de publicación"@es ,
+        "Local"@pt ,
+        "Place of publication"@en ,
+        "Miejsce publikacji"@pl ,
+        "Luogo"@it ;
+    ] ,
+    [
+      rdf:value "Hochschule der Künste Bern / RISM Digital Center"@none ;
+      rdfs:label
+        "Wydawca, kopista"@pl ,
+        "Schreiber, Verleger, Verlag"@de ,
+        "Publisher, copyist"@en ,
+        "Copista, editore, casa editrice"@it ,
+        "Editor, copista"@pt ,
+        "Editor, copista"@es ,
+        "Copiste ou maison d'édition"@fr ;
+    ] ,
+    [
+      rdf:value "AndP"@none ;
+      rdfs:label
+        "Skrócony tytuł"@pl ,
+        "Titolo breve"@it ,
+        "Short title"@en ,
+        "Kurztitel"@de ,
+        "Título breve"@es ,
+        "Titre abrégé"@fr ,
+        "Título abreviado"@pt ;
+    ] ,
+    [
+      rdf:value "2025"@none ;
+      rdfs:label
+        "Data"@it ,
+        "Data"@pt ,
+        "Data"@pl ,
+        "Date"@fr ,
+        "Date"@en ,
+        "Datum"@de ,
+        "Fecha"@es ;
+    ] ;
+  rism:publicationDates "2025"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-08-16T07:09:30Z"^^xsd:dateTime ;
+          rdfs:label
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Date de création"@fr ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ,
+            "Data utworzenia"@pl ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-03-31T14:17:06Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ostatnia modyfikacja"@pl ,
+            "Ultima modifica"@it ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Última modificação"@pt ,
+            "Dernière modification"@fr ,
+            "Fecha de modificación"@es ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/50007446/relationships> ;
+  rism:shortTitle "AndP"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Completato"@it ,
+        "Kompletne"@pl ,
+        "Completed"@en ,
+        "Completado"@es ,
+        "Concluído"@pt ,
+        "Terminé"@fr ,
+        "Abgeschlossen"@de ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 262 ;
+      schemaorg:url "https://rism.online/publications/50007446/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/50007446/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/51016431> ;
+      rism:hasRole relators:aut ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/people/51016432> ;
+      rism:hasRole relators:aut ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/people/26730> ;
+      rism:hasRole relators:att ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/people/30088060> ;
+      rism:hasRole relators:aut ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/institutions/51003675> ;
+      rism:hasRole relators:edt ;
+    ] ;
+  rism:sectionLabel
+    "Relacje"@pl ,
+    "Beziehungen"@de ,
+    "Relazioni"@it ,
+    "Relacionamentos"@pt ,
+    "Relaciones"@es ,
+    "Relations"@fr ,
+    "Relations"@en ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Referência cruzada de compositor"@pt ,
+    "Odniesienie do innego kompozytora"@pl ,
+    "Komponistenquerverweis"@de ,
+    "Referencia cruzada de compositor"@es ,
+    "Composer cross-reference"@en ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Rimando ad altro compositore"@it ;
+  .
+
+relators:aut
+  rdf:value "aut" ;
+  rdfs:label
+    "Autore"@it ,
+    "Autor"@pl ,
+    "Autor"@de ,
+    "Autor"@es ,
+    "Autor"@pt ,
+    "Auteur"@fr ,
+    "Author"@en ;
+  .
+
+<https://rism.online/people/30009879>
+  a rism:Person ;
+  rdfs:label "Strozzi, Barbara (1619-1677)"@none ;
+  .
+
+<https://rism.online/people/50043384>
+  a rism:Person ;
+  rdfs:label "Magner, Candace A. (1951*)"@none ;
+  .
+
+<https://rism.online/publications/50006150>
+  a rism:Publication ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/50043384> ;
+      rism:hasRole relators:aut ;
+    ] ;
+  rdfs:label "[Barbara Strozzi Catalog of Works]"@none ;
+  relators:att <https://rism.online/people/30009879> ;
+  rism:composer <https://rism.online/people/30009879> ;
+  rism:externalResources
+    [
+      rism:hasExternalResource
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Online resource"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "http://barbarastrozzi.com/" ;
+        ] ;
+      rism:sectionLabel
+        "Links"@de ,
+        "Collegamenti"@it ,
+        "Powiązane zasoby"@pl ,
+        "Related resources"@en ,
+        "Recursos relacionados"@es ,
+        "Recursos relacionados"@pt ,
+        "Liens"@fr ;
+    ] ;
+  rism:hasSummary
+    [
+      rdf:value "2020-"@none ;
+      rdfs:label
+        "Datum"@de ,
+        "Date"@fr ,
+        "Date"@en ,
+        "Fecha"@es ,
+        "Data"@pl ,
+        "Data"@it ,
+        "Data"@pt ;
+    ] ,
+    [
+      rdf:value "MagS"@none ;
+      rdfs:label
+        "Título breve"@es ,
+        "Título abreviado"@pt ,
+        "Short title"@en ,
+        "Titre abrégé"@fr ,
+        "Skrócony tytuł"@pl ,
+        "Kurztitel"@de ,
+        "Titolo breve"@it ;
+    ] ,
+    [
+      a dcterms:language ;
+      rdf:value
+        "Angielski"@pl ,
+        "Inglés"@es ,
+        "Anglais"@fr ,
+        "Englisch"@de ,
+        "English"@en ,
+        "Inglese"@it ,
+        "Inglês"@pt ;
+      rdfs:label
+        "Language of text"@en ,
+        "Idioma del texto"@es ,
+        "Sprachcode"@de ,
+        "Język tekstu"@pl ,
+        "Lingua del testo cantato"@it ,
+        "Idioma do texto"@pt ,
+        "Langue du texte chanté"@fr ;
+    ] ;
+  rism:notes <https://rism.online/publications/50006150/notes> ;
+  rism:publicationDates "2020-"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2020-07-02T10:43:39Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Data di creazione"@it ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-05-21T08:23:12Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de modificación"@es ,
+            "Ultima modifica"@it ,
+            "Dernière modification"@fr ,
+            "Última modificação"@pt ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Ostatnia modyfikacja"@pl ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/50006150/relationships> ;
+  rism:shortTitle "MagS"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Kompletne"@pl ,
+        "Completed"@en ,
+        "Terminé"@fr ,
+        "Completato"@it ,
+        "Concluído"@pt ,
+        "Completado"@es ,
+        "Abgeschlossen"@de ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 126 ;
+      schemaorg:url "https://rism.online/publications/50006150/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/50006150/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Bibliografia e note"@it ,
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "Odniesienia i uwagi"@pl ,
+    "References and notes"@en ,
+    "Literatur und Bemerkungen"@de ,
+    "Referencias y notas"@es ;
+  rism:hasNote
+    [
+      rdf:value
+        "Indexes are available for instrumentation and first line/title."@none ,
+        "MagB 8 (op. 8 as a whole)"@none ,
+        "MagB 8.08 (Non c'è più fede, number 8 of op. 8)"@none ,
+        "Modern editions of the pieces are published by Cor Donato Editions (edited by Magner)."@none ,
+        "Works are arranged op. 1-op. 8, followed by the pieces without opus numbers (which were not published in Strozzi's collections). Works are identified by their opus number plus position within collection. Full contents are given when known."@none ;
+      rdfs:label
+        "Nota general"@es ,
+        "Bemerkungen"@de ,
+        "Remarque générale"@fr ,
+        "Nota geral"@pt ,
+        "General note"@en ,
+        "Uwaga ogólna"@pl ,
+        "Nota generale"@it ;
+    ] ;
+  .
+
+<https://rism.online/publications/50006150/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/30009879> ;
+      rism:hasRole relators:att ;
+    ] ;
+  rism:sectionLabel
+    "Relacje"@pl ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relaciones"@es ,
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ,
+    "Beziehungen"@de ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Referencia cruzada de compositor"@es ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Rimando ad altro compositore"@it ,
+    "Referência cruzada de compositor"@pt ,
+    "Komponistenquerverweis"@de ,
+    "Odniesienie do innego kompozytora"@pl ,
+    "Composer cross-reference"@en ;
+  .
+
+relators:edt
+  rdf:value "edt" ;
+  rdfs:label
+    "Editeur"@fr ,
+    "Herausgeber"@de ,
+    "Editor"@pt ,
+    "Editor"@en ,
+    "Edytor"@pl ,
+    "Editor (curador)/Editorial"@es ,
+    "Curatore"@it ;
+  .
+
+<https://rism.online/people/114903>
+  a rism:Person ;
+  rdfs:label "Schütz, Heinrich (1585-1672)"@none ;
+  .
+
+<https://rism.online/people/30086090>
+  a rism:Person ;
+  rdfs:label "Breig, Werner (1932*)"@none ;
+  .
+
+<https://rism.online/publications/50007402>
+  a rism:Publication ;
+  rdfs:label "Schütz-Werkverzeichnis (= SWV)"@none ;
+  relators:att <https://rism.online/people/114903> ;
+  relators:edt <https://rism.online/people/30086090> ;
+  rism:composer <https://rism.online/people/114903> ;
+  rism:hasSummary
+    [
+      rdf:value "SWV"@none ;
+      rdfs:label
+        "Kurztitel"@de ,
+        "Short title"@en ,
+        "Titolo breve"@it ,
+        "Titre abrégé"@fr ,
+        "Título abreviado"@pt ,
+        "Título breve"@es ,
+        "Skrócony tytuł"@pl ;
+    ] ,
+    [
+      rdf:value "2023"@none ;
+      rdfs:label
+        "Data"@pt ,
+        "Data"@pl ,
+        "Data"@it ,
+        "Fecha"@es ,
+        "Date"@fr ,
+        "Date"@en ,
+        "Datum"@de ;
+    ] ,
+    [
+      rdf:value "Kassel"@none ;
+      rdfs:label
+        "Miejsce publikacji"@pl ,
+        "Verlagsort"@de ,
+        "Place of publication"@en ,
+        "Lugar de publicación"@es ,
+        "Local"@pt ,
+        "Endroit"@fr ,
+        "Luogo"@it ;
+    ] ,
+    [
+      rdf:value "9783761823897"@none ;
+      rdfs:label
+        "ISBN"@fr ,
+        "ISBN"@de ,
+        "ISBN"@pt ,
+        "ISBN"@pl ,
+        "ISBN"@es ,
+        "ISBN"@it ,
+        "ISBN"@en ;
+    ] ,
+    [
+      a dcterms:language ;
+      rdf:value
+        "Allemand"@fr ,
+        "Deutsch"@de ,
+        "Alemão"@pt ,
+        "German"@en ,
+        "Niemiecki"@pl ,
+        "Alemán"@es ,
+        "Tedesco"@it ;
+      rdfs:label
+        "Langue du texte chanté"@fr ,
+        "Idioma do texto"@pt ,
+        "Lingua del testo cantato"@it ,
+        "Language of text"@en ,
+        "Idioma del texto"@es ,
+        "Język tekstu"@pl ,
+        "Sprachcode"@de ;
+    ] ,
+    [
+      rdf:value "Bärenreiter"@none ;
+      rdfs:label
+        "Schreiber, Verleger, Verlag"@de ,
+        "Copista, editore, casa editrice"@it ,
+        "Wydawca, kopista"@pl ,
+        "Editor, copista"@pt ,
+        "Editor, copista"@es ,
+        "Copiste ou maison d'édition"@fr ,
+        "Publisher, copyist"@en ;
+    ] ,
+    [
+      rdf:value "572 p."@none ;
+      rdfs:label
+        "Zakres"@pl ,
+        "Umfang"@de ,
+        "Extent"@en ,
+        "Extension"@fr ,
+        "Estensione"@it ,
+        "Extensión"@es ,
+        "Extensão"@pt ;
+    ] ;
+  rism:notes <https://rism.online/publications/50007402/notes> ;
+  rism:publicationDates "2023"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-06-25T13:44:07Z"^^xsd:dateTime ;
+          rdfs:label
+            "Data utworzenia"@pl ,
+            "Created on"@en ,
+            "Erstellungsdatum"@de ,
+            "Data di creazione"@it ,
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2025-06-20T09:28:07Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de modificación"@es ,
+            "Last modification"@en ,
+            "Última modificação"@pt ,
+            "Letzte Änderung"@de ,
+            "Dernière modification"@fr ,
+            "Ostatnia modyfikacja"@pl ,
+            "Ultima modifica"@it ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/50007402/relationships> ;
+  rism:shortTitle "SWV"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Completed"@en ,
+        "Abgeschlossen"@de ,
+        "Concluído"@pt ,
+        "Completato"@it ,
+        "Terminé"@fr ,
+        "Completado"@es ,
+        "Kompletne"@pl ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 686 ;
+      schemaorg:url "https://rism.online/publications/50007402/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/50007402/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Références et notes"@fr ,
+    "Referencias y notas"@es ,
+    "Literatur und Bemerkungen"@de ,
+    "Odniesienia i uwagi"@pl ,
+    "Bibliografia e note"@it ,
+    "Notas e referências"@pt ,
+    "References and notes"@en ;
+  rism:hasNote
+    [
+      rdf:value "Citation: SWV."@none ;
+      rdfs:label
+        "Uwaga ogólna"@pl ,
+        "Nota general"@es ,
+        "Nota generale"@it ,
+        "Remarque générale"@fr ,
+        "General note"@en ,
+        "Nota geral"@pt ,
+        "Bemerkungen"@de ;
+    ] ;
+  .
+
+<https://rism.online/publications/50007402/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/114903> ;
+      rism:hasRole relators:att ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/people/30086090> ;
+      rism:hasRole relators:edt ;
+    ] ;
+  rism:sectionLabel
+    "Relazioni"@it ,
+    "Relacje"@pl ,
+    "Beziehungen"@de ,
+    "Relacionamentos"@pt ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relaciones"@es ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Composer cross-reference"@en ,
+    "Referencia cruzada de compositor"@es ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Rimando ad altro compositore"@it ,
+    "Komponistenquerverweis"@de ,
+    "Odniesienie do innego kompozytora"@pl ,
+    "Referência cruzada de compositor"@pt ;
+  .
+
+relators:aut
+  rdf:value "aut" ;
+  rdfs:label
+    "Author"@en ,
+    "Auteur"@fr ,
+    "Autore"@it ,
+    "Autor"@pl ,
+    "Autor"@pt ,
+    "Autor"@es ,
+    "Autor"@de ;
+  .
+
+<https://rism.online/people/30029705>
+  a rism:Person ;
+  rdfs:label "Rebmann, Martina (1965*)"@none ;
+  .
+
+<https://rism.online/people/30074802>
+  a rism:Person ;
+  rdfs:label "Faisst, Clara (1872-1948)"@none ;
+  .
+
+<https://rism.online/publications/30000288>
+  a rism:Publication ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/30029705> ;
+      rism:hasRole relators:aut ;
+    ] ;
+  rdfs:label "\"Denn Fremdling sein ist Künstlers Los auf Erden\": zu Leben und Werk der Karlsruher Komponistin Clara Faisst (1872-1948)"@none ;
+  relators:att <https://rism.online/people/30074802> ;
+  rism:composer <https://rism.online/people/30074802> ;
+  rism:hasSummary
+    [
+      rdf:value "RebF"@none ;
+      rdfs:label
+        "Kurztitel"@de ,
+        "Titolo breve"@it ,
+        "Título abreviado"@pt ,
+        "Título breve"@es ,
+        "Short title"@en ,
+        "Titre abrégé"@fr ,
+        "Skrócony tytuł"@pl ;
+    ] ,
+    [
+      a dcterms:language ;
+      rdf:value
+        "Tedesco"@it ,
+        "Niemiecki"@pl ,
+        "Allemand"@fr ,
+        "Alemán"@es ,
+        "Deutsch"@de ,
+        "German"@en ,
+        "Alemão"@pt ;
+      rdfs:label
+        "Language of text"@en ,
+        "Język tekstu"@pl ,
+        "Langue du texte chanté"@fr ,
+        "Idioma del texto"@es ,
+        "Sprachcode"@de ,
+        "Idioma do texto"@pt ,
+        "Lingua del testo cantato"@it ;
+    ] ,
+    [
+      rdf:value "2001"@none ;
+      rdfs:label
+        "Fecha"@es ,
+        "Data"@pl ,
+        "Data"@pt ,
+        "Data"@it ,
+        "Datum"@de ,
+        "Date"@fr ,
+        "Date"@en ;
+    ] ;
+  rism:notes <https://rism.online/publications/30000288/notes> ;
+  rism:publicationDates "2001"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Created on"@en ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ,
+            "Date de création"@fr ,
+            "Fecha de creación"@es ,
+            "Criado em"@pt ,
+            "Data utworzenia"@pl ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2025-08-20T07:25:59Z"^^xsd:dateTime ;
+          rdfs:label
+            "Dernière modification"@fr ,
+            "Ultima modifica"@it ,
+            "Fecha de modificación"@es ,
+            "Letzte Änderung"@de ,
+            "Ostatnia modyfikacja"@pl ,
+            "Last modification"@en ,
+            "Última modificação"@pt ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/30000288/relationships> ;
+  rism:shortTitle "RebF"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Completato"@it ,
+        "Completed"@en ,
+        "Abgeschlossen"@de ,
+        "Concluído"@pt ,
+        "Terminé"@fr ,
+        "Completado"@es ,
+        "Kompletne"@pl ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 116 ;
+      schemaorg:url "https://rism.online/publications/30000288/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/30000288/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Odniesienia i uwagi"@pl ,
+    "Références et notes"@fr ,
+    "Referencias y notas"@es ,
+    "Literatur und Bemerkungen"@de ,
+    "Bibliografia e note"@it ,
+    "References and notes"@en ,
+    "Notas e referências"@pt ;
+  rism:hasNote
+    [
+      rdf:value
+        "116 works, numbered continuously from CF1 to CF 116. Structure of catalog: A. Werke mit Opuszahl (CF 1-63) -- B. Werke ohne Opuszahl (I. Vokalwerke: gedruckte (CF 64-94), ungedruckte (CF 95-105). II. Instrumentalwerke: gedruckte (CF 106-107), ungedruckte (CF 108-112)) -- C.\tIn Konzertprogrammen nachgewiesene Werke (CF 113-116)."@none ,
+        "Citation: RebF. CF Number. Example: CF 78 (Im Herzen hab' ich dich getragen)"@none ,
+        "Werkverzeichnis p. 87-103 (without music incipits)."@none ;
+      rdfs:label
+        "Uwaga ogólna"@pl ,
+        "General note"@en ,
+        "Nota general"@es ,
+        "Bemerkungen"@de ,
+        "Nota generale"@it ,
+        "Nota geral"@pt ,
+        "Remarque générale"@fr ;
+    ] ;
+  .
+
+<https://rism.online/publications/30000288/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/30074802> ;
+      rism:hasRole relators:att ;
+    ] ;
+  rism:sectionLabel
+    "Beziehungen"@de ,
+    "Relazioni"@it ,
+    "Relacionamentos"@pt ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relacje"@pl ,
+    "Relaciones"@es ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Komponistenquerverweis"@de ,
+    "Composer cross-reference"@en ,
+    "Rimando ad altro compositore"@it ,
+    "Referencia cruzada de compositor"@es ,
+    "Referência cruzada de compositor"@pt ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Odniesienie do innego kompozytora"@pl ;
+  .
+
+relators:aut
+  rdf:value "aut" ;
+  rdfs:label
+    "Author"@en ,
+    "Autore"@it ,
+    "Autor"@de ,
+    "Autor"@pl ,
+    "Autor"@pt ,
+    "Autor"@es ,
+    "Auteur"@fr ;
+  .
+
+<https://rism.online/people/111603>
+  a rism:Person ;
+  rdfs:label "Schubert, Franz (1797-1828)"@none ;
+  .
+
+<https://rism.online/people/8897>
+  a rism:Person ;
+  rdfs:label "Deutsch, Otto Erich (1883-1967)"@none ;
+  .
+
+<https://rism.online/publications/30000089>
+  a rism:Publication ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/8897> ;
+      rism:hasRole relators:aut ;
+    ] ;
+  rdfs:label "Franz Schubert, Thematisches Verzeichnis seiner Werke in chronologischer Folge"@none ;
+  relators:att <https://rism.online/people/111603> ;
+  rism:composer <https://rism.online/people/111603> ;
+  rism:hasSummary
+    [
+      a dcterms:language ;
+      rdf:value
+        "Deutsch"@de ,
+        "Allemand"@fr ,
+        "German"@en ,
+        "Niemiecki"@pl ,
+        "Alemán"@es ,
+        "Alemão"@pt ,
+        "Tedesco"@it ;
+      rdfs:label
+        "Langue du texte chanté"@fr ,
+        "Język tekstu"@pl ,
+        "Language of text"@en ,
+        "Idioma do texto"@pt ,
+        "Sprachcode"@de ,
+        "Lingua del testo cantato"@it ,
+        "Idioma del texto"@es ;
+    ] ,
+    [
+      rdf:value "XXIII, 712p."@none ;
+      rdfs:label
+        "Extensão"@pt ,
+        "Zakres"@pl ,
+        "Extent"@en ,
+        "Extensión"@es ,
+        "Umfang"@de ,
+        "Extension"@fr ,
+        "Estensione"@it ;
+    ] ,
+    [
+      rdf:value "Kassel"@none ;
+      rdfs:label
+        "Endroit"@fr ,
+        "Luogo"@it ,
+        "Place of publication"@en ,
+        "Lugar de publicación"@es ,
+        "Miejsce publikacji"@pl ,
+        "Verlagsort"@de ,
+        "Local"@pt ;
+    ] ,
+    [
+      rdf:value "D-2"@none ;
+      rdfs:label
+        "Título abreviado"@pt ,
+        "Kurztitel"@de ,
+        "Short title"@en ,
+        "Skrócony tytuł"@pl ,
+        "Titre abrégé"@fr ,
+        "Título breve"@es ,
+        "Titolo breve"@it ;
+    ] ,
+    [
+      rdf:value "1978"@none ;
+      rdfs:label
+        "Date"@en ,
+        "Date"@fr ,
+        "Datum"@de ,
+        "Data"@pl ,
+        "Data"@pt ,
+        "Data"@it ,
+        "Fecha"@es ;
+    ] ,
+    [
+      rdf:value "Bärenreiter"@none ;
+      rdfs:label
+        "Copiste ou maison d'édition"@fr ,
+        "Schreiber, Verleger, Verlag"@de ,
+        "Copista, editore, casa editrice"@it ,
+        "Wydawca, kopista"@pl ,
+        "Publisher, copyist"@en ,
+        "Editor, copista"@pt ,
+        "Editor, copista"@es ;
+    ] ;
+  rism:notes <https://rism.online/publications/30000089/notes> ;
+  rism:publicationDates "1978"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Created on"@en ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ,
+            "Data utworzenia"@pl ,
+            "Fecha de creación"@es ,
+            "Date de création"@fr ,
+            "Criado em"@pt ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2025-06-20T09:08:45Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de modificación"@es ,
+            "Last modification"@en ,
+            "Letzte Änderung"@de ,
+            "Ultima modifica"@it ,
+            "Ostatnia modyfikacja"@pl ,
+            "Última modificação"@pt ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/30000089/relationships> ;
+  rism:shortTitle "D-2"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Concluído"@pt ,
+        "Terminé"@fr ,
+        "Kompletne"@pl ,
+        "Completed"@en ,
+        "Completato"@it ,
+        "Abgeschlossen"@de ,
+        "Completado"@es ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 1055 ;
+      schemaorg:url "https://rism.online/publications/30000089/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/30000089/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "References and notes"@en ,
+    "Referencias y notas"@es ,
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "Bibliografia e note"@it ,
+    "Literatur und Bemerkungen"@de ,
+    "Odniesienia i uwagi"@pl ;
+  rism:hasNote
+    [
+      rdf:value
+        "1. Auflage 1951 = D-1"@none ,
+        "Citation: D-2.Verzeichnis-Nr/Nummer oder Fassung oder Anh.X/Nummer"@none ;
+      rdfs:label
+        "Nota general"@es ,
+        "Nota generale"@it ,
+        "General note"@en ,
+        "Bemerkungen"@de ,
+        "Remarque générale"@fr ,
+        "Uwaga ogólna"@pl ,
+        "Nota geral"@pt ;
+    ] ,
+    [
+      rdf:value "Alle Werke gesicherter Autorschaft sind als Werknormdaten eingetragen, sowie alle zweifelhafte oder unechte Werke in Anh.I. Die Werke in Anh.II (Schuberts Bearbeitungen fremder Werke) sowie in Anh.III (Schuberts Abschriften von fremden Werken) haben keinen Normeintrag."@none ;
+      rdfs:label
+        "Notatka do katalogu utworów"@pl ,
+        "Work catalog note"@en ,
+        "Note sur le catalogue des œuvres"@fr ,
+        "Nota sul catalogo delle opere"@it ,
+        "Bemerkung Werkverzeichnis"@de ,
+        "Nota del catálogo de trabajo"@es ,
+        "Nota no catálogo da obra"@pt ;
+    ] ;
+  .
+
+<https://rism.online/publications/30000089/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/111603> ;
+      rism:hasRole relators:att ;
+    ] ;
+  rism:sectionLabel
+    "Relacje"@pl ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Beziehungen"@de ,
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ,
+    "Relaciones"@es ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Komponistenquerverweis"@de ,
+    "Composer cross-reference"@en ,
+    "Referência cruzada de compositor"@pt ,
+    "Odniesienie do innego kompozytora"@pl ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Rimando ad altro compositore"@it ,
+    "Referencia cruzada de compositor"@es ;
+  .
+
+relators:edt
+  rdf:value "edt" ;
+  rdfs:label
+    "Herausgeber"@de ,
+    "Editor"@en ,
+    "Editor"@pt ,
+    "Editeur"@fr ,
+    "Editor (curador)/Editorial"@es ,
+    "Edytor"@pl ,
+    "Curatore"@it ;
+  .
+
+<https://rism.online/people/2539>
+  a rism:Person ;
+  rdfs:label "Bach, Johann Sebastian (1685-1750)"@none ;
+  .
+
+<https://rism.online/people/30027282>
+  a rism:Person ;
+  rdfs:label "Wolff, Christoph (1940*)"@none ;
+  .
+
+<https://rism.online/people/30027661>
+  a rism:Person ;
+  rdfs:label "Wollny, Peter (1961*)"@none ;
+  .
+
+<https://rism.online/people/30074488>
+  a rism:Person ;
+  rdfs:label "Blanken, Christine (1967*)"@none ;
+  .
+
+<https://rism.online/publications/30019500>
+  a rism:Publication ;
+  rdfs:label "Thematisch-systematisches Verzeichnis der musikalischen Werke von Johann Sebastian Bach. Bach-Werke-Verzeichnis (BWV-3)"@none ;
+  relators:att <https://rism.online/people/2539> ;
+  relators:edt
+    <https://rism.online/people/30027282> ,
+    <https://rism.online/people/30027661> ,
+    <https://rism.online/people/30074488> ;
+  rism:composer <https://rism.online/people/2539> ;
+  rism:externalResources
+    [
+      rism:hasExternalResource
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Contents"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "https://d-nb.info/1259824411/04" ;
+        ] ,
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Addenda & Corrigenda zum BWV-3"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "https://www.bach-digital.de/servlets/MCRBachCorrectionServlet?catalogue=BWV%C2%B3" ;
+        ] ;
+      rism:sectionLabel
+        "Liens"@fr ,
+        "Related resources"@en ,
+        "Recursos relacionados"@es ,
+        "Recursos relacionados"@pt ,
+        "Collegamenti"@it ,
+        "Powiązane zasoby"@pl ,
+        "Links"@de ;
+    ] ;
+  rism:hasSummary
+    [
+      rdf:value "Breitkopf & Härtel"@none ;
+      rdfs:label
+        "Copista, editore, casa editrice"@it ,
+        "Copiste ou maison d'édition"@fr ,
+        "Publisher, copyist"@en ,
+        "Schreiber, Verleger, Verlag"@de ,
+        "Wydawca, kopista"@pl ,
+        "Editor, copista"@es ,
+        "Editor, copista"@pt ;
+    ] ,
+    [
+      rdf:value "2022"@none ;
+      rdfs:label
+        "Datum"@de ,
+        "Data"@it ,
+        "Data"@pl ,
+        "Data"@pt ,
+        "Fecha"@es ,
+        "Date"@fr ,
+        "Date"@en ;
+    ] ,
+    [
+      a dcterms:language ;
+      rdf:value
+        "Englisch"@de ,
+        "Inglese"@it ,
+        "English"@en ,
+        "German"@en ,
+        "Tedesco"@it ,
+        "Inglês"@pt ,
+        "Alemán"@es ,
+        "Inglés"@es ,
+        "Anglais"@fr ,
+        "Angielski"@pl ,
+        "Niemiecki"@pl ,
+        "Allemand"@fr ,
+        "Alemão"@pt ,
+        "Deutsch"@de ;
+      rdfs:label
+        "Lingua del testo cantato"@it ,
+        "Language of text"@en ,
+        "Sprachcode"@de ,
+        "Język tekstu"@pl ,
+        "Idioma del texto"@es ,
+        "Idioma do texto"@pt ,
+        "Langue du texte chanté"@fr ;
+    ] ,
+    [
+      rdf:value "978-3-7651-0400-8"@none ;
+      rdfs:label
+        "ISBN"@de ,
+        "ISBN"@it ,
+        "ISBN"@es ,
+        "ISBN"@fr ,
+        "ISBN"@en ,
+        "ISBN"@pl ,
+        "ISBN"@pt ;
+    ] ,
+    [
+      rdf:value "BWV-3"@none ;
+      rdfs:label
+        "Titolo breve"@it ,
+        "Skrócony tytuł"@pl ,
+        "Kurztitel"@de ,
+        "Short title"@en ,
+        "Titre abrégé"@fr ,
+        "Título abreviado"@pt ,
+        "Título breve"@es ;
+    ] ,
+    [
+      rdf:value "Wiesbaden"@none ;
+      rdfs:label
+        "Verlagsort"@de ,
+        "Place of publication"@en ,
+        "Lugar de publicación"@es ,
+        "Luogo"@it ,
+        "Local"@pt ,
+        "Endroit"@fr ,
+        "Miejsce publikacji"@pl ;
+    ] ;
+  rism:notes <https://rism.online/publications/30019500/notes> ;
+  rism:publicationDates "2022"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ,
+            "Date de création"@fr ,
+            "Fecha de creación"@es ,
+            "Data di creazione"@it ,
+            "Created on"@en ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-02-12T13:25:28Z"^^xsd:dateTime ;
+          rdfs:label
+            "Letzte Änderung"@de ,
+            "Ultima modifica"@it ,
+            "Fecha de modificación"@es ,
+            "Última modificação"@pt ,
+            "Ostatnia modyfikacja"@pl ,
+            "Dernière modification"@fr ,
+            "Last modification"@en ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/30019500/relationships> ;
+  rism:shortTitle "BWV-3"@none ;
+  rism:status
+    [
+      rdf:value "partial" ;
+      rdfs:label
+        "Teilweise abgeschlossen"@de ,
+        "Częściowo kompletne"@pl ,
+        "Parcialmente concluído"@pt ,
+        "Parcialmente completado"@es ,
+        "Partially completed"@en ,
+        "Parzialmente processato"@it ,
+        "Partiellement terminé"@fr ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 1058 ;
+      schemaorg:url "https://rism.online/publications/30019500/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/30019500/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Bibliografia e note"@it ,
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "Referencias y notas"@es ,
+    "References and notes"@en ,
+    "Literatur und Bemerkungen"@de ,
+    "Odniesienia i uwagi"@pl ;
+  rism:hasNote
+    [
+      rdf:value
+        "Appendix A (\"J. S. Bach\"-Incerta) und Appendix B (\"Bach\"-Incerta) sind nummeriert, Appendix C (Fehlzuschreibungen und Werke ohne Zusschreibung) ist nur eine Tabelle."@none ,
+        "BWV-3. 1178 [Nachtrag/Addendum 2025]"@none ,
+        "BWV-3. App.B:31"@none ,
+        "Citation: BWV-3.Number"@none ;
+      rdfs:label
+        "Nota general"@es ,
+        "General note"@en ,
+        "Nota geral"@pt ,
+        "Nota generale"@it ,
+        "Bemerkungen"@de ,
+        "Remarque générale"@fr ,
+        "Uwaga ogólna"@pl ;
+    ] ;
+  .
+
+<https://rism.online/publications/30019500/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/30027661> ;
+      rism:hasRole relators:edt ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/people/30074488> ;
+      rism:hasRole relators:edt ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/people/2539> ;
+      rism:hasRole relators:att ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/people/30027282> ;
+      rism:hasRole relators:edt ;
+    ] ;
+  rism:sectionLabel
+    "Relacionamentos"@pt ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relazioni"@it ,
+    "Beziehungen"@de ,
+    "Relaciones"@es ,
+    "Relacje"@pl ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Referência cruzada de compositor"@pt ,
+    "Referencia cruzada de compositor"@es ,
+    "Odniesienie do innego kompozytora"@pl ,
+    "Komponistenquerverweis"@de ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Composer cross-reference"@en ,
+    "Rimando ad altro compositore"@it ;
+  .
+
+relators:aut
+  rdf:value "aut" ;
+  rdfs:label
+    "Autor"@de ,
+    "Autor"@pt ,
+    "Autor"@es ,
+    "Autor"@pl ,
+    "Autore"@it ,
+    "Auteur"@fr ,
+    "Author"@en ;
+  .
+
+<https://rism.online/people/132446>
+  a rism:Person ;
+  rdfs:label "Lully, Jean-Baptiste (1632-1687)"@none ;
+  .
+
+<https://rism.online/people/30027280>
+  a rism:Person ;
+  rdfs:label "Schneider, Herbert (1941*)"@none ;
+  .
+
+<https://rism.online/publications/237>
+  a rism:Publication ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/30027280> ;
+      rism:hasRole relators:aut ;
+    ] ;
+  rdfs:label "Chronologisch-thematisches Verzeichnis sämtlicher Werke von Jean-Baptiste Lully (=LWV)"@none ;
+  relators:att <https://rism.online/people/132446> ;
+  rism:composer <https://rism.online/people/132446> ;
+  rism:hasSummary
+    [
+      rdf:value "Tutzing"@none ;
+      rdfs:label
+        "Place of publication"@en ,
+        "Lugar de publicación"@es ,
+        "Endroit"@fr ,
+        "Verlagsort"@de ,
+        "Local"@pt ,
+        "Luogo"@it ,
+        "Miejsce publikacji"@pl ;
+    ] ,
+    [
+      rdf:value "Hans Schneider"@none ;
+      rdfs:label
+        "Schreiber, Verleger, Verlag"@de ,
+        "Editor, copista"@pt ,
+        "Editor, copista"@es ,
+        "Copiste ou maison d'édition"@fr ,
+        "Copista, editore, casa editrice"@it ,
+        "Publisher, copyist"@en ,
+        "Wydawca, kopista"@pl ;
+    ] ,
+    [
+      rdf:value "570p."@none ;
+      rdfs:label
+        "Zakres"@pl ,
+        "Extensão"@pt ,
+        "Extension"@fr ,
+        "Extensión"@es ,
+        "Umfang"@de ,
+        "Estensione"@it ,
+        "Extent"@en ;
+    ] ,
+    [
+      a dcterms:language ;
+      rdf:value
+        "Allemand"@fr ,
+        "Deutsch"@de ,
+        "Niemiecki"@pl ,
+        "Alemão"@pt ,
+        "Alemán"@es ,
+        "German"@en ,
+        "Tedesco"@it ;
+      rdfs:label
+        "Language of text"@en ,
+        "Idioma del texto"@es ,
+        "Sprachcode"@de ,
+        "Langue du texte chanté"@fr ,
+        "Język tekstu"@pl ,
+        "Lingua del testo cantato"@it ,
+        "Idioma do texto"@pt ;
+    ] ,
+    [
+      rdf:value "1981"@none ;
+      rdfs:label
+        "Fecha"@es ,
+        "Date"@fr ,
+        "Date"@en ,
+        "Datum"@de ,
+        "Data"@it ,
+        "Data"@pt ,
+        "Data"@pl ;
+    ] ,
+    [
+      rdf:value "LWV"@none ;
+      rdfs:label
+        "Kurztitel"@de ,
+        "Título breve"@es ,
+        "Short title"@en ,
+        "Titolo breve"@it ,
+        "Título abreviado"@pt ,
+        "Titre abrégé"@fr ,
+        "Skrócony tytuł"@pl ;
+    ] ,
+    [
+      rdf:value "3-7952-0323-6"@none ;
+      rdfs:label
+        "ISBN"@fr ,
+        "ISBN"@en ,
+        "ISBN"@de ,
+        "ISBN"@it ,
+        "ISBN"@pt ,
+        "ISBN"@es ,
+        "ISBN"@pl ;
+    ] ;
+  rism:notes <https://rism.online/publications/237/notes> ;
+  rism:publicationDates "1981"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Data utworzenia"@pl ,
+            "Data di creazione"@it ,
+            "Created on"@en ,
+            "Erstellungsdatum"@de ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2025-06-20T09:08:45Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ostatnia modyfikacja"@pl ,
+            "Ultima modifica"@it ,
+            "Dernière modification"@fr ,
+            "Última modificação"@pt ,
+            "Fecha de modificación"@es ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/237/relationships> ;
+  rism:shortTitle "LWV"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Completed"@en ,
+        "Completado"@es ,
+        "Abgeschlossen"@de ,
+        "Terminé"@fr ,
+        "Kompletne"@pl ,
+        "Concluído"@pt ,
+        "Completato"@it ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 173 ;
+      schemaorg:url "https://rism.online/publications/237/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/237/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Références et notes"@fr ,
+    "Referencias y notas"@es ,
+    "Odniesienia i uwagi"@pl ,
+    "Bibliografia e note"@it ,
+    "Literatur und Bemerkungen"@de ,
+    "References and notes"@en ,
+    "Notas e referências"@pt ;
+  rism:hasNote
+    [
+      rdf:value
+        "BrookCM 1997: 766.1"@none ,
+        "Citation: LWV-Nr/Satz-Nr [LWV. 56/11 (Air aus \"Psyche\")]"@none ,
+        "LWV. 75-X [LWV. 75-4 \"Air\", nicht datierbares Instrumentalwerk]"@none ,
+        "LWV. 78-X [LWV. 78-5 \"Sarabande\", stammt vermutlich von Lully]"@none ,
+        "LWV. Anh.X [LWV. Anh.5 (Minuet, fälschlich zugeschriebenes Werk)]"@none ;
+      rdfs:label
+        "Uwaga ogólna"@pl ,
+        "Nota generale"@it ,
+        "General note"@en ,
+        "Remarque générale"@fr ,
+        "Nota geral"@pt ,
+        "Bemerkungen"@de ,
+        "Nota general"@es ;
+    ] ;
+  .
+
+<https://rism.online/publications/237/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/132446> ;
+      rism:hasRole relators:att ;
+    ] ;
+  rism:sectionLabel
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ,
+    "Relations"@fr ,
+    "Relations"@en ,
+    "Relacje"@pl ,
+    "Beziehungen"@de ,
+    "Relaciones"@es ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+relators:att
+  rdf:value "att" ;
+  rdfs:label
+    "Rimando ad altro compositore"@it ,
+    "Renvoi à un autre compositeur"@fr ,
+    "Composer cross-reference"@en ,
+    "Odniesienie do innego kompozytora"@pl ,
+    "Referencia cruzada de compositor"@es ,
+    "Komponistenquerverweis"@de ,
+    "Referência cruzada de compositor"@pt ;
+  .
+
+relators:aut
+  rdf:value "aut" ;
+  rdfs:label
+    "Author"@en ,
+    "Autore"@it ,
+    "Autor"@de ,
+    "Autor"@es ,
+    "Autor"@pt ,
+    "Autor"@pl ,
+    "Auteur"@fr ;
+  .
+
+<https://rism.online/people/107007>
+  a rism:Person ;
+  rdfs:label "Hummel, Johann Nepomuk (1778-1837)"@none ;
+  .
+
+<https://rism.online/people/30027311>
+  a rism:Person ;
+  rdfs:label "Zimmerschied, Dieter (1934-2010)"@none ;
+  .
+
+<https://rism.online/publications/272>
+  a rism:Publication ;
+  dcterms:creator
+    [
+      dcterms:relation <https://rism.online/people/30027311> ;
+      rism:hasRole relators:aut ;
+    ] ;
+  rdfs:label "Thematisches Verzeichnis der Werke von Johann Nepomuk Hummel"@none ;
+  relators:att <https://rism.online/people/107007> ;
+  rism:composer <https://rism.online/people/107007> ;
+  rism:hasSummary
+    [
+      rdf:value "1971"@none ;
+      rdfs:label
+        "Data"@it ,
+        "Data"@pt ,
+        "Data"@pl ,
+        "Date"@en ,
+        "Date"@fr ,
+        "Fecha"@es ,
+        "Datum"@de ;
+    ] ,
+    [
+      rdf:value "ZimH"@none ;
+      rdfs:label
+        "Short title"@en ,
+        "Titre abrégé"@fr ,
+        "Skrócony tytuł"@pl ,
+        "Titolo breve"@it ,
+        "Título breve"@es ,
+        "Kurztitel"@de ,
+        "Título abreviado"@pt ;
+    ] ,
+    [
+      rdf:value "Hofheim am Taunus"@none ;
+      rdfs:label
+        "Lugar de publicación"@es ,
+        "Verlagsort"@de ,
+        "Place of publication"@en ,
+        "Miejsce publikacji"@pl ,
+        "Endroit"@fr ,
+        "Luogo"@it ,
+        "Local"@pt ;
+    ] ,
+    [
+      a dcterms:language ;
+      rdf:value
+        "Alemão"@pt ,
+        "Allemand"@fr ,
+        "Tedesco"@it ,
+        "Niemiecki"@pl ,
+        "German"@en ,
+        "Alemán"@es ,
+        "Deutsch"@de ;
+      rdfs:label
+        "Sprachcode"@de ,
+        "Langue du texte chanté"@fr ,
+        "Język tekstu"@pl ,
+        "Lingua del testo cantato"@it ,
+        "Idioma del texto"@es ,
+        "Idioma do texto"@pt ,
+        "Language of text"@en ;
+    ] ;
+  rism:notes <https://rism.online/publications/272/notes> ;
+  rism:publicationDates "1971"@none ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Erstellungsdatum"@de ,
+            "Date de création"@fr ,
+            "Data utworzenia"@pl ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ,
+            "Created on"@en ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2025-06-20T09:08:45Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ultima modifica"@it ,
+            "Letzte Änderung"@de ,
+            "Ostatnia modyfikacja"@pl ,
+            "Last modification"@en ,
+            "Última modificação"@pt ,
+            "Fecha de modificación"@es ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/publications/272/relationships> ;
+  rism:shortTitle "ZimH"@none ;
+  rism:status
+    [
+      rdf:value "completed" ;
+      rdfs:label
+        "Kompletne"@pl ,
+        "Concluído"@pt ,
+        "Completed"@en ,
+        "Abgeschlossen"@de ,
+        "Completado"@es ,
+        "Terminé"@fr ,
+        "Completato"@it ;
+    ] ;
+  rism:works
+    [
+      rism:sectionLabel "Works in this publication"@none ;
+      rism:totalItems 209 ;
+      schemaorg:url "https://rism.online/publications/272/works"^^xsd:anyURI ;
+    ] ;
+  .
+
+<https://rism.online/publications/272/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "References and notes"@en ,
+    "Notas e referências"@pt ,
+    "Odniesienia i uwagi"@pl ,
+    "Referencias y notas"@es ,
+    "Literatur und Bemerkungen"@de ,
+    "Bibliografia e note"@it ,
+    "Références et notes"@fr ;
+  rism:hasNote
+    [
+      rdf:value
+        "BrookCM 1997: 611"@none ,
+        "Sigel. Opuszahl.Nummer/Satz"@none ,
+        "Sigel. WoO X"@none ,
+        "ZimH. 125.8 (Opus 125, Etude Nr.8, \"Vivace\")"@none ,
+        "ZimH. 2a.2/2 (Violin- bzw. Flötensonate, op. 2[a] Nr. 2, zweiter Satz)"@none ,
+        "ZimH. 63 (Opus 63: 1. Serenade für Klavier m. Begl. div. Instrumente)"@none ,
+        "ZimH. WoO 9 (Werk ohne Opuszahl Nr. 9: Klavierstück)"@none ,
+        "ZimH. p4 (Opus posthum Nr. 4: Klavierquartett)"@none ;
+      rdfs:label
+        "Uwaga ogólna"@pl ,
+        "General note"@en ,
+        "Bemerkungen"@de ,
+        "Nota geral"@pt ,
+        "Nota general"@es ,
+        "Remarque générale"@fr ,
+        "Nota generale"@it ;
+    ] ;
+  .
+
+<https://rism.online/publications/272/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/people/107007> ;
+      rism:hasRole relators:att ;
+    ] ;
+  rism:sectionLabel
+    "Beziehungen"@de ,
+    "Relaciones"@es ,
+    "Relacje"@pl ,
+    "Relacionamentos"@pt ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Relazioni"@it ;
+  .

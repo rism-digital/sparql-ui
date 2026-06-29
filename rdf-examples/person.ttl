@@ -1,0 +1,1790 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/people/40220796>
+  a rism:Person ;
+  rdfs:label "Bignami, Pompeo (19/20)"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "people/40220796"@none ;
+          rdfs:label
+            "RISM Dokumentnummer"@de ,
+            "No. RISM"@fr ,
+            "Número de ID de RISM"@es ,
+            "Numero documento RISM"@it ,
+            "Número ID RISM"@pt ,
+            "RISM ID"@pl ,
+            "RISM ID number"@en ;
+        ] ,
+        [
+          rdf:value
+            "Mężczyzna"@pl ,
+            "Maschio"@it ,
+            "homme"@fr ,
+            "Masculino"@es ,
+            "Masculino"@pt ,
+            "Männlich"@de ,
+            "Male"@en ;
+          rdfs:label
+            "Gender"@en ,
+            "Sexe"@fr ,
+            "Género"@es ,
+            "Género"@pt ,
+            "Geschlecht"@de ,
+            "Genere"@it ,
+            "Płeć społeczno-kulturowa"@pl ;
+        ] ,
+        [
+          rdf:value "19/20"@none ;
+          rdfs:label
+            "Data di nascita e di morte"@it ,
+            "Daty urodzenia i śmierci"@pl ,
+            "Geburts- und Todesdaten"@de ,
+            "Datas de nascimento e morte"@pt ,
+            "Life dates"@en ,
+            "Fechas de nacimiento y muerte"@es ,
+            "Dates de vie"@fr ;
+        ] ,
+        [
+          rdf:value "differentiated"@none ;
+          rdfs:label
+            "Código de autenticação"@pt ,
+            "Code d'authentification"@fr ,
+            "Código de autenticación"@es ,
+            "Kod uwierzytelnienia"@pl ,
+            "Individualsierung"@de ,
+            "Authentication code"@en ,
+            "Codice di autenticazione"@it ;
+        ] ,
+        [
+          rdf:value
+            "Dedicatee"@none ,
+            "Possessor"@none ;
+          rdfs:label
+            "Profession ou fonction"@fr ,
+            "Profissão ou função"@pt ,
+            "Zawód lub funkcja"@pl ,
+            "Profesión o función"@es ,
+            "Profession or function"@en ,
+            "Beruf oder Funktion"@de ,
+            "Professione o funzione"@it ;
+        ] ;
+      rism:sectionLabel
+        "Detalles biográficos"@es ,
+        "Biographical details"@en ,
+        "Détails biographiques"@fr ,
+        "Dati biografici"@it ,
+        "Detalhes biográficos"@pt ,
+        "Szczegóły bibliograficzne"@pl ,
+        "Biografische Details"@de ;
+    ] ;
+  rism:externalAuthorities <https://rism.online/people/40220796/external-authorities> ;
+  rism:hasExternalAuthority
+    <https://rism.online/people/40220796/external-authorities/iccuSBNV030735> ,
+    <https://rism.online/people/40220796/external-authorities/viaf94159032647401181446> ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2019-01-03T11:59:11Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Date de création"@fr ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Data di creazione"@it ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-12T00:44:17Z"^^xsd:dateTime ;
+          rdfs:label
+            "Dernière modification"@fr ,
+            "Última modificação"@pt ,
+            "Last modification"@en ,
+            "Letzte Änderung"@de ,
+            "Ultima modifica"@it ,
+            "Fecha de modificación"@es ,
+            "Ostatnia modyfikacja"@pl ;
+        ] ;
+    ] ;
+  schemaorg:gender "male" ;
+  schemaorg:sameAs
+    "http://id.sbn.it/bid/SBNV030735"^^xsd:anyURI ,
+    "https://viaf.org/viaf/94159032647401181446"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/40220796/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Identyfikator innego standardu"@pl ,
+    "Référence d'authorité"@fr ,
+    "Riferimento autorità"@it ,
+    "Other standard identifier"@en ,
+    "Normdatenverweise"@de ,
+    "Otro identificador estándar"@es ,
+    "Outro identificador padronizado"@pt ;
+  rism:hasExternalAuthority
+    <https://rism.online/people/40220796/external-authorities/iccuSBNV030735> ,
+    <https://rism.online/people/40220796/external-authorities/viaf94159032647401181446> ;
+  .
+
+<https://rism.online/people/40220796/external-authorities/iccuSBNV030735>
+  a rism:ExternalAuthority ;
+  rdf:value "SBNV030735" ;
+  rdfs:label "Istituto Centrale per il Catalogo Unico: SBNV030735"@none ;
+  rism:authorityBase "http://id.sbn.it/bid/"^^xsd:anyURI ;
+  rism:authorityScheme "iccu" ;
+  rism:authorityUrl "http://id.sbn.it/bid/SBNV030735"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/40220796/external-authorities/viaf94159032647401181446>
+  a rism:ExternalAuthority ;
+  rdf:value "94159032647401181446" ;
+  rdfs:label "Virtual Internet Authority File (VIAF): 94159032647401181446"@none ;
+  rism:authorityBase "https://viaf.org/viaf/"^^xsd:anyURI ;
+  rism:authorityScheme "viaf" ;
+  rism:authorityUrl "https://viaf.org/viaf/94159032647401181446"^^xsd:anyURI ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:go
+  rdf:value "go" ;
+  rdfs:label
+    "Lugar de nacimiento"@es ,
+    "Lieu de naissance"@fr ,
+    "Local de nascimento"@pt ,
+    "Luogo di nascita"@it ,
+    "Place of birth"@en ,
+    "Miejsce urodzenia"@pl ,
+    "Geburtsort"@de ;
+  .
+
+rismrel:so
+  rdf:value "so" ;
+  rdfs:label
+    "Local de morte"@pt ,
+    "Lugar de fallecimiento"@es ,
+    "Sterbeort"@de ,
+    "Place of death"@en ,
+    "Lieu de décès"@fr ,
+    "Luogo di morte"@it ,
+    "Miejsce śmierci"@pl ;
+  .
+
+rismrel:wo
+  rdf:value "wo" ;
+  rdfs:label
+    "Luogo di attività"@it ,
+    "Lieu d'activité"@fr ,
+    "Place active"@en ,
+    "Local ativo"@pt ,
+    "Lugar de actividad"@es ,
+    "Miejsce aktywności artystycznej"@pl ,
+    "Wirkungsort"@de ;
+  .
+
+<https://rism.online/people/51008152>
+  a rism:Person ;
+  rdfs:label "Ernst, Robert (1900-1977)"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "1900-1977"@none ;
+          rdfs:label
+            "Geburts- und Todesdaten"@de ,
+            "Fechas de nacimiento y muerte"@es ,
+            "Daty urodzenia i śmierci"@pl ,
+            "Datas de nascimento e morte"@pt ,
+            "Data di nascita e di morte"@it ,
+            "Life dates"@en ,
+            "Dates de vie"@fr ;
+        ] ,
+        [
+          rdf:value "09.06.1900-31.12.1977"@none ;
+          rdfs:label
+            "Autres dates"@fr ,
+            "Altre date"@it ,
+            "Otras fechas de vida"@es ,
+            "Other life dates"@en ,
+            "Pozostałe daty urodzenia i śmierci"@pl ,
+            "Andere Lebensdaten"@de ,
+            "Outras datas de vida"@pt ;
+        ] ,
+        [
+          rdf:value
+            "Mężczyzna"@pl ,
+            "homme"@fr ,
+            "Männlich"@de ,
+            "Male"@en ,
+            "Maschio"@it ,
+            "Masculino"@pt ,
+            "Masculino"@es ;
+          rdfs:label
+            "Genere"@it ,
+            "Geschlecht"@de ,
+            "Gender"@en ,
+            "Sexe"@fr ,
+            "Płeć społeczno-kulturowa"@pl ,
+            "Género"@pt ,
+            "Género"@es ;
+        ] ,
+        [
+          rdf:value "people/51008152"@none ;
+          rdfs:label
+            "RISM ID"@pl ,
+            "No. RISM"@fr ,
+            "RISM ID number"@en ,
+            "RISM Dokumentnummer"@de ,
+            "Numero documento RISM"@it ,
+            "Número ID RISM"@pt ,
+            "Número de ID de RISM"@es ;
+        ] ,
+        [
+          rdf:value
+            "Composer"@none ,
+            "Conductor"@none ,
+            "Pianist"@none ;
+          rdfs:label
+            "Professione o funzione"@it ,
+            "Profesión o función"@es ,
+            "Profession ou fonction"@fr ,
+            "Profissão ou função"@pt ,
+            "Profession or function"@en ,
+            "Beruf oder Funktion"@de ,
+            "Zawód lub funkcja"@pl ;
+        ] ,
+        [
+          rdf:value "differentiated"@none ;
+          rdfs:label
+            "Authentication code"@en ,
+            "Code d'authentification"@fr ,
+            "Código de autenticación"@es ,
+            "Kod uwierzytelnienia"@pl ,
+            "Código de autenticação"@pt ,
+            "Individualsierung"@de ,
+            "Codice di autenticazione"@it ;
+        ] ;
+      rism:sectionLabel
+        "Dati biografici"@it ,
+        "Detalles biográficos"@es ,
+        "Detalhes biográficos"@pt ,
+        "Détails biographiques"@fr ,
+        "Biografische Details"@de ,
+        "Biographical details"@en ,
+        "Szczegóły bibliograficzne"@pl ;
+    ] ;
+  rism:externalAuthorities <https://rism.online/people/51008152/external-authorities> ;
+  rism:externalResources
+    [
+      rism:hasExternalResource
+        [
+          a rism:ExternalResource ;
+          rdfs:label "Christian Fastl, Art. „Ernst, Robert‟, in: Oesterreichisches Musiklexikon online, begr. von Rudolf Flotzinger, hg. von Barbara Boisits (letzte inhaltliche Änderung: 16.4.2013, abgerufen am 7.2.2023)"@none ;
+          rism:resourceType "rism:OtherLink" ;
+          rism:url "https://dx.doi.org/10.1553/0x00137231" ;
+        ] ;
+      rism:sectionLabel
+        "Recursos relacionados"@pt ,
+        "Recursos relacionados"@es ,
+        "Liens"@fr ,
+        "Links"@de ,
+        "Powiązane zasoby"@pl ,
+        "Related resources"@en ,
+        "Collegamenti"@it ;
+    ] ;
+  rism:hasExternalAuthority
+    <https://rism.online/people/51008152/external-authorities/dnb130146382> ,
+    <https://rism.online/people/51008152/external-authorities/viaf72491457> ,
+    <https://rism.online/people/51008152/external-authorities/wkpQ94911341> ;
+  rism:nameVariants
+    [
+      a rism:VariantNamesSection ;
+      rdfs:label
+        "Varianti del nome"@it ,
+        "Alternatywne nazwy osoby"@pl ,
+        "Name variants"@en ,
+        "Variantes du nom"@fr ,
+        "Variantes del nombre"@es ,
+        "Namensvarianten"@de ,
+        "Variantes de nome"@pt ;
+      rism:hasNameVariant
+        [
+          a rism:VariantName ;
+          rdf:value "Ernst, Robert Heinrich Siegfried"@none ;
+          rdfs:label
+            "Nicht kategorisiert"@de ,
+            "Bez kategorii"@pl ,
+            "Non classé"@fr ,
+            "Sin categorizar"@es ,
+            "Sem categoria"@pt ,
+            "Uncategorized"@en ,
+            "Non categorizzato"@it ;
+        ] ;
+    ] ;
+  rism:notes <https://rism.online/people/51008152/notes> ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2022-10-28T15:13:16Z"^^xsd:dateTime ;
+          rdfs:label
+            "Fecha de creación"@es ,
+            "Date de création"@fr ,
+            "Created on"@en ,
+            "Data di creazione"@it ,
+            "Criado em"@pt ,
+            "Erstellungsdatum"@de ,
+            "Data utworzenia"@pl ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-24T20:15:44Z"^^xsd:dateTime ;
+          rdfs:label
+            "Última modificação"@pt ,
+            "Fecha de modificación"@es ,
+            "Dernière modification"@fr ,
+            "Ostatnia modyfikacja"@pl ,
+            "Ultima modifica"@it ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/people/51008152/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 5 ;
+      rism:url "https://rism.online/people/51008152/sources" ;
+    ] ;
+  rismrel:go <https://rism.online/places/3900005> ;
+  rismrel:so <https://rism.online/places/3900059> ;
+  rismrel:wo <https://rism.online/places/3900059> ;
+  schemaorg:gender "male" ;
+  schemaorg:sameAs
+    "https://d-nb.info/gnd/130146382"^^xsd:anyURI ,
+    "https://viaf.org/viaf/72491457"^^xsd:anyURI ,
+    "https://www.wikidata.org/wiki/Q94911341"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/51008152/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Outro identificador padronizado"@pt ,
+    "Référence d'authorité"@fr ,
+    "Normdatenverweise"@de ,
+    "Riferimento autorità"@it ,
+    "Otro identificador estándar"@es ,
+    "Other standard identifier"@en ,
+    "Identyfikator innego standardu"@pl ;
+  rism:hasExternalAuthority
+    <https://rism.online/people/51008152/external-authorities/dnb130146382> ,
+    <https://rism.online/people/51008152/external-authorities/viaf72491457> ,
+    <https://rism.online/people/51008152/external-authorities/wkpQ94911341> ;
+  .
+
+<https://rism.online/people/51008152/external-authorities/dnb130146382>
+  a rism:ExternalAuthority ;
+  rdf:value "130146382" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 130146382"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityScheme "dnb" ;
+  rism:authorityUrl "https://d-nb.info/gnd/130146382"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/51008152/external-authorities/viaf72491457>
+  a rism:ExternalAuthority ;
+  rdf:value "72491457" ;
+  rdfs:label "Virtual Internet Authority File (VIAF): 72491457"@none ;
+  rism:authorityBase "https://viaf.org/viaf/"^^xsd:anyURI ;
+  rism:authorityScheme "viaf" ;
+  rism:authorityUrl "https://viaf.org/viaf/72491457"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/51008152/external-authorities/wkpQ94911341>
+  a rism:ExternalAuthority ;
+  rdf:value "Q94911341" ;
+  rdfs:label "Wikidata: Q94911341"@none ;
+  rism:authorityBase "https://www.wikidata.org/wiki/"^^xsd:anyURI ;
+  rism:authorityScheme "wkp" ;
+  rism:authorityUrl "https://www.wikidata.org/wiki/Q94911341"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/51008152/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Referencias y notas"@es ,
+    "Odniesienia i uwagi"@pl ,
+    "Literatur und Bemerkungen"@de ,
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "Bibliografia e note"@it ,
+    "References and notes"@en ;
+  rism:hasNote
+    [
+      rdf:value "<span>Flotzinger, Rudolf (ed.). 2002-. <i>Oesterreichisches Musiklexikon.</i> Wien: Verlag der Österreichischen Akademie der Wissenschaften. <a href=\"http://www.musiklexikon.ac.at\">http://www.musiklexikon.ac.at</a>.</span> [OEML online Ernst, Robert [09.06.1900-31.12.1977]]."@none ;
+      rdfs:label
+        "Fonte dos dados encontrados"@pt ,
+        "Fuente de los datos encontrados"@es ,
+        "Fonte dei dati"@it ,
+        "Source data found"@en ,
+        "Source des données"@fr ,
+        "Odnalezione źródło danych"@pl ,
+        "Literaturnachweis"@de ;
+    ] ;
+  .
+
+<https://rism.online/people/51008152/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3900059> ;
+      rism:hasRole rismrel:so ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/places/3900059> ;
+      rism:hasRole rismrel:wo ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/places/3900005> ;
+      rism:hasRole rismrel:go ;
+    ] ;
+  rism:sectionLabel
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ,
+    "Relacje"@pl ,
+    "Relaciones"@es ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Beziehungen"@de ;
+  .
+
+<https://rism.online/places/3900005>
+  a rism:Place ;
+  rdfs:label "München, Deutschland"@none ;
+  .
+
+<https://rism.online/places/3900059>
+  a rism:Place ;
+  rdfs:label "Wien, Österreich"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/people/30067550>
+  a rism:Person ;
+  rdfs:label "Menesson"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "undifferentiated"@none ;
+          rdfs:label
+            "Código de autenticação"@pt ,
+            "Code d'authentification"@fr ,
+            "Individualsierung"@de ,
+            "Código de autenticación"@es ,
+            "Kod uwierzytelnienia"@pl ,
+            "Codice di autenticazione"@it ,
+            "Authentication code"@en ;
+        ] ,
+        [
+          rdf:value "people/30067550"@none ;
+          rdfs:label
+            "RISM ID"@pl ,
+            "Numero documento RISM"@it ,
+            "RISM ID number"@en ,
+            "No. RISM"@fr ,
+            "Número de ID de RISM"@es ,
+            "Número ID RISM"@pt ,
+            "RISM Dokumentnummer"@de ;
+        ] ;
+      rism:sectionLabel
+        "Dati biografici"@it ,
+        "Detalles biográficos"@es ,
+        "Biographical details"@en ,
+        "Szczegóły bibliograficzne"@pl ,
+        "Detalhes biográficos"@pt ,
+        "Biografische Details"@de ,
+        "Détails biographiques"@fr ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Criado em"@pt ,
+            "Data di creazione"@it ,
+            "Data utworzenia"@pl ,
+            "Created on"@en ,
+            "Erstellungsdatum"@de ,
+            "Date de création"@fr ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:27:52Z"^^xsd:dateTime ;
+          rdfs:label
+            "Dernière modification"@fr ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Ultima modifica"@it ,
+            "Última modificação"@pt ,
+            "Ostatnia modyfikacja"@pl ,
+            "Fecha de modificación"@es ;
+        ] ;
+    ] ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/people/30067550/sources" ;
+    ] ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:contributing_project
+  rdf:value "contributing_project" ;
+  rdfs:label
+    "Contributing project"@en ,
+    "Projeto contribuidor"@pt ,
+    "Progetto contribuente"@it ,
+    "Contribuyendo al proyecto"@es ,
+    "Współtworzy Projekt"@pl ,
+    "Projet contributif"@fr ,
+    "Beitrag zum Projekt"@de ;
+  .
+
+<https://rism.online/institutions/51008558>
+  a rism:Institution ;
+  rdfs:label "Corpus Musicae Ottomanicae"@none ;
+  .
+
+<https://rism.online/people/51036657>
+  a rism:Person ;
+  rdfs:label "Kemâl Batanay (1892-1981)"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "differentiated"@none ;
+          rdfs:label
+            "Kod uwierzytelnienia"@pl ,
+            "Código de autenticación"@es ,
+            "Código de autenticação"@pt ,
+            "Individualsierung"@de ,
+            "Code d'authentification"@fr ,
+            "Authentication code"@en ,
+            "Codice di autenticazione"@it ;
+        ] ,
+        [
+          rdf:value "people/51036657"@none ;
+          rdfs:label
+            "No. RISM"@fr ,
+            "Número ID RISM"@pt ,
+            "Numero documento RISM"@it ,
+            "Número de ID de RISM"@es ,
+            "RISM ID"@pl ,
+            "RISM Dokumentnummer"@de ,
+            "RISM ID number"@en ;
+        ] ,
+        [
+          rdf:value "1892-1981"@none ;
+          rdfs:label
+            "Daty urodzenia i śmierci"@pl ,
+            "Life dates"@en ,
+            "Dates de vie"@fr ,
+            "Fechas de nacimiento y muerte"@es ,
+            "Data di nascita e di morte"@it ,
+            "Geburts- und Todesdaten"@de ,
+            "Datas de nascimento e morte"@pt ;
+        ] ;
+      rism:sectionLabel
+        "Dati biografici"@it ,
+        "Detalles biográficos"@es ,
+        "Szczegóły bibliograficzne"@pl ,
+        "Biografische Details"@de ,
+        "Detalhes biográficos"@pt ,
+        "Biographical details"@en ,
+        "Détails biographiques"@fr ;
+    ] ;
+  rism:externalAuthorities <https://rism.online/people/51036657/external-authorities> ;
+  rism:hasExternalAuthority
+    <https://rism.online/people/51036657/external-authorities/cmocmo_person_00000278> ,
+    <https://rism.online/people/51036657/external-authorities/dnb132588072> ;
+  rism:nameVariants
+    [
+      a rism:VariantNamesSection ;
+      rdfs:label
+        "Namensvarianten"@de ,
+        "Variantes de nome"@pt ,
+        "Variantes du nom"@fr ,
+        "Variantes del nombre"@es ,
+        "Name variants"@en ,
+        "Alternatywne nazwy osoby"@pl ,
+        "Varianti del nome"@it ;
+      rism:hasNameVariant
+        [
+          a rism:VariantName ;
+          rdf:value
+            "Batanay, Kemâl"@none ,
+            "Tanbûrî Hâfız Hattât Mehmed Kemâleddîn"@none ;
+          rdfs:label
+            "Sin categorizar"@es ,
+            "Non categorizzato"@it ,
+            "Nicht kategorisiert"@de ,
+            "Sem categoria"@pt ,
+            "Uncategorized"@en ,
+            "Non classé"@fr ,
+            "Bez kategorii"@pl ;
+        ] ;
+    ] ;
+  rism:notes <https://rism.online/people/51036657/notes> ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2025-02-26T15:59:39Z"^^xsd:dateTime ;
+          rdfs:label
+            "Date de création"@fr ,
+            "Erstellungsdatum"@de ,
+            "Criado em"@pt ,
+            "Data utworzenia"@pl ,
+            "Created on"@en ,
+            "Data di creazione"@it ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:41:58Z"^^xsd:dateTime ;
+          rdfs:label
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Dernière modification"@fr ,
+            "Ultima modifica"@it ,
+            "Fecha de modificación"@es ,
+            "Ostatnia modyfikacja"@pl ,
+            "Última modificação"@pt ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/people/51036657/relationships> ;
+  rismrel:contributing_project <https://rism.online/institutions/51008558> ;
+  schemaorg:sameAs
+    "https://corpus-musicae-ottomanicae.de/receive/cmo_person_00000278"^^xsd:anyURI ,
+    "https://d-nb.info/gnd/132588072"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/51036657/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Normdatenverweise"@de ,
+    "Other standard identifier"@en ,
+    "Otro identificador estándar"@es ,
+    "Outro identificador padronizado"@pt ,
+    "Identyfikator innego standardu"@pl ,
+    "Référence d'authorité"@fr ,
+    "Riferimento autorità"@it ;
+  rism:hasExternalAuthority
+    <https://rism.online/people/51036657/external-authorities/cmocmo_person_00000278> ,
+    <https://rism.online/people/51036657/external-authorities/dnb132588072> ;
+  .
+
+<https://rism.online/people/51036657/external-authorities/cmocmo_person_00000278>
+  a rism:ExternalAuthority ;
+  rdf:value "cmo_person_00000278" ;
+  rdfs:label "Corpus Musicae Ottomanicae (CMO): cmo_person_00000278"@none ;
+  rism:authorityBase "https://corpus-musicae-ottomanicae.de/receive/"^^xsd:anyURI ;
+  rism:authorityScheme "cmo" ;
+  rism:authorityUrl "https://corpus-musicae-ottomanicae.de/receive/cmo_person_00000278"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/51036657/external-authorities/dnb132588072>
+  a rism:ExternalAuthority ;
+  rdf:value "132588072" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 132588072"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityScheme "dnb" ;
+  rism:authorityUrl "https://d-nb.info/gnd/132588072"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/51036657/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Literatur und Bemerkungen"@de ,
+    "Referencias y notas"@es ,
+    "Odniesienia i uwagi"@pl ,
+    "Bibliografia e note"@it ,
+    "Références et notes"@fr ,
+    "Notas e referências"@pt ,
+    "References and notes"@en ;
+  rism:hasNote
+    [
+      rdf:value
+        "gregorian : 22.6.1981 (death) (Not before: 1981-06-22)"@none ,
+        "gregorian : 6.2.1893 (birth) (Not before: 1893-02-06)"@none ;
+      rdfs:label
+        "Nota general"@es ,
+        "Remarque générale"@fr ,
+        "Nota generale"@it ,
+        "Nota geral"@pt ,
+        "Uwaga ogólna"@pl ,
+        "Bemerkungen"@de ,
+        "General note"@en ;
+    ] ;
+  .
+
+<https://rism.online/people/51036657/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/institutions/51008558> ;
+      rism:hasRole rismrel:contributing_project ;
+      rism:project_url "https://sigel.staatsbibliothek-berlin.de/suche/?isil=DE-4353" ;
+    ] ;
+  rism:sectionLabel
+    "Beziehungen"@de ,
+    "Relaciones"@es ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Relacje"@pl ,
+    "Relacionamentos"@pt ,
+    "Relazioni"@it ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:xi
+  rdf:value "xi" ;
+  rdfs:label
+    "Instituição relacionada"@pt ,
+    "Institución relacionada"@es ,
+    "Istituzione correlata"@it ,
+    "Powiązana instytucja"@pl ,
+    "Institution liée"@fr ,
+    "In Beziehung stehende Körperschaft"@de ,
+    "Related institution"@en ;
+  .
+
+<https://rism.online/institutions/30000264>
+  a rism:Institution ;
+  rdfs:label "Fürstlich Fürstenbergische Hofbibliothek (D-DO)"@none ;
+  .
+
+<https://rism.online/people/30026856>
+  a rism:Person ;
+  rdfs:label "Fürstenberg, Marie Dorothée Louise Valencay Fürstin von (1862-1948)"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "differentiated"@none ;
+          rdfs:label
+            "Individualsierung"@de ,
+            "Código de autenticação"@pt ,
+            "Codice di autenticazione"@it ,
+            "Code d'authentification"@fr ,
+            "Código de autenticación"@es ,
+            "Kod uwierzytelnienia"@pl ,
+            "Authentication code"@en ;
+        ] ,
+        [
+          rdf:value "Dedicatee"@none ;
+          rdfs:label
+            "Profession or function"@en ,
+            "Profesión o función"@es ,
+            "Profession ou fonction"@fr ,
+            "Professione o funzione"@it ,
+            "Zawód lub funkcja"@pl ,
+            "Beruf oder Funktion"@de ,
+            "Profissão ou função"@pt ;
+        ] ,
+        [
+          rdf:value "1862-1948"@none ;
+          rdfs:label
+            "Geburts- und Todesdaten"@de ,
+            "Fechas de nacimiento y muerte"@es ,
+            "Dates de vie"@fr ,
+            "Life dates"@en ,
+            "Daty urodzenia i śmierci"@pl ,
+            "Data di nascita e di morte"@it ,
+            "Datas de nascimento e morte"@pt ;
+        ] ,
+        [
+          rdf:value
+            "Female"@en ,
+            "Feminino"@pt ,
+            "Femmina"@it ,
+            "Kobieta"@pl ,
+            "femme"@fr ,
+            "Femenino"@es ,
+            "Weiblich"@de ;
+          rdfs:label
+            "Genere"@it ,
+            "Gender"@en ,
+            "Género"@pt ,
+            "Género"@es ,
+            "Geschlecht"@de ,
+            "Sexe"@fr ,
+            "Płeć społeczno-kulturowa"@pl ;
+        ] ,
+        [
+          rdf:value "people/30026856"@none ;
+          rdfs:label
+            "Número de ID de RISM"@es ,
+            "Numero documento RISM"@it ,
+            "RISM ID"@pl ,
+            "RISM Dokumentnummer"@de ,
+            "No. RISM"@fr ,
+            "Número ID RISM"@pt ,
+            "RISM ID number"@en ;
+        ] ;
+      rism:sectionLabel
+        "Détails biographiques"@fr ,
+        "Detalhes biográficos"@pt ,
+        "Biografische Details"@de ,
+        "Detalles biográficos"@es ,
+        "Biographical details"@en ,
+        "Dati biografici"@it ,
+        "Szczegóły bibliograficzne"@pl ;
+    ] ;
+  rism:nameVariants
+    [
+      a rism:VariantNamesSection ;
+      rdfs:label
+        "Namensvarianten"@de ,
+        "Variantes del nombre"@es ,
+        "Alternatywne nazwy osoby"@pl ,
+        "Name variants"@en ,
+        "Variantes de nome"@pt ,
+        "Variantes du nom"@fr ,
+        "Varianti del nome"@it ;
+      rism:hasNameVariant
+        [
+          a rism:VariantName ;
+          rdf:value
+            "Comtesse von Talleyrand-Périgord, Marie Dorothée Louise Valencay Fürstin von"@none ,
+            "Comtesse von TalleyrandPerigord, Marie Dorothee Louise Valencay Fürstin von"@none ,
+            "Marie Dorothee Louise Valencay, Comtesse von TalleyrandPerigord"@none ,
+            "Marie Dorothée Louise Valencay, Comtesse von Talleyrand-Périgord"@none ,
+            "Marie Dorothée Louise Valencay, Fürstin von Fürstenberg"@none ;
+          rdfs:label
+            "Non classé"@fr ,
+            "Sem categoria"@pt ,
+            "Uncategorized"@en ,
+            "Non categorizzato"@it ,
+            "Nicht kategorisiert"@de ,
+            "Sin categorizar"@es ,
+            "Bez kategorii"@pl ;
+        ] ;
+    ] ;
+  rism:notes <https://rism.online/people/30026856/notes> ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Created on"@en ,
+            "Criado em"@pt ,
+            "Fecha de creación"@es ,
+            "Erstellungsdatum"@de ,
+            "Date de création"@fr ,
+            "Data di creazione"@it ,
+            "Data utworzenia"@pl ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:23:53Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ultima modifica"@it ,
+            "Dernière modification"@fr ,
+            "Fecha de modificación"@es ,
+            "Última modificação"@pt ,
+            "Last modification"@en ,
+            "Ostatnia modyfikacja"@pl ,
+            "Letzte Änderung"@de ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/people/30026856/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/people/30026856/sources" ;
+    ] ;
+  rismrel:xi <https://rism.online/institutions/30000264> ;
+  schemaorg:gender "female" ;
+  .
+
+<https://rism.online/people/30026856/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Bibliografia e note"@it ,
+    "Références et notes"@fr ,
+    "Odniesienia i uwagi"@pl ,
+    "Notas e referências"@pt ,
+    "Literatur und Bemerkungen"@de ,
+    "Referencias y notas"@es ,
+    "References and notes"@en ;
+  rism:hasNote
+    [
+      rdf:value "D-DO: Nachweis der Lebensdaten; geborene Comtesse de Talleyrand-Périgord; 1881 Heirat mit Karl Egon IV. Fürst von Fürstenberg"@none ;
+      rdfs:label
+        "Bemerkungen"@de ,
+        "Remarque générale"@fr ,
+        "Nota general"@es ,
+        "Nota geral"@pt ,
+        "Nota generale"@it ,
+        "General note"@en ,
+        "Uwaga ogólna"@pl ;
+    ] ;
+  .
+
+<https://rism.online/people/30026856/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/institutions/30000264> ;
+      rism:hasRole rismrel:xi ;
+    ] ;
+  rism:sectionLabel
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Relaciones"@es ,
+    "Relazioni"@it ,
+    "Relacje"@pl ,
+    "Beziehungen"@de ,
+    "Relacionamentos"@pt ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/people/30080717>
+  a rism:Person ;
+  rdfs:label "Sikloss"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "Copyist"@none ;
+          rdfs:label
+            "Profesión o función"@es ,
+            "Professione o funzione"@it ,
+            "Beruf oder Funktion"@de ,
+            "Profession or function"@en ,
+            "Profession ou fonction"@fr ,
+            "Profissão ou função"@pt ,
+            "Zawód lub funkcja"@pl ;
+        ] ,
+        [
+          rdf:value "undifferentiated"@none ;
+          rdfs:label
+            "Individualsierung"@de ,
+            "Kod uwierzytelnienia"@pl ,
+            "Authentication code"@en ,
+            "Code d'authentification"@fr ,
+            "Código de autenticação"@pt ,
+            "Código de autenticación"@es ,
+            "Codice di autenticazione"@it ;
+        ] ,
+        [
+          rdf:value "people/30080717"@none ;
+          rdfs:label
+            "Número de ID de RISM"@es ,
+            "Numero documento RISM"@it ,
+            "Número ID RISM"@pt ,
+            "RISM ID"@pl ,
+            "RISM ID number"@en ,
+            "No. RISM"@fr ,
+            "RISM Dokumentnummer"@de ;
+        ] ;
+      rism:sectionLabel
+        "Biografische Details"@de ,
+        "Dati biografici"@it ,
+        "Détails biographiques"@fr ,
+        "Detalles biográficos"@es ,
+        "Szczegóły bibliograficzne"@pl ,
+        "Detalhes biográficos"@pt ,
+        "Biographical details"@en ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Data utworzenia"@pl ,
+            "Date de création"@fr ,
+            "Erstellungsdatum"@de ,
+            "Fecha de creación"@es ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ,
+            "Created on"@en ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:29:26Z"^^xsd:dateTime ;
+          rdfs:label
+            "Dernière modification"@fr ,
+            "Ostatnia modyfikacja"@pl ,
+            "Ultima modifica"@it ,
+            "Last modification"@en ,
+            "Última modificação"@pt ,
+            "Fecha de modificación"@es ,
+            "Letzte Änderung"@de ;
+        ] ;
+    ] ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/people/30080717/sources" ;
+    ] ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/people/30001052>
+  a rism:Person ;
+  rdfs:label "Ferrari, Hyacintho (18.sc)"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value
+            "Mężczyzna"@pl ,
+            "Masculino"@es ,
+            "Masculino"@pt ,
+            "homme"@fr ,
+            "Männlich"@de ,
+            "Male"@en ,
+            "Maschio"@it ;
+          rdfs:label
+            "Sexe"@fr ,
+            "Género"@es ,
+            "Género"@pt ,
+            "Geschlecht"@de ,
+            "Płeć społeczno-kulturowa"@pl ,
+            "Genere"@it ,
+            "Gender"@en ;
+        ] ,
+        [
+          rdf:value "Composer"@none ;
+          rdfs:label
+            "Professione o funzione"@it ,
+            "Profesión o función"@es ,
+            "Zawód lub funkcja"@pl ,
+            "Profession ou fonction"@fr ,
+            "Beruf oder Funktion"@de ,
+            "Profession or function"@en ,
+            "Profissão ou função"@pt ;
+        ] ,
+        [
+          rdf:value "people/30001052"@none ;
+          rdfs:label
+            "RISM ID"@pl ,
+            "Número ID RISM"@pt ,
+            "RISM ID number"@en ,
+            "Numero documento RISM"@it ,
+            "Número de ID de RISM"@es ,
+            "No. RISM"@fr ,
+            "RISM Dokumentnummer"@de ;
+        ] ,
+        [
+          rdf:value "differentiated"@none ;
+          rdfs:label
+            "Kod uwierzytelnienia"@pl ,
+            "Código de autenticación"@es ,
+            "Authentication code"@en ,
+            "Code d'authentification"@fr ,
+            "Individualsierung"@de ,
+            "Codice di autenticazione"@it ,
+            "Código de autenticação"@pt ;
+        ] ,
+        [
+          rdf:value "18.sc"@none ;
+          rdfs:label
+            "Life dates"@en ,
+            "Dates de vie"@fr ,
+            "Datas de nascimento e morte"@pt ,
+            "Daty urodzenia i śmierci"@pl ,
+            "Geburts- und Todesdaten"@de ,
+            "Data di nascita e di morte"@it ,
+            "Fechas de nacimiento y muerte"@es ;
+        ] ,
+        [
+          rdf:value "fl. 1700-1799"@none ;
+          rdfs:label
+            "Autres dates"@fr ,
+            "Outras datas de vida"@pt ,
+            "Other life dates"@en ,
+            "Pozostałe daty urodzenia i śmierci"@pl ,
+            "Altre date"@it ,
+            "Andere Lebensdaten"@de ,
+            "Otras fechas de vida"@es ;
+        ] ;
+      rism:sectionLabel
+        "Detalles biográficos"@es ,
+        "Biographical details"@en ,
+        "Szczegóły bibliograficzne"@pl ,
+        "Détails biographiques"@fr ,
+        "Detalhes biográficos"@pt ,
+        "Dati biografici"@it ,
+        "Biografische Details"@de ;
+    ] ;
+  rism:notes <https://rism.online/people/30001052/notes> ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Date de création"@fr ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Data utworzenia"@pl ,
+            "Erstellungsdatum"@de ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-12T00:21:53Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ostatnia modyfikacja"@pl ,
+            "Last modification"@en ,
+            "Fecha de modificación"@es ,
+            "Última modificação"@pt ,
+            "Ultima modifica"@it ,
+            "Dernière modification"@fr ,
+            "Letzte Änderung"@de ;
+        ] ;
+    ] ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/people/30001052/sources" ;
+    ] ;
+  schemaorg:gender "male" ;
+  .
+
+<https://rism.online/people/30001052/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Referencias y notas"@es ,
+    "Notas e referências"@pt ,
+    "Bibliografia e note"@it ,
+    "Odniesienia i uwagi"@pl ,
+    "Literatur und Bemerkungen"@de ,
+    "References and notes"@en ,
+    "Références et notes"@fr ;
+  rism:hasNote
+    [
+      rdf:value "<span>Idaszak, Danuta. 1993. <i>Grodzisk Wielkopolski. Katalog tematyczny muzykaliów.</i> Studia et dissertationes instituti musicologiae universitatis Varsoviensis, vol. A/1. Kraków.</span> [IdaszakGR 1993 Ferrari, Hyacintho [18.me]]."@none ;
+      rdfs:label
+        "Source des données"@fr ,
+        "Source data found"@en ,
+        "Odnalezione źródło danych"@pl ,
+        "Fonte dei dati"@it ,
+        "Fuente de los datos encontrados"@es ,
+        "Fonte dos dados encontrados"@pt ,
+        "Literaturnachweis"@de ;
+    ] ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/people/30034463>
+  a rism:Person ;
+  rdfs:label "Calamnius, G."@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "undifferentiated"@none ;
+          rdfs:label
+            "Codice di autenticazione"@it ,
+            "Código de autenticação"@pt ,
+            "Authentication code"@en ,
+            "Individualsierung"@de ,
+            "Kod uwierzytelnienia"@pl ,
+            "Code d'authentification"@fr ,
+            "Código de autenticación"@es ;
+        ] ,
+        [
+          rdf:value "people/30034463"@none ;
+          rdfs:label
+            "RISM Dokumentnummer"@de ,
+            "Número ID RISM"@pt ,
+            "No. RISM"@fr ,
+            "Número de ID de RISM"@es ,
+            "Numero documento RISM"@it ,
+            "RISM ID"@pl ,
+            "RISM ID number"@en ;
+        ] ;
+      rism:sectionLabel
+        "Détails biographiques"@fr ,
+        "Biographical details"@en ,
+        "Szczegóły bibliograficzne"@pl ,
+        "Detalhes biográficos"@pt ,
+        "Detalles biográficos"@es ,
+        "Biografische Details"@de ,
+        "Dati biografici"@it ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Erstellungsdatum"@de ,
+            "Date de création"@fr ,
+            "Data utworzenia"@pl ,
+            "Created on"@en ,
+            "Criado em"@pt ,
+            "Data di creazione"@it ,
+            "Fecha de creación"@es ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:24:39Z"^^xsd:dateTime ;
+          rdfs:label
+            "Ostatnia modyfikacja"@pl ,
+            "Dernière modification"@fr ,
+            "Fecha de modificación"@es ,
+            "Last modification"@en ,
+            "Letzte Änderung"@de ,
+            "Última modificação"@pt ,
+            "Ultima modifica"@it ;
+        ] ;
+    ] ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/people/30034463/sources" ;
+    ] ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rismrel:go
+  rdf:value "go" ;
+  rdfs:label
+    "Lieu de naissance"@fr ,
+    "Local de nascimento"@pt ,
+    "Place of birth"@en ,
+    "Miejsce urodzenia"@pl ,
+    "Lugar de nacimiento"@es ,
+    "Geburtsort"@de ,
+    "Luogo di nascita"@it ;
+  .
+
+rismrel:so
+  rdf:value "so" ;
+  rdfs:label
+    "Lieu de décès"@fr ,
+    "Sterbeort"@de ,
+    "Lugar de fallecimiento"@es ,
+    "Local de morte"@pt ,
+    "Place of death"@en ,
+    "Luogo di morte"@it ,
+    "Miejsce śmierci"@pl ;
+  .
+
+<https://rism.online/people/51016505>
+  a rism:Person ;
+  rdfs:label "Hochberg-Rohnstock, Sophie Friederike Erdmuthe von (1756-1782)"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "1756-1782"@none ;
+          rdfs:label
+            "Fechas de nacimiento y muerte"@es ,
+            "Geburts- und Todesdaten"@de ,
+            "Daty urodzenia i śmierci"@pl ,
+            "Data di nascita e di morte"@it ,
+            "Datas de nascimento e morte"@pt ,
+            "Life dates"@en ,
+            "Dates de vie"@fr ;
+        ] ,
+        [
+          rdf:value
+            "Femmina"@it ,
+            "Weiblich"@de ,
+            "Female"@en ,
+            "femme"@fr ,
+            "Feminino"@pt ,
+            "Kobieta"@pl ,
+            "Femenino"@es ;
+          rdfs:label
+            "Płeć społeczno-kulturowa"@pl ,
+            "Genere"@it ,
+            "Género"@es ,
+            "Género"@pt ,
+            "Sexe"@fr ,
+            "Geschlecht"@de ,
+            "Gender"@en ;
+        ] ,
+        [
+          rdf:value "people/51016505"@none ;
+          rdfs:label
+            "Número de ID de RISM"@es ,
+            "RISM ID number"@en ,
+            "RISM Dokumentnummer"@de ,
+            "Numero documento RISM"@it ,
+            "No. RISM"@fr ,
+            "RISM ID"@pl ,
+            "Número ID RISM"@pt ;
+        ] ,
+        [
+          rdf:value "differentiated"@none ;
+          rdfs:label
+            "Código de autenticación"@es ,
+            "Authentication code"@en ,
+            "Individualsierung"@de ,
+            "Código de autenticação"@pt ,
+            "Kod uwierzytelnienia"@pl ,
+            "Codice di autenticazione"@it ,
+            "Code d'authentification"@fr ;
+        ] ,
+        [
+          rdf:value "24.03.1756-22.03.1782"@none ;
+          rdfs:label
+            "Altre date"@it ,
+            "Autres dates"@fr ,
+            "Andere Lebensdaten"@de ,
+            "Other life dates"@en ,
+            "Outras datas de vida"@pt ,
+            "Otras fechas de vida"@es ,
+            "Pozostałe daty urodzenia i śmierci"@pl ;
+        ] ;
+      rism:sectionLabel
+        "Detalhes biográficos"@pt ,
+        "Biografische Details"@de ,
+        "Biographical details"@en ,
+        "Dati biografici"@it ,
+        "Detalles biográficos"@es ,
+        "Détails biographiques"@fr ,
+        "Szczegóły bibliograficzne"@pl ;
+    ] ;
+  rism:nameVariants
+    [
+      a rism:VariantNamesSection ;
+      rdfs:label
+        "Variantes de nome"@pt ,
+        "Namensvarianten"@de ,
+        "Varianti del nome"@it ,
+        "Alternatywne nazwy osoby"@pl ,
+        "Variantes del nombre"@es ,
+        "Variantes du nom"@fr ,
+        "Name variants"@en ;
+      rism:hasNameVariant
+        [
+          a rism:VariantName ;
+          rdf:value "Schönburg-Hartenstein, Sophie Friederike Erdmuthe von"@none ;
+          rdfs:label
+            "Birth name"@en ,
+            "Nom de naissance"@fr ,
+            "Nazwisko rodowe"@pl ,
+            "Nome da nubile/celibe"@it ,
+            "Nombre de nacimiento"@es ,
+            "Geburtsname"@de ,
+            "Nome de nascimento"@pt ;
+        ] ;
+    ] ;
+  rism:notes <https://rism.online/people/51016505/notes> ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2023-09-06T09:29:54Z"^^xsd:dateTime ;
+          rdfs:label
+            "Data utworzenia"@pl ,
+            "Date de création"@fr ,
+            "Data di creazione"@it ,
+            "Erstellungsdatum"@de ,
+            "Created on"@en ,
+            "Fecha de creación"@es ,
+            "Criado em"@pt ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-06-14T01:11:14Z"^^xsd:dateTime ;
+          rdfs:label
+            "Última modificação"@pt ,
+            "Ultima modifica"@it ,
+            "Fecha de modificación"@es ,
+            "Ostatnia modyfikacja"@pl ,
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Dernière modification"@fr ;
+        ] ;
+    ] ;
+  rism:relationships <https://rism.online/people/51016505/relationships> ;
+  rism:sources
+    [
+      rism:totalItems 1 ;
+      rism:url "https://rism.online/people/51016505/sources" ;
+    ] ;
+  rismrel:go <https://rism.online/places/3902150> ;
+  rismrel:so <https://rism.online/places/50020411> ;
+  schemaorg:gender "female" ;
+  .
+
+<https://rism.online/people/51016505/notes>
+  a rism:NotesSection ;
+  rdfs:label
+    "Références et notes"@fr ,
+    "Literatur und Bemerkungen"@de ,
+    "References and notes"@en ,
+    "Notas e referências"@pt ,
+    "Bibliografia e note"@it ,
+    "Referencias y notas"@es ,
+    "Odniesienia i uwagi"@pl ;
+  rism:hasNote
+    [
+      rdf:value "19.08.1779 Vermählung mit Graf Gottlob Johann Ludwig von Hochberg-Rohnstock (1753-1791) in Hartenstein"@none ;
+      rdfs:label
+        "Nota generale"@it ,
+        "Bemerkungen"@de ,
+        "Remarque générale"@fr ,
+        "Nota general"@es ,
+        "Nota geral"@pt ,
+        "Uwaga ogólna"@pl ,
+        "General note"@en ;
+    ] ;
+  .
+
+<https://rism.online/people/51016505/relationships>
+  rism:hasRelationship
+    [
+      dcterms:relation <https://rism.online/places/3902150> ;
+      rism:hasRole rismrel:go ;
+    ] ,
+    [
+      dcterms:relation <https://rism.online/places/50020411> ;
+      rism:hasRole rismrel:so ;
+    ] ;
+  rism:sectionLabel
+    "Beziehungen"@de ,
+    "Relacje"@pl ,
+    "Relazioni"@it ,
+    "Relacionamentos"@pt ,
+    "Relations"@en ,
+    "Relations"@fr ,
+    "Relaciones"@es ;
+  .
+
+<https://rism.online/places/3902150>
+  a rism:Place ;
+  rdfs:label "Hartenstein"@none ;
+  .
+
+<https://rism.online/places/50020411>
+  a rism:Place ;
+  rdfs:label "Roztoka"@none ;
+  .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix pmo: <http://performedmusicontology.org/ontology/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix relators: <http://id.loc.gov/vocabulary/relators/> .
+@prefix rism: <https://rism.online/api/v1#> .
+@prefix rismrel: <https://rism.online/vocabulary/relationship/#> .
+@prefix schemaorg: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rism.online/people/30042886>
+  a rism:Person ;
+  rdfs:label "Wälti, Christian (1819-1862)"@none ;
+  rism:biographicalDetails
+    [
+      rism:hasSummary
+        [
+          rdf:value "people/30042886"@none ;
+          rdfs:label
+            "RISM ID number"@en ,
+            "Numero documento RISM"@it ,
+            "Número ID RISM"@pt ,
+            "RISM ID"@pl ,
+            "Número de ID de RISM"@es ,
+            "RISM Dokumentnummer"@de ,
+            "No. RISM"@fr ;
+        ] ,
+        [
+          rdf:value
+            "Male"@en ,
+            "Maschio"@it ,
+            "Masculino"@pt ,
+            "Masculino"@es ,
+            "Mężczyzna"@pl ,
+            "Männlich"@de ,
+            "homme"@fr ;
+          rdfs:label
+            "Geschlecht"@de ,
+            "Płeć społeczno-kulturowa"@pl ,
+            "Sexe"@fr ,
+            "Gender"@en ,
+            "Género"@pt ,
+            "Género"@es ,
+            "Genere"@it ;
+        ] ,
+        [
+          rdf:value
+            "Poet"@none ,
+            "Writer"@none ;
+          rdfs:label
+            "Professione o funzione"@it ,
+            "Profession ou fonction"@fr ,
+            "Profession or function"@en ,
+            "Zawód lub funkcja"@pl ,
+            "Profissão ou função"@pt ,
+            "Profesión o función"@es ,
+            "Beruf oder Funktion"@de ;
+        ] ,
+        [
+          rdf:value "1819-1862"@none ;
+          rdfs:label
+            "Data di nascita e di morte"@it ,
+            "Fechas de nacimiento y muerte"@es ,
+            "Dates de vie"@fr ,
+            "Geburts- und Todesdaten"@de ,
+            "Datas de nascimento e morte"@pt ,
+            "Life dates"@en ,
+            "Daty urodzenia i śmierci"@pl ;
+        ] ,
+        [
+          rdf:value "differentiated"@none ;
+          rdfs:label
+            "Individualsierung"@de ,
+            "Código de autenticação"@pt ,
+            "Kod uwierzytelnienia"@pl ,
+            "Codice di autenticazione"@it ,
+            "Authentication code"@en ,
+            "Code d'authentification"@fr ,
+            "Código de autenticación"@es ;
+        ] ;
+      rism:sectionLabel
+        "Biografische Details"@de ,
+        "Détails biographiques"@fr ,
+        "Dati biografici"@it ,
+        "Detalhes biográficos"@pt ,
+        "Detalles biográficos"@es ,
+        "Szczegóły bibliograficzne"@pl ,
+        "Biographical details"@en ;
+    ] ;
+  rism:externalAuthorities <https://rism.online/people/30042886/external-authorities> ;
+  rism:hasExternalAuthority
+    <https://rism.online/people/30042886/external-authorities/dnb1044335327> ,
+    <https://rism.online/people/30042886/external-authorities/viaf305353067> ,
+    <https://rism.online/people/30042886/external-authorities/wkpQ73607454> ;
+  rism:nameVariants
+    [
+      a rism:VariantNamesSection ;
+      rdfs:label
+        "Variantes de nome"@pt ,
+        "Variantes du nom"@fr ,
+        "Name variants"@en ,
+        "Varianti del nome"@it ,
+        "Alternatywne nazwy osoby"@pl ,
+        "Variantes del nombre"@es ,
+        "Namensvarianten"@de ;
+      rism:hasNameVariant
+        [
+          a rism:VariantName ;
+          rdf:value "Wälti, Christ."@none ;
+          rdfs:label
+            "Non classé"@fr ,
+            "Sin categorizar"@es ,
+            "Nicht kategorisiert"@de ,
+            "Bez kategorii"@pl ,
+            "Sem categoria"@pt ,
+            "Non categorizzato"@it ,
+            "Uncategorized"@en ;
+        ] ;
+    ] ;
+  rism:recordHistory
+    [
+      a rism:RecordHistory ;
+      dcterms:created
+        [
+          rdf:value "2016-11-09T00:00:00Z"^^xsd:dateTime ;
+          rdfs:label
+            "Date de création"@fr ,
+            "Created on"@en ,
+            "Data utworzenia"@pl ,
+            "Fecha de creación"@es ,
+            "Criado em"@pt ,
+            "Erstellungsdatum"@de ,
+            "Data di creazione"@it ;
+        ] ;
+      dcterms:modified
+        [
+          rdf:value "2026-04-09T06:25:27Z"^^xsd:dateTime ;
+          rdfs:label
+            "Letzte Änderung"@de ,
+            "Last modification"@en ,
+            "Última modificação"@pt ,
+            "Fecha de modificación"@es ,
+            "Dernière modification"@fr ,
+            "Ultima modifica"@it ,
+            "Ostatnia modyfikacja"@pl ;
+        ] ;
+    ] ;
+  rism:sources
+    [
+      rism:totalItems 8 ;
+      rism:url "https://rism.online/people/30042886/sources" ;
+    ] ;
+  schemaorg:gender "male" ;
+  schemaorg:sameAs
+    "https://d-nb.info/gnd/1044335327"^^xsd:anyURI ,
+    "https://viaf.org/viaf/305353067"^^xsd:anyURI ,
+    "https://www.wikidata.org/wiki/Q73607454"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/30042886/external-authorities>
+  a rism:ExternalAuthoritiesSection ;
+  rdfs:label
+    "Identyfikator innego standardu"@pl ,
+    "Référence d'authorité"@fr ,
+    "Outro identificador padronizado"@pt ,
+    "Riferimento autorità"@it ,
+    "Normdatenverweise"@de ,
+    "Otro identificador estándar"@es ,
+    "Other standard identifier"@en ;
+  rism:hasExternalAuthority
+    <https://rism.online/people/30042886/external-authorities/dnb1044335327> ,
+    <https://rism.online/people/30042886/external-authorities/viaf305353067> ,
+    <https://rism.online/people/30042886/external-authorities/wkpQ73607454> ;
+  .
+
+<https://rism.online/people/30042886/external-authorities/dnb1044335327>
+  a rism:ExternalAuthority ;
+  rdf:value "1044335327" ;
+  rdfs:label "Deutsche Nationalbibliothek (GND): 1044335327"@none ;
+  rism:authorityBase "https://d-nb.info/gnd/"^^xsd:anyURI ;
+  rism:authorityScheme "dnb" ;
+  rism:authorityUrl "https://d-nb.info/gnd/1044335327"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/30042886/external-authorities/viaf305353067>
+  a rism:ExternalAuthority ;
+  rdf:value "305353067" ;
+  rdfs:label "Virtual Internet Authority File (VIAF): 305353067"@none ;
+  rism:authorityBase "https://viaf.org/viaf/"^^xsd:anyURI ;
+  rism:authorityScheme "viaf" ;
+  rism:authorityUrl "https://viaf.org/viaf/305353067"^^xsd:anyURI ;
+  .
+
+<https://rism.online/people/30042886/external-authorities/wkpQ73607454>
+  a rism:ExternalAuthority ;
+  rdf:value "Q73607454" ;
+  rdfs:label "Wikidata: Q73607454"@none ;
+  rism:authorityBase "https://www.wikidata.org/wiki/"^^xsd:anyURI ;
+  rism:authorityScheme "wkp" ;
+  rism:authorityUrl "https://www.wikidata.org/wiki/Q73607454"^^xsd:anyURI ;
+  .
